@@ -4,3 +4,6 @@
 [submodule "u-boot"]
 	path = u-boot
 	url = https://github.com/aviseqk/u-boot.git
+[submodule "qemu"]
+	path = qemu
+	url = https://github.com/aviseqk/qemu.git
