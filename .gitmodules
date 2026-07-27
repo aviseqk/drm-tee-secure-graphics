@@ -7,3 +7,9 @@
 [submodule "qemu"]
 	path = qemu
 	url = https://github.com/aviseqk/qemu.git
+[submodule "optee_os"]
+	path = optee_os
+	url = https://github.com/aviseqk/optee_os.git
+[submodule "optee_client"]
+	path = optee_client
+	url = https://github.com/OP-TEE/optee_client.git
