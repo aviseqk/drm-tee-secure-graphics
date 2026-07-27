@@ -16,3 +16,6 @@
 [submodule "buildroot"]
 	path = buildroot
 	url = https://github.com/buildroot/buildroot.git
+[submodule "trusted-firmware-a"]
+	path = trusted-firmware-a
+	url = https://github.com/aviseqk/trusted-firmware-a.git
