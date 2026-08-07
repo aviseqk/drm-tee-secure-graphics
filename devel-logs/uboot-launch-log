@@ -1,0 +1,1487 @@
+Bloblist at 0 not found (err=-2)
+size=400, ptr=400, limit=0: alloc space exhausted ptr 400 limit 0
+size=30, ptr=30, limit=2000: 401fe000
+Bloblist at 0 not found (err=-2)
+size=400, ptr=430, limit=2000: aligned to 401fe030
+Creating new bloblist size 400 at 401fe030
+size=400, ptr=830, limit=2000: 401fe430
+size=100, ptr=930, limit=2000: 401fe830
+size=30, ptr=960, limit=2000: 401fe930
+size=98, ptr=9f8, limit=2000: 401fe960
+size=30, ptr=a28, limit=2000: 401fe9f8
+size=98, ptr=ac0, limit=2000: 401fea28
+bind node reserved-memory
+Device 'reserved-memory' has no compatible string
+bind node firmware
+Device 'firmware' has no compatible string
+bind node psci
+   - attempt to match compatible string 'arm,psci-1.0'
+   - found match at driver 'psci' for 'arm,psci-1.0'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+size=30, ptr=af0, limit=2000: 401feac0
+size=98, ptr=b88, limit=2000: 401feaf0
+size=30, ptr=bb8, limit=2000: 401feb88
+size=98, ptr=c50, limit=2000: 401febb8
+bind node memory@40000000
+Device 'memory@40000000' has no compatible string
+bind node platform-bus@c000000
+   - attempt to match compatible string 'qemu,platform'
+   - attempt to match compatible string 'simple-bus'
+   - found match at driver 'simple_bus' for 'simple-bus'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+size=30, ptr=c80, limit=2000: 401fec50
+size=98, ptr=d18, limit=2000: 401fec80
+size=18, ptr=d30, limit=2000: 401fed18
+ofnode_read_u32_array: ranges: bind node fw-cfg@9020000
+   - attempt to match compatible string 'qemu,fw-cfg-mmio'
+   - found match at driver 'qfw_mmio' for 'qemu,fw-cfg-mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a000000
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a000200
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a000400
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a000600
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a000800
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a000a00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a000c00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a000e00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a001000
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a001200
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a001400
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a001600
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a001800
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a001a00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a001c00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a001e00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a002000
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a002200
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a002400
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a002600
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a002800
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a002a00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a002c00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a002e00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a003000
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a003200
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a003400
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a003600
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a003800
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a003a00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a003c00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node virtio_mmio@a003e00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node pcie@10000000
+   - attempt to match compatible string 'pci-host-ecam-generic'
+   - found match at driver 'pci_generic_ecam' for 'pci-host-ecam-generic'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node pl031@9010000
+   - attempt to match compatible string 'arm,pl031'
+   - found match at driver 'rtc-pl031' for 'arm,pl031'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node pl011@9000000
+   - attempt to match compatible string 'arm,pl011'
+   - found match at driver 'serial_pl01x' for 'arm,pl011'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+size=30, ptr=d60, limit=2000: 401fed30
+size=98, ptr=df8, limit=2000: 401fed60
+   - seq=0
+size=18, ptr=e10, limit=2000: 401fedf8
+bind node pmu
+   - attempt to match compatible string 'arm,armv8-pmuv3'
+No match for node 'pmu'
+bind node intc@8000000
+   - attempt to match compatible string 'arm,cortex-a15-gic'
+No match for node 'intc@8000000'
+bind node flash@4000000
+   - attempt to match compatible string 'cfi-flash'
+   - found match at driver 'cfi_flash' for 'cfi-flash'
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+Skipping device pre-relocation
+bind node cpus
+Device 'cpus' has no compatible string
+bind node timer
+   - attempt to match compatible string 'arm,armv8-timer'
+   - attempt to match compatible string 'arm,armv7-timer'
+No match for node 'timer'
+bind node apb-pclk
+   - attempt to match compatible string 'fixed-clock'
+No match for node 'apb-pclk'
+bind node aliases
+Device 'aliases' has no compatible string
+bind node secure-chosen
+Device 'secure-chosen' has no compatible string
+bind node chosen
+Device 'chosen' has no compatible string
+bind node optee
+   - attempt to match compatible string 'linaro,optee-tz'
+No match for node 'optee'
+bind node optee_core@e100000
+Device 'optee_core@e100000' has no compatible string
+bind node optee_shm@42000000
+Device 'optee_shm@42000000' has no compatible string
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+ofnode_read_bool: bootph-all: false
+ofnode_read_bool: bootph-some-ram: false
+ofnode_read_bool: bootph-pre-ram: false
+ofnode_read_bool: bootph-pre-sram: false
+size=10, ptr=e20, limit=2000: 401fee10
+size=8, ptr=e28, limit=2000: 401fee20
+ofnode_read_u32_index: clock: (not found)
+ofnode_read_bool: skip-init: false
+
+
+U-Boot 2026.07-gece349ade297-dirty (Jul 30 2026 - 12:12:30 +0530)
+
+ofnode_read_prop: method: smc
+DRAM:  size=30, ptr=e58, limit=2000: 401fee28
+size=60, ptr=eb8, limit=2000: 401fee58
+1 GiB
+bind node reserved-memory
+Device 'reserved-memory' has no compatible string
+bind node firmware
+Device 'firmware' has no compatible string
+bind node psci
+   - attempt to match compatible string 'arm,psci-1.0'
+   - found match at driver 'psci' for 'arm,psci-1.0'
+bind node memory@40000000
+Device 'memory@40000000' has no compatible string
+bind node platform-bus@c000000
+   - attempt to match compatible string 'qemu,platform'
+   - attempt to match compatible string 'simple-bus'
+   - found match at driver 'simple_bus' for 'simple-bus'
+ofnode_read_u32_array: ranges: bind node fw-cfg@9020000
+   - attempt to match compatible string 'qemu,fw-cfg-mmio'
+   - found match at driver 'qfw_mmio' for 'qemu,fw-cfg-mmio'
+bind node virtio_mmio@a000000
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a000200
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a000400
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a000600
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a000800
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a000a00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a000c00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a000e00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a001000
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a001200
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a001400
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a001600
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a001800
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a001a00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a001c00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a001e00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a002000
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a002200
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a002400
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a002600
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a002800
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a002a00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a002c00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a002e00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a003000
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a003200
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a003400
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a003600
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a003800
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a003a00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a003c00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node virtio_mmio@a003e00
+   - attempt to match compatible string 'virtio,mmio'
+   - found match at driver 'virtio-mmio' for 'virtio,mmio'
+bind node pcie@10000000
+   - attempt to match compatible string 'pci-host-ecam-generic'
+   - found match at driver 'pci_generic_ecam' for 'pci-host-ecam-generic'
+bind node pl031@9010000
+   - attempt to match compatible string 'arm,pl031'
+   - found match at driver 'rtc-pl031' for 'arm,pl031'
+bind node pl011@9000000
+   - attempt to match compatible string 'arm,pl011'
+   - found match at driver 'serial_pl01x' for 'arm,pl011'
+   - seq=0
+bind node pmu
+   - attempt to match compatible string 'arm,armv8-pmuv3'
+No match for node 'pmu'
+bind node intc@8000000
+   - attempt to match compatible string 'arm,cortex-a15-gic'
+No match for node 'intc@8000000'
+bind node flash@4000000
+   - attempt to match compatible string 'cfi-flash'
+   - found match at driver 'cfi_flash' for 'cfi-flash'
+bind node cpus
+Device 'cpus' has no compatible string
+bind node timer
+   - attempt to match compatible string 'arm,armv8-timer'
+   - attempt to match compatible string 'arm,armv7-timer'
+No match for node 'timer'
+bind node apb-pclk
+   - attempt to match compatible string 'fixed-clock'
+No match for node 'apb-pclk'
+bind node aliases
+Device 'aliases' has no compatible string
+bind node secure-chosen
+Device 'secure-chosen' has no compatible string
+bind node chosen
+Device 'chosen' has no compatible string
+bind node optee
+   - attempt to match compatible string 'linaro,optee-tz'
+No match for node 'optee'
+bind node optee_core@e100000
+Device 'optee_core@e100000' has no compatible string
+bind node optee_shm@42000000
+Device 'optee_shm@42000000' has no compatible string
+ofnode_read_u32_index: clock: (not found)
+ofnode_read_bool: skip-init: false
+Core:  51 devices, 14 uclasses, devicetree: board
+ofnode_read_bool: u-boot,skip-auto-config-until-reloc: false
+Flash: Req index out of range
+32 MiB
+Initializing EFI driver framework
+Adding EFI driver 'EFI block driver'
+Loading Environment from Flash... *** Warning - bad CRC, using default environment
+
+0
+   - not found
+0
+   - not found
+In:    serial,usbkbd
+Out:   serial,vidconsole
+Err:   serial,vidconsole
+Sending event 5/(unknown) to spy 'efi_disk add'
+No USB controllers found
+Net:   0
+   - 0 'virtio-net#32'
+   - found
+Sending event 5/(unknown) to spy 'efi_disk add'
+eth0: virtio-net#32
+Sending event b/(unknown) to spy '?'
+Initializing UCLASS_EFI_LOADER
+Sending event b/(unknown) to spy '?'
+smbios_version = 000000007e685041: '2026.07-gece349ade297-dirty'
+ofnode_read_prop: compatible: linux,dummy-virt
+ofnode_read_prop: model: linux,dummy-virt
+ofnode_read_prop: compatible: linux,dummy-virt
+ofnode_read_prop: model: linux,dummy-virt
+ofnode_find_subnode: l1-cache: <none>
+ofnode_read_prop: socket-design: <not found>
+ofnode_read_prop: device-locator: <not found>
+ofnode_read_prop: bank-locator: <not found>
+ofnode_read_prop: manufacturer: <not found>
+ofnode_read_prop: serial-number: <not found>
+ofnode_read_prop: asset-tag: <not found>
+ofnode_read_prop: part-number: <not found>
+ofnode_read_prop: firmware-version: <not found>
+SMBIOS tables written to 7e685000
+
+Hit any key to stop autoboot: 0
+Sending event 5/(unknown) to spy 'efi_disk add'
+Scanning for bootflows in all bootdevs
+Seq  Method       State   Uclass    Part  Name                      Filename
+---  -----------  ------  --------  ----  ------------------------  ----------------
+0
+   - 0 'extlinux'
+   - found
+Sending event 5/(unknown) to spy 'efi_disk add'
+1
+   - 0 'extlinux'
+   - 1 'script'
+   - found
+Sending event 5/(unknown) to spy 'efi_disk add'
+2
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - found
+Sending event 5/(unknown) to spy 'efi_disk add'
+3
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - found
+Sending event 5/(unknown) to spy 'efi_disk add'
+4
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - found
+Sending event 5/(unknown) to spy 'efi_disk add'
+5
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - found
+Sending event 5/(unknown) to spy 'efi_disk add'
+6
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - found
+ofnode_read_u32_index: area-start: (not found)
+7
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+8
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+9
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+10
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+11
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+12
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+13
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+14
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+15
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+16
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+17
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+18
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+19
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+20
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+21
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+22
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+23
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+24
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+25
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+26
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+27
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+28
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+29
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+30
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+31
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+32
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+33
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+0
+   - 0 'extlinux'
+   - found
+1
+   - 0 'extlinux'
+   - 1 'script'
+   - found
+2
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - found
+3
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - found
+4
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - found
+5
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - found
+6
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - found
+ofnode_read_u32_index: area-start: (not found)
+7
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+8
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+9
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+10
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+11
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+12
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+13
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+14
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+15
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+16
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+17
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+18
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+19
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+20
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+21
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+22
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+23
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+24
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+25
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+26
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+27
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+28
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+29
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+30
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+31
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+32
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+33
+   - 0 'extlinux'
+   - 1 'script'
+   - 2 'efi_mgr'
+   - 3 'efi'
+   - 4 'qfw'
+   - 5 'pxe'
+   - 6 'vbe_simple'
+   - not found
+methods_done now 5
+iter: Setting dev to (none), flags 0
+Scanning global bootmeth 'efi_mgr':
+Console size 56x134
+Cannot persist EFI variables without system partition
+ECPT created
+Missing TPMv2 device for EFI_TCG_PROTOCOL
+Missing RNG device for EFI_RNG_PROTOCOL
+0
+   - 0 'virtio-net#32'
+   - found
+EFI using SMBIOS tables at 7e685000
+ofnode_read_prop: method: smc
+Sending event 5/(unknown) to spy 'efi_disk add'
+check - ret=-22
+entry: err=-22
+inc_dev=0
+Hunting for priority 1
+exit 0
+- bootdev_hunt_prio() ret 0
+- targets qfw usb scsi virtio nvme dhcp 0000000000000000
+setup labels 000000007e6939b0
+next
+Scanning: qfw
+looking at qfw for ethernet
+looking at qfw for nvme
+looking at qfw for qfw
+Hunting with: qfw
+Sending event 5/(unknown) to spy 'efi_disk add'
+  - hunt result 0
+looking at qfw for scsi
+looking at qfw for usb
+looking at qfw for virtio
+find qfw: seq=-1, id=101/qfw
+- found fw-cfg@9020000.bootdev
+method flags 8
+Selected bootdev: fw-cfg@9020000.bootdev
+Sending event 5/(unknown) to spy 'efi_disk add'
+ret=0, dev=000000007e669750 fw-cfg@9020000.bootdev
+rescan global bootmeths have_global 1
+first_glob_method 5 num_methods 6 methods_done 20
+considering glob 'efi_mgr': done 1 glob_prio 6
+probe fw-cfg@9020000.bootdev 0
+iter: Setting dev to fw-cfg@9020000.bootdev, flags 8
+Scanning bootdev 'fw-cfg@9020000.bootdev':
+iter_incr: ret=0
+methods_done now 0
+->get_bootflow fw-cfg@9020000.bootdev,0=000000007f6e68cc
+media=fw-cfg@9020000
+uclass 101: qfw
+Bootdev 'fw-cfg@9020000.bootdev' part 0 method 'extlinux': Error -524
+check - ret=-524
+entry: err=-524
+iter_incr: ret=0
+methods_done now 1
+->get_bootflow fw-cfg@9020000.bootdev,0=000000007f6e68cc
+media=fw-cfg@9020000
+iter->part=0
+reading bootflow with method: script
+trying: /boot.scr.uimg
+   /boot.scr.uimg - err=-1
+trying: /boot.scr
+   /boot.scr - err=-1
+trying: /boot/boot.scr.uimg
+   /boot/boot.scr.uimg - err=-1
+trying: /boot/boot.scr
+   /boot/boot.scr - err=-1
+Bootdev 'fw-cfg@9020000.bootdev' part 0 method 'script': Error -1
+check - ret=-1
+entry: err=-1
+iter_incr: ret=0
+methods_done now 2
+->get_bootflow fw-cfg@9020000.bootdev,0=000000007f6e68cc
+media=fw-cfg@9020000
+uclass 101: qfw
+uclass 101: qfw
+Bootdev 'fw-cfg@9020000.bootdev' part 0 method 'efi': Error -524
+check - ret=-524
+entry: err=-524
+iter_incr: ret=0
+methods_done now 3
+->get_bootflow fw-cfg@9020000.bootdev,0=000000007f6e68cc
+media=fw-cfg@9020000
+media=fw-cfg@9020000
+iter->part=0
+reading bootflow with method: qfw
+setup kernel fw-cfg@9020000 40400000 44000000
+loading kernel to address 40400000 size 277ea00 initrd 44000000 size 155276d
+setup kernel result 0
+Bootdev 'fw-cfg@9020000.bootdev' part 0 method 'qfw': Found bootflow
+check - ret=0
+  0  qfw          ready   qfw          0  qfw
+** Booting bootflow 'qfw' with qfw
+Failed to allocate memory for the image at 0x40400000
+zimage: Bad magic!
+Boot failed (err=-5)
+entry: err=-524
+iter_incr: ret=0
+methods_done now 4
+->get_bootflow fw-cfg@9020000.bootdev,0=000000007f6e68cc
+media=fw-cfg@9020000
+uclass 101: qfw
+Bootdev 'fw-cfg@9020000.bootdev' part 0 method 'pxe': Error -524
+check - ret=-524
+entry: err=-524
+inc_dev=1
+labels 000000007e6939b0
+looking for next device fw-cfg@9020000.bootdev: <none>
+looking at next label
+next
+Scanning: usb
+looking at usb for ethernet
+looking at usb for nvme
+looking at usb for qfw
+looking at usb for scsi
+looking at usb for usb
+Hunting with: usb
+  - hunt result 0
+looking at usb for virtio
+find usb: seq=-1, id=131/usb
+Scanning: scsi
+looking at scsi for ethernet
+looking at scsi for nvme
+looking at scsi for qfw
+looking at scsi for scsi
+Hunting with: scsi
+scanning bus for devices...
+  - hunt result 0
+looking at scsi for usb
+looking at scsi for virtio
+find scsi: seq=-1, id=112/scsi
+Scanning: virtio
+looking at virtio for ethernet
+looking at virtio for nvme
+looking at virtio for qfw
+looking at virtio for scsi
+looking at virtio for usb
+looking at virtio for virtio
+Hunting with: virtio
+  - hunt result 0
+find virtio: seq=-1, id=139/virtio
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a000000
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a000200
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a000400
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a000600
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a000800
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a000a00
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a000c00
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a000e00
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a001000
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a001200
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a001400
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a001600
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a001800
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a001a00
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a001c00
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a001e00
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a002000
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a002200
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a002400
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a002600
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a002800
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a002a00
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a002c00
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a002e00
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a003000
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a003200
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a003400
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a003600
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a003800
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a003a00
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a003c00
+- looking via blk, seq=-1, id=139
+- no device in virtio_mmio@a003e00
+- looking via blk, seq=-1, id=139
+- no device in virtio-pci.l#0
+Scanning: nvme
+looking at nvme for ethernet
+looking at nvme for nvme
+Hunting with: nvme
+  - hunt result 0
+looking at nvme for qfw
+looking at nvme for scsi
+looking at nvme for usb
+looking at nvme for virtio
+find nvme: seq=-1, id=83/nvme
+Scanning: dhcp
+looking at dhcp for ethernet
+Hunting with: ethernet
+  - hunt result 0
+looking at dhcp for nvme
+looking at dhcp for qfw
+looking at dhcp for scsi
+looking at dhcp for usb
+looking at dhcp for virtio
+Cannot find uclass for id -1: please add the UCLASS_DRIVER() declaration for this UCLASS_... id
+find dhcp: seq=-1, id=-1/<NULL>
+- found virtio-net#32.bootdev
+method flags 9
+ret=0, dev=000000007e66e300 virtio-net#32.bootdev
+rescan global bootmeths have_global 1
+first_glob_method 5 num_methods 6 methods_done 3f
+considering glob 'efi_mgr': done 1 glob_prio 6
+Sending event 5/(unknown) to spy 'efi_disk add'
+probe virtio-net#32.bootdev 0
+iter: Setting dev to virtio-net#32.bootdev, flags 9
+Scanning bootdev 'virtio-net#32.bootdev':
+iter_incr: ret=0
+methods_done now 0
+->get_bootflow virtio-net#32.bootdev,0=000000007f73ea44
+uclass 41: ethernet
+uclass 41: ethernet
+Bootdev 'virtio-net#32.bootdev' part 0 method 'extlinux': Error -524
+check - ret=-524
+entry: err=-524
+iter_incr: ret=0
+methods_done now 1
+->get_bootflow virtio-net#32.bootdev,0=000000007f73ea44
+uclass 41: ethernet
+dhcp complete - reading bootflow with method 'script'
+reading bootflow returned -22
+Bootdev 'virtio-net#32.bootdev' part 0 method 'script': Error -22
+check - ret=-22
+entry: err=-22
+iter_incr: ret=0
+methods_done now 2
+->get_bootflow virtio-net#32.bootdev,0=000000007f73ea44
+uclass 41: ethernet
+uclass 41: ethernet
+uclass 41: ethernet
+dhcp complete - reading bootflow with method 'efi'
+dev='virtio-net#32.bootdev', part=0
+addr=40400000, fname=<NULL>, autoload=1
+0
+   - 0 'virtio-net#32'
+   - found
+BOOTP broadcast 1
+DHCP client bound to address 10.0.2.15 (3 ms)
+*** Warning: no boot file name; using '0A00020F.img'
+Using virtio-net#32 device
+TFTP from server 10.0.2.2; our IP address is 10.0.2.15
+Filename '0A00020F.img'.
+Load address: 0x40400000
+Loading: *
+TFTP error: 'Access violation' (2)
+Not retrying...
+reading bootflow returned -2
+Bootdev 'virtio-net#32.bootdev' part 0 method 'efi': Error -2
+check - ret=-2
+entry: err=-2
+iter_incr: ret=0
+methods_done now 3
+->get_bootflow virtio-net#32.bootdev,0=000000007f73ea44
+uclass 41: ethernet
+media=virtio-net#32
+Bootdev 'virtio-net#32.bootdev' part 0 method 'qfw': Error -524
+check - ret=-524
+entry: err=-524
+iter_incr: ret=0
+methods_done now 4
+->get_bootflow virtio-net#32.bootdev,0=000000007f73ea44
+uclass 41: ethernet
+uclass 41: ethernet
+Bootdev 'virtio-net#32.bootdev' part 0 method 'pxe': Error -524
+check - ret=-524
+entry: err=-524
+inc_dev=1
+labels 000000007e6939b0
+looking for next device virtio-net#32.bootdev: <none>
+looking at next label
+next
+ret=-19, dev=0000000000000000 none
+iter: Setting dev to (none), flags 0
+No more bootdevs
+no more bootdevs, trying global
+rescan global bootmeths have_global 1
+first_glob_method 5 num_methods 6 methods_done 3f
+considering glob 'efi_mgr': done 1 glob_prio 6
+iter_incr: ret=-19
+---  -----------  ------  --------  ----  ------------------------  ----------------
+(1 bootflow, 1 valid)
+=>
