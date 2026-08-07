@@ -1,4 +1,4 @@
-.PHONY: tf-a optee uboot clean
+.PHONY: tf-a optee uboot linux clean
 
 optee:
 	./scripts/build-optee.sh
@@ -6,7 +6,10 @@ optee:
 uboot:
 	./scripts/build-uboot.sh
 
-tf-a: optee uboot
+linux:
+	./scripts/build-linux.sh
+
+tf-a: optee uboot linux
 	./scripts/build-tfa.sh
 
 clean:
