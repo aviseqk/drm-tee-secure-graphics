@@ -1,4 +1,4 @@
-.PHONY: tf-a optee uboot linux clean
+.PHONY: tf-a optee uboot linux run clean
 
 optee:
 	./scripts/build-optee.sh
@@ -11,6 +11,9 @@ linux:
 
 tf-a: optee uboot linux
 	./scripts/build-tfa.sh
+
+run: tf-a
+	./scripts/run-qemu.sh
 
 clean:
 	rm -rf out/*
