@@ -19,3 +19,6 @@
 [submodule "trusted-firmware-a"]
 	path = trusted-firmware-a
 	url = https://github.com/aviseqk/trusted-firmware-a.git
+[submodule "optee_test"]
+	path = optee_test
+	url = https://github.com/OP-TEE/optee_test.git
