@@ -1,4 +1,4 @@
-.PHONY: tf-a optee uboot linux run clean
+.PHONY: tf-a optee uboot linux buildroot run clean
 
 optee:
 	./scripts/build-optee.sh
@@ -9,7 +9,10 @@ uboot:
 linux:
 	./scripts/build-linux.sh
 
-tf-a: optee uboot linux
+buildroot:
+	./scripts/build-buildroot.sh
+
+tf-a: optee uboot linux buildroot
 	./scripts/build-tfa.sh
 
 run: tf-a
