@@ -1,0 +1,6 @@
+menu "Secure Graphics Buildroot External"
+
+source "$BR2_EXTERNAL_SG_EXT_PATH/package/optee_client_ext/Config.in"
+source "$BR2_EXTERNAL_SG_EXT_PATH/package/optee_os_artifacts_ext/Config.in"
+
+endmenu
