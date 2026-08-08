@@ -1,0 +1,5 @@
+config BR2_PACKAGE_SG_DRM_INFO
+	bool "sg-drm-info"
+	select BR2_PACKAGE_LIBDRM
+	help
+		Secure Graphics DRM Information Utility(drm-test-app)

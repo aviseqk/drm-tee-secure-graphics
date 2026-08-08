@@ -5417,3 +5417,4 @@ BR2_PACKAGE_SG_TEE_TEST=y
 BR2_PACKAGE_SG_TEE_TEST_TA_DEV_KIT="/home/zephyr/SecureSWCodebase/secure-graphics-workspace/out/optee/export-ta_arm64"
 BR2_PACKAGE_SG_TEE_ABI_TEST=y
 BR2_PACKAGE_SG_TEE_ABI_TEST_TA_DEV_KIT="/home/zephyr/SecureSWCodebase/secure-graphics-workspace/out/optee/export-ta_arm64"
+BR2_PACKAGE_SG_DRM_INFO=y
