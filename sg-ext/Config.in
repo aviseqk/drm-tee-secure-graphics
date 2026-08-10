@@ -8,5 +8,6 @@ source "$BR2_EXTERNAL_SG_EXT_PATH/package/sg-tee-test/Config.in"
 source "$BR2_EXTERNAL_SG_EXT_PATH/package/sg-tee-abi-test/Config.in"
 
 source "$BR2_EXTERNAL_SG_EXT_PATH/package/sg-drm-info/Config.in"
+source "$BR2_EXTERNAL_SG_EXT_PATH/package/sg-drm-dump/Config.in"
 
 endmenu
