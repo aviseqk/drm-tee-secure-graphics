@@ -10,5 +10,6 @@ source "$BR2_EXTERNAL_SG_EXT_PATH/package/sg-tee-abi-test/Config.in"
 source "$BR2_EXTERNAL_SG_EXT_PATH/package/sg-drm-info/Config.in"
 source "$BR2_EXTERNAL_SG_EXT_PATH/package/sg-drm-dump/Config.in"
 source "$BR2_EXTERNAL_SG_EXT_PATH/package/sg-drm-modeset/Config.in"
+source "$BR2_EXTERNAL_SG_EXT_PATH/package/sg-drm-atomic-modeset/Config.in"
 
 endmenu
