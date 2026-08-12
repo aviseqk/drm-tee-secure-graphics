@@ -1,0 +1,23 @@
+#!/bin/sh
+
+case "$1" in
+	start)
+
+		# mount debugfs if not already mounted
+		if ! mountpoint -q /sys/kernel/debug 2>/dev/null; then
+			mount -t debugfs debugfs /sys/kernel/debug
+		fi
+
+		# mount tracefs if not already mounted
+		if ! mountpoint -q /sys/kernel/tracing 2>/dev/null; then
+			mount -t tracefs tracefs /sys/kernel/tracing
+		fi
+		;;
+
+	stop)
+		;;
+esac
+
+exit 0
+
+
