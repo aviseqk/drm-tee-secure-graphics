@@ -4,4 +4,6 @@ source "$BR2_EXTERNAL_SG_EXT_PATH/package/optee_client_ext/Config.in"
 source "$BR2_EXTERNAL_SG_EXT_PATH/package/optee_os_artifacts_ext/Config.in"
 source "$BR2_EXTERNAL_SG_EXT_PATH/package/optee_test_ext/Config.in"
 
+source "$BR2_EXTERNAL_SG_EXT_PATH/package/sg-tee-test/Config.in"
+
 endmenu
