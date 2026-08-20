@@ -1,0 +1,18 @@
+config BR2_PACKAGE_SG_TEE_ABI_TEST
+	bool "sg-tee-abi-test"
+	select BR2_PACKAGE_OPTEE_CLIENT_EXT
+	help
+		Secure Graphics REE <-> TEE ABI Harness Test
+
+if BR2_PACKAGE_SG_TEE_TEST
+
+config BR2_PACKAGE_SG_TEE_ABI_TEST_TA_DEV_KIT
+	string "OP-TEE TA Development Kit Path"
+	help
+		Path to the  OP-TEE exported development kit path.
+
+		This directory is normally "/out/optee/export-ta_arm64"
+		in our setup
+
+endif
+
