@@ -5,7 +5,7 @@
 BR2_HAVE_DOT_CONFIG=y
 BR2_EXTERNAL_NAMES="SG_EXT"
 BR2_EXTERNAL_SG_EXT_PATH="/home/zephyr/SecureSWCodebase/secure-graphics-workspace/sg-ext"
-BR2_EXTERNAL_SG_EXT_VERSION="v0.1-platform-ready-dirty"
+BR2_EXTERNAL_SG_EXT_VERSION="v0.1-platform-ready-6-gdeddfb0d3-dirty"
 BR2_HOST_GCC_AT_LEAST_4_9=y
 BR2_HOST_GCC_AT_LEAST_5=y
 BR2_HOST_GCC_AT_LEAST_6=y
@@ -5413,3 +5413,7 @@ BR2_PACKAGE_OPTEE_TEST_EXT_CROSS_COMPILE="aarch64-none-linux-gnu-"
 BR2_PACKAGE_OPTEE_TEST_EXT_GP_PACKAGE=""
 # BR2_PACKAGE_OPTEE_TEST_EXT_WITH_TLS_TESTS is not set
 # BR2_PACKAGE_OPTEE_TEST_EXT_WITH_CXX_TESTS is not set
+BR2_PACKAGE_SG_TEE_TEST=y
+BR2_PACKAGE_SG_TEE_TEST_TA_DEV_KIT="/home/zephyr/SecureSWCodebase/secure-graphics-workspace/out/optee/export-ta_arm64"
+BR2_PACKAGE_SG_TEE_ABI_TEST=y
+BR2_PACKAGE_SG_TEE_ABI_TEST_TA_DEV_KIT="/home/zephyr/SecureSWCodebase/secure-graphics-workspace/out/optee/export-ta_arm64"

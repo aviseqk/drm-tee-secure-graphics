@@ -21,7 +21,9 @@ TFA_OUT_DIR=out/tf-a/qemu/debug
 	-smp 4 \
 	-m 1024 \
 	-display gtk \
+	-chardev pty,id=secure_uart \
 	-serial stdio \
+	-serial chardev:secure_uart \
 	-device virtio-gpu \
 	-kernel "$KERNEL_IMAGE" \
 	-initrd "$ROOTFS_IMAGE" \
