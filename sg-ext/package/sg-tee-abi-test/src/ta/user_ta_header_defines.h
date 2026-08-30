@@ -6,7 +6,7 @@
 
 #define TA_UUID			TA_SG_TEE_ABI_TEST_UUID
 
-#define TA_FLAGS		0
+#define TA_FLAGS		(TA_FLAG_DEVICE_ENUM)
 
 #define TA_STACK_SIZE		(4 * 1024)
 

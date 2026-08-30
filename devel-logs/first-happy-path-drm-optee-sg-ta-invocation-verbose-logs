@@ -1,0 +1,1034 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x000f0510]
+[    0.000000] Linux version 7.2.0-rc5-gc7ad1a146dbf (zephyr@storm) (aarch64-none-linux-gnu-gcc (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 15.2.1 20251203, GNU ld (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 2.45.1.20251203) #36 SMP PREEMPT Sun Aug 30 22:20:39 IST 2026
+[    0.000000] KASLR enabled
+[    0.000000] random: crng init done
+[    0.000000] Machine model: linux,dummy-virt
+[    0.000000] printk: debug: skip boot console de-registration.
+[    0.000000] efi: UEFI not found.
+[    0.000000] OF: reserved mem: 0x000000000e100000..0x000000000effffff (15360 KiB) nomap non-reusable optee_core@e100000
+[    0.000000] OF: reserved mem: 0x0000000042000000..0x00000000421fffff (2048 KiB) nomap non-reusable optee_shm@42000000
+[    0.000000] NUMA: Faking a node at [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x7fdedbc0-0x7fdf027f]
+[    0.000000] cma: Reserved 32 MiB at 0x000000007dc00000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: Trusted OS migration not required
+[    0.000000] psci: SMC Calling Convention v1.5
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x0000000041ffffff]
+[    0.000000]   node   0: [mem 0x0000000042000000-0x00000000421fffff]
+[    0.000000]   node   0: [mem 0x0000000042200000-0x000000007fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] percpu: Embedded 35 pages/cpu s106328 r8192 d28840 u143360
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] CPU features: detected: Address authentication (IMP DEF algorithm)
+[    0.000000] CPU features: detected: HCRX_EL2 register
+[    0.000000] CPU features: detected: Stage-1 Permission Indirection Extension (S1PIE)
+[    0.000000] CPU features: detected: 52-bit Virtual Addressing (LPA2)
+[    0.000000] CPU features: detected: Spectre-v4
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Kernel command line: console=ttyAMA0,38400 keep_bootcon
+[    0.000000] printk: log buffer data + meta data: 131072 + 458752 = 589824 bytes
+[    0.000000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.000000] software IO TLB: SWIOTLB bounce buffer size adjusted to 1MB
+[    0.000000] software IO TLB: area num 4.
+[    0.000000] software IO TLB: mapped [mem 0x000000007c300000-0x000000007c400000] (1MB)
+[    0.000000] Fallback order for Node 0: 0
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 262144
+[    0.000000] Policy zone: DMA
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] ftrace: allocating 69769 entries in 274 pages
+[    0.000000] ftrace: allocated 274 pages with 3 groups
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=512 to nr_cpu_ids=4.
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] 	Rude variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] RCU Tasks: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+[    0.000000] RCU Tasks Rude: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GICv2m: range[mem 0x08020000-0x08020fff], SPI[80:143]
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.000000] arch_timer: cp15 timer running at 1000.00MHz (virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0x1fffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000068] sched_clock: 61 bits at 1000MHz, resolution 1ns, wraps every 4398046511103ns
+[    0.024062] Console: colour dummy device 80x25
+[    0.031358] Calibrating delay loop (skipped), value calculated using timer frequency.. 2000.00 BogoMIPS (lpj=4000000)
+[    0.032188] pid_max: default: 32768 minimum: 301
+[    0.040735] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.040829] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.051311] VFS: Finished mounting rootfs on nullfs
+[    0.085146] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.100731] rcu: Hierarchical SRCU implementation.
+[    0.100787] rcu: 	Max phase no-delay instances is 1000.
+[    0.102358] Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+[    0.112900] EFI services will not be available.
+[    0.114751] smp: Bringing up secondary CPUs ...
+[    0.125033] Detected PIPT I-cache on CPU1
+[    0.129321] CPU1: Booted secondary processor 0x0000000001 [0x000f0510]
+[    0.138013] Detected PIPT I-cache on CPU2
+[    0.138441] CPU2: Booted secondary processor 0x0000000002 [0x000f0510]
+[    0.140999] Detected PIPT I-cache on CPU3
+[    0.141435] CPU3: Booted secondary processor 0x0000000003 [0x000f0510]
+[    0.142167] smp: Brought up 1 node, 4 CPUs
+[    0.142210] SMP: Total of 4 processors activated.
+[    0.142247] CPU: All CPU(s) started at EL1
+[    0.142500] CPU features: detected: Branch Target Identification
+[    0.142546] CPU features: detected: 32-bit EL0 Support
+[    0.142564] CPU features: detected: 32-bit EL1 Support
+[    0.142572] CPU features: detected: ARMv8.4 Translation Table Level
+[    0.142593] CPU features: detected: Instruction cache invalidation not required for I/D coherence
+[    0.142612] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.142660] CPU features: detected: Common not Private translations
+[    0.142669] CPU features: detected: CRC32 instructions
+[    0.142677] CPU features: detected: Data independent timing control (DIT)
+[    0.142686] CPU features: detected: E0PD
+[    0.142693] CPU features: detected: Enhanced Counter Virtualization
+[    0.142703] CPU features: detected: Enhanced Counter Virtualization (CNTPOFF)
+[    0.142711] CPU features: detected: Enhanced Privileged Access Never
+[    0.142721] CPU features: detected: Enhanced Virtualization Traps
+[    0.142730] CPU features: detected: Fine Grained Traps
+[    0.142740] CPU features: detected: Guarded Control Stack (GCS)
+[    0.142811] CPU features: detected: Generic authentication (IMP DEF algorithm)
+[    0.142978] CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.143064] CPU features: detected: 52-bit Virtual Addressing for KVM (LPA2)
+[    0.143074] CPU features: detected: LSE atomic instructions
+[    0.143085] CPU features: detected: Memory Copy and Memory Set instructions
+[    0.143094] CPU features: detected: Privileged Access Never
+[    0.143130] CPU features: detected: PMUv3
+[    0.143138] CPU features: detected: SCTLR2
+[    0.143146] CPU features: detected: RAS Extension Support
+[    0.143209] CPU features: detected: RASv1p1 Extension Support
+[    0.143221] CPU features: detected: Random Number Generator
+[    0.143229] CPU features: detected: Speculation barrier (SB)
+[    0.143237] CPU features: detected: Stage-2 Force Write-Back
+[    0.143245] CPU features: detected: Trap EL0 IMPLEMENTATION DEFINED functionality
+[    0.143254] CPU features: detected: TLB range maintenance instructions
+[    0.143262] CPU features: detected: WFx with timeout
+[    0.143270] CPU features: detected: XNX
+[    0.143354] CPU features: detected: Scalable Matrix Extension
+[    0.143363] CPU features: detected: FA64
+[    0.143371] CPU features: detected: SME2
+[    0.143378] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.143386] CPU features: detected: Scalable Vector Extension
+[    0.162453] alternatives: applying system-wide alternatives
+[    0.183281] CPU features: detected: Hardware dirty bit management on CPU0-3
+[    0.184401] SVE: maximum available vector length 256 bytes per vector
+[    0.184563] SVE: default vector length 64 bytes per vector
+[    0.184666] SME: minimum available vector length 16 bytes per vector
+[    0.184680] SME: maximum available vector length 256 bytes per vector
+[    0.184693] SME: default vector length 32 bytes per vector
+[    0.210757] Memory: 929520K/1048576K available (21696K kernel code, 6790K rwdata, 16280K rodata, 4352K init, 720K bss, 80164K reserved, 32768K cma-reserved)
+[    0.243313] devtmpfs: initialized
+[    0.276826] posixtimers hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.277463] futex hash table entries: 1024 (65536 bytes on 1 NUMA nodes, total 64 KiB, linear).
+[    0.281263] 2G module region forced by RANDOMIZE_MODULE_REGION_FULL
+[    0.281341] 0 pages in range for non-PLT usage
+[    0.281394] 511760 pages in range for PLT usage
+[    0.306674] DMI: not present or invalid.
+[    0.333375] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.348905] DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.349348] audit: initializing netlink subsys (disabled)
+[    0.351971] audit: type=2000 audit(0.292:1): state=initialized audit_enabled=0 res=1
+[    0.360993] thermal_sys: Registered thermal governor 'step_wise'
+[    0.361042] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.361804] cpuidle: using governor menu
+[    0.363511] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.364993] ASID allocator initialised with 65536 entries
+[    0.385132] Serial: AMBA PL011 UART driver
+[    0.475583] 9000000.pl011: ttyAMA0 at MMIO 0x9000000 (irq = 13, base_baud = 0) is a PL011 rev1
+[    0.479914] printk: console [ttyAMA0] enabled
+[    0.516070] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.516134] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.516195] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.516212] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.516233] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.516255] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.516277] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.516293] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.542976] ACPI: Interpreter disabled.
+[    0.560492] iommu: Default domain type: Translated
+[    0.560619] iommu: DMA domain TLB invalidation policy: strict mode
+[    0.564780] SCSI subsystem initialized
+[    0.569120] usbcore: registered new interface driver usbfs
+[    0.569710] usbcore: registered new interface driver hub
+[    0.570310] usbcore: registered new device driver usb
+[    0.575266] pps_core: LinuxPPS API ver. 1 registered
+[    0.575424] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.575570] PTP clock support registered
+[    0.577077] EDAC MC: Ver: 3.0.0
+[    0.580064] scmi_core: SCMI protocol bus registered
+[    0.587063] FPGA manager framework
+[    0.602696] vgaarb: loaded
+[    0.607858] clocksource: Switched to clocksource arch_sys_counter
+[    0.616042] VFS: Disk quotas dquot_6.6.0
+[    0.616402] VFS: Dquot-cache hash table entries: 512 (4096 bytes)
+[    0.622264] pnp: PnP ACPI: disabled
+[    0.666329] NET: Registered PF_INET protocol family
+[    0.668262] IP idents hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.673522] tcp_listen_portaddr_hash hash table entries: 512 (order: 1, 8192 bytes, linear)
+[    0.673703] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.673834] TCP established hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.674128] TCP bind hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    0.674392] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.676355] UDP hash table entries: 512 (order: 3, 32768 bytes, linear)
+[    0.678183] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.683619] RPC: Registered named UNIX socket transport module.
+[    0.684138] RPC: Registered udp transport module.
+[    0.684427] RPC: Registered tcp transport module.
+[    0.684717] RPC: Registered tcp-with-tls transport module.
+[    0.685022] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.685469] PCI: CLS 0 bytes, default 64
+[    0.692016] Unpacking initramfs...
+[    0.700506] kvm [1]: HYP mode not available
+[    0.708402] Initialise system trusted keyrings
+[    0.711833] workingset: timestamp_bits=42 (anon: 37) max_order=18 bucket_order=0 (anon: 0)
+[    0.716062] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.720432] NFS: Registering the id_resolver key type
+[    0.721344] Key type id_resolver registered
+[    0.721722] Key type id_legacy registered
+[    0.722569] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    0.723450] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    0.725428] 9p: Installing v9fs 9p2000 file system support
+[    0.730329] Key type asymmetric registered
+[    0.730937] Asymmetric key parser 'x509' registered
+[    0.732675] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 243)
+[    0.733812] io scheduler mq-deadline registered
+[    0.734584] io scheduler kyber registered
+[    0.735921] io scheduler bfq registered
+[    0.806525] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.814871] pci-host-generic 4010000000.pcie: host bridge /pcie@10000000 ranges:
+[    0.816866] pci-host-generic 4010000000.pcie:       IO 0x003eff0000..0x003effffff -> 0x0000000000
+[    0.818153] pci-host-generic 4010000000.pcie:      MEM 0x0010000000..0x003efeffff -> 0x0010000000
+[    0.818856] pci-host-generic 4010000000.pcie:      MEM 0x8000000000..0xffffffffff -> 0x8000000000
+[    0.820719] pci-host-generic 4010000000.pcie: Memory resource size exceeds max for 32 bits
+[    0.821779] pci-host-generic 4010000000.pcie: ECAM at [mem 0x4010000000-0x401fffffff] for [bus 00-ff]
+[    0.824714] pci-host-generic 4010000000.pcie: PCI host bridge to bus 0000:00
+[    0.825403] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.825531] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+[    0.825598] pci_bus 0000:00: root bus resource [mem 0x10000000-0x3efeffff]
+[    0.825637] pci_bus 0000:00: root bus resource [mem 0x8000000000-0xffffffffff]
+[    0.828042] pci 0000:00:00.0: [1b36:0008] type 00 class 0x060000 conventional PCI endpoint
+[    0.835823] pci 0000:00:01.0: [1af4:1000] type 00 class 0x020000 conventional PCI endpoint
+[    0.838918] pci 0000:00:01.0: BAR 0 [io  0x1000-0x101f]
+[    0.839143] pci 0000:00:01.0: BAR 1 [mem 0x10000000-0x10000fff]
+[    0.839515] pci 0000:00:01.0: BAR 4 [mem 0x10004000-0x10007fff 64bit pref]
+[    0.839680] pci 0000:00:01.0: ROM [mem 0x10040000-0x1007ffff pref]
+[    0.841315] pci 0000:00:02.0: [1af4:1050] type 00 class 0x038000 conventional PCI endpoint
+[    0.843643] pci 0000:00:02.0: BAR 1 [mem 0x10080000-0x10080fff]
+[    0.843748] pci 0000:00:02.0: BAR 4 [mem 0x10084000-0x10087fff 64bit pref]
+[    0.849726] pci 0000:00:01.0: ROM [mem 0x10000000-0x1003ffff pref]: assigned
+[    0.850179] pci 0000:00:01.0: BAR 4 [mem 0x8000000000-0x8000003fff 64bit pref]: assigned
+[    0.852203] pci 0000:00:02.0: BAR 4 [mem 0x8000004000-0x8000007fff 64bit pref]: assigned
+[    0.853879] pci 0000:00:01.0: BAR 1 [mem 0x10040000-0x10040fff]: assigned
+[    0.854914] pci 0000:00:02.0: BAR 1 [mem 0x10041000-0x10041fff]: assigned
+[    0.856704] pci 0000:00:01.0: BAR 0 [io  0x1000-0x101f]: assigned
+[    0.857188] pci_bus 0000:00: resource 4 [io  0x0000-0xffff]
+[    0.857302] pci_bus 0000:00: resource 5 [mem 0x10000000-0x3efeffff]
+[    0.857332] pci_bus 0000:00: resource 6 [mem 0x8000000000-0xffffffffff]
+[    0.997850] Freeing initrd memory: 5308K
+[    1.064064] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.084272] msm_serial: driver initialized
+[    1.087262] SuperH (H)SCI(F) driver initialized
+[    1.088662] STM32 USART driver initialized
+[    1.108714] [drm] pci: virtio-gpu-pci detected at 0000:00:02.0
+[    1.110310] [drm] features: -virgl +edid -resource_blob -host_visible
+[    1.110444] [drm] features: -context_init -blob_alignment
+[    1.120841] [drm] number of scanouts: 1
+[    1.120976] [drm] number of cap sets: 0
+[    1.139877] [drm] Initialized virtio_gpu 0.1.0 for 0000:00:02.0 on minor 0
+[    1.191616] entered sg_tee_validate() function
+[    1.191730] SG TEE Driver not ready, skipping validation
+[    1.191782] exiting sg_tee_validate() function
+[    1.191857] virtio-pci 0000:00:02.0: [drm] SG did not validate because: SG-TEE Driver Not Ready
+[    1.191892] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 404
+[    1.219908] entered sg_tee_validate() function
+[    1.219998] SG TEE Driver not ready, skipping validation
+[    1.220067] exiting sg_tee_validate() function
+[    1.220104] virtio-pci 0000:00:02.0: [drm] SG did not validate because: SG-TEE Driver Not Ready
+[    1.220123] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 404
+[    1.227766] entered sg_tee_validate() function
+[    1.227871] SG TEE Driver not ready, skipping validation
+[    1.227903] exiting sg_tee_validate() function
+[    1.227931] virtio-pci 0000:00:02.0: [drm] SG did not validate because: SG-TEE Driver Not Ready
+[    1.227961] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 404
+[    1.240742] entered sg_tee_validate() function
+[    1.240840] SG TEE Driver not ready, skipping validation
+[    1.240890] exiting sg_tee_validate() function
+[    1.240937] virtio-pci 0000:00:02.0: [drm] SG did not validate because: SG-TEE Driver Not Ready
+[    1.240993] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 404
+[    1.249081] Console: switching to colour frame buffer device 159x85
+[    1.252117] entered sg_tee_validate() function
+[    1.252229] SG TEE Driver not ready, skipping validation
+[    1.252317] exiting sg_tee_validate() function
+[    1.252353] virtio-pci 0000:00:02.0: [drm] SG did not validate because: SG-TEE Driver Not Ready
+[    1.252408] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 404
+[    1.258749] entered sg_tee_validate() function
+[    1.258797] SG TEE Driver not ready, skipping validation
+[    1.258814] exiting sg_tee_validate() function
+[    1.258848] virtio-pci 0000:00:02.0: [drm] SG did not validate because: SG-TEE Driver Not Ready
+[    1.258882] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 404
+[    1.274020] entered sg_tee_validate() function
+[    1.274121] SG TEE Driver not ready, skipping validation
+[    1.274168] exiting sg_tee_validate() function
+[    1.274213] virtio-pci 0000:00:02.0: [drm] SG did not validate because: SG-TEE Driver Not Ready
+[    1.274255] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 404
+[    1.281519] virtio-pci 0000:00:02.0: [drm] fb0: virtio_gpudrmfb frame buffer device
+[    1.285116] entered sg_tee_validate() function
+[    1.285257] SG TEE Driver not ready, skipping validation
+[    1.285314] exiting sg_tee_validate() function
+[    1.285349] virtio-pci 0000:00:02.0: [drm] SG did not validate because: SG-TEE Driver Not Ready
+[    1.285404] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 404
+[    1.330162] loop: module loaded
+[    1.336435] megasas: 07.734.00.00-rc1
+[    1.348375] physmap-flash 4000000.flash: physmap platform flash device: [mem 0x04000000-0x07ffffff]
+[    1.351726] 4000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+[    1.352567] Intel/Sharp Extended Query Table at 0x0031
+[    1.354211] Using buffer write method
+[    1.390825] entered sg_tee_validate() function
+[    1.391019] SG TEE Driver not ready, skipping validation
+[    1.391102] exiting sg_tee_validate() function
+[    1.391189] virtio-pci 0000:00:02.0: [drm] SG did not validate because: SG-TEE Driver Not Ready
+[    1.391563] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 404
+[    1.505951] tun: Universal TUN/TAP device driver, 1.6
+[    1.521063] VFIO - User Level meta-driver version: 0.3
+[    1.541160] usbcore: registered new interface driver usb-storage
+[    1.562810] rtc-pl031 9010000.pl031: registered as rtc0
+[    1.564169] rtc-pl031 9010000.pl031: setting system clock to 2026-08-30T16:51:14 UTC (1788108674)
+[    1.568554] i2c_dev: i2c /dev entries driver
+[    1.596440] entered sg_tee_validate() function
+[    1.596593] SG TEE Driver not ready, skipping validation
+[    1.596665] exiting sg_tee_validate() function
+[    1.596757] virtio-pci 0000:00:02.0: [drm] SG did not validate because: SG-TEE Driver Not Ready
+[    1.596796] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 404
+[    1.636441] ARM FF-A: FFA_VERSION returned not supported
+[    1.642878] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[    1.649037] usbcore: registered new interface driver usbhid
+[    1.649151] usbhid: USB HID core driver
+[    1.673290] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 (0,8000003f) counters available
+[    1.685891] optee: probing for conduit method.
+[    1.688315] optee: revision 4.10 (991587c721a603e8)
+[    1.693000] optee: Asynchronous notifications enabled
+[    1.693749] optee: dynamic shared memory is enabled
+[    1.707676] optee: initialized driver
+[    1.720786] optee-sg-test optee-ta-cc6c3285-e725-4249-bfc4-3ad5a558e051: optee_sg_test driver probed
+[    1.755396] optee-sg-test optee-ta-cc6c3285-e725-4249-bfc4-3ad5a558e051: sending to TA: "Hello from Linux Kernel via Shared Memory"
+[    1.758454] optee-sg-test optee-ta-cc6c3285-e725-4249-bfc4-3ad5a558e051: received from TA: "Hello back from Secure World!"
+[    1.762428] optee-sg optee-ta-a6a197ec-d5cb-4e04-b72c-7332ec01d427: optee_sg driver probed
+[    1.802003] entered sg_tee_validate() function
+[    1.802115] SG TEE Driver not ready, skipping validation
+[    1.802162] exiting sg_tee_validate() function
+[    1.802249] virtio-pci 0000:00:02.0: [drm] SG did not validate because: SG-TEE Driver Not Ready
+[    1.802361] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 404
+[    1.824559] optee-sg optee-ta-a6a197ec-d5cb-4e04-b72c-7332ec01d427: TEE Context/Session/SHM initialized successfully
+[    1.824760] optee-sg optee-ta-a6a197ec-d5cb-4e04-b72c-7332ec01d427: optee_sg driver: TEST CASE: fake DRM call with no actual TA call
+[    1.827615] NET: Registered PF_INET6 protocol family
+[    1.838049] Segment Routing with IPv6
+[    1.838343] In-situ OAM (IOAM) with IPv6
+[    1.839470] NET: Registered PF_PACKET protocol family
+[    1.841404] 9pnet: Installing 9P2000 support
+[    1.841871] Key type dns_resolver registered
+[    1.921999] registered taskstats version 1
+[    1.924608] Loading compiled-in X.509 certificates
+[    1.964131] Demotion targets for Node 0: null
+[    1.968632] Key type encrypted registered
+[    1.974885] clk: Disabling unused clocks
+[    1.975576] PM: genpd: Disabling unused power domains
+[    2.011506] entered sg_tee_validate() function
+[    2.011806] entered sg_serialize_request: buffer=fff00000062d0000
+[    2.011919] proposed reserving offset: 20
+[    2.012068] entered sg_serialize_transaction
+[    2.012116] sg_serialize_transaction: buf=fff00000062d0000 offset=20 metadata=ffff800080412308
+[    2.012213] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=20 value=1
+[    2.012319] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=24 value=1
+[    2.012427] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=28 value=0
+[    2.012493] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=32 value=1
+[    2.012588] entered sg_serialize_crtc
+[    2.012625] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=36 value=39
+[    2.012675] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=40 value=1
+[    2.012728] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=44 value=1
+[    2.012780] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=48 value=1272
+[    2.012824] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=52 value=1371
+[    2.012869] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=56 value=180000
+[    2.012995] entered sg_serialize_plane
+[    2.013071] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=60 value=35
+[    2.013133] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=64 value=39
+[    2.013193] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=68 value=43
+[    2.013253] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=72 value=1272
+[    2.013313] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=76 value=1371
+[    2.013377] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=80 value=875713112
+[    2.013458] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=92 value=0
+[    2.013510] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=96 value=0
+[    2.013572] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=100 value=1272
+[    2.013599] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=104 value=1371
+[    2.013630] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=116 value=1272
+[    2.013658] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=120 value=1371
+[    2.013694] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=124 value=1
+[    2.013732] entered sg_serialize_buffer
+[    2.013769] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=128 value=0
+[    2.013837] post sg_serialize_transaction offset: 132
+[    2.013876] entered sg_serialize_header
+[    2.013892] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=0 value=1
+[    2.013920] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=4 value=1
+[    2.013943] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=8 value=132
+[    2.013970] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=12 value=132
+[    2.014017] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=16 value=12
+[    2.014108] serialized request size: 132
+[    2.014134] response offset: 132
+[    2.014156] hex dump:
+[    2.014536] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    2.014598] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    2.014620] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    2.014641] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    2.014660] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    2.014680] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    2.014699] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    2.014726] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    2.014747] 00 00 00 00
+[    2.014831] ctx=fff0000006295fe0 session=1 shm=fff00000062c1ba0 shm_va=fff00000062d0000
+[    2.014866] ctx       = fff0000006295fe0
+[    2.014938] teedev    = fff000000185b000
+[    2.272499] POST TA RESPONSE
+[    2.272621] request.header.size: 132 request.header.response_size: 12
+[    2.272690] serialized request size: 144
+[    2.272732] response offset: 0
+[    2.272771] hex dump:
+[    2.272803] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    2.272843] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    2.272871] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    2.272899] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    2.272927] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    2.272954] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    2.272965] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    2.272975] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    2.272993] 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00
+[    2.273106] struct sg_validate_response:
+[    2.273131] VERSION: 1
+[    2.273227] DECISION: 0
+[    2.273269] REASON: 0
+[    2.273325] exiting sg_tee_validate() function
+[    2.273390] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 0
+[    2.280557] entered sg_tee_validate() function
+[    2.280595] entered sg_serialize_request: buffer=fff00000062d0000
+[    2.280612] proposed reserving offset: 20
+[    2.280629] entered sg_serialize_transaction
+[    2.280637] sg_serialize_transaction: buf=fff00000062d0000 offset=20 metadata=ffff800080412308
+[    2.280650] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=20 value=1
+[    2.280668] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=24 value=1
+[    2.280703] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=28 value=0
+[    2.280719] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=32 value=1
+[    2.280748] entered sg_serialize_crtc
+[    2.280759] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=36 value=39
+[    2.280780] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=40 value=1
+[    2.280797] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=44 value=1
+[    2.280821] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=48 value=1272
+[    2.280843] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=52 value=1371
+[    2.280885] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=56 value=180000
+[    2.280906] entered sg_serialize_plane
+[    2.280913] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=60 value=35
+[    2.280939] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=64 value=39
+[    2.280979] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=68 value=43
+[    2.281014] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=72 value=1272
+[    2.281030] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=76 value=1371
+[    2.281048] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=80 value=875713112
+[    2.281063] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=92 value=0
+[    2.281094] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=96 value=0
+[    2.281126] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=100 value=1272
+[    2.281146] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=104 value=1371
+[    2.281166] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=116 value=1272
+[    2.281191] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=120 value=1371
+[    2.281219] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=124 value=1
+[    2.281269] entered sg_serialize_buffer
+[    2.281283] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=128 value=0
+[    2.281310] post sg_serialize_transaction offset: 132
+[    2.281326] entered sg_serialize_header
+[    2.281338] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=0 value=1
+[    2.281424] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=4 value=1
+[    2.281457] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=8 value=132
+[    2.281480] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=12 value=132
+[    2.281519] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=16 value=12
+[    2.281536] serialized request size: 132
+[    2.281544] response offset: 132
+[    2.281552] hex dump:
+[    2.281564] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    2.281578] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    2.281796] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    2.281809] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    2.281824] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    2.281860] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    2.281878] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    2.281908] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    2.281926] 00 00 00 00
+[    2.281943] ctx=fff0000006295fe0 session=1 shm=fff00000062c1ba0 shm_va=fff00000062d0000
+[    2.281969] ctx       = fff0000006295fe0
+[    2.281980] teedev    = fff000000185b000
+[    2.418162] Freeing unused kernel memory: 4352K
+[    2.420725] Run /init as init process
+[    2.433915] POST TA RESPONSE
+[    2.434067] request.header.size: 132 request.header.response_size: 12
+[    2.434108] serialized request size: 144
+[    2.434136] response offset: 0
+[    2.434182] hex dump:
+[    2.434211] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    2.434229] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    2.434239] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    2.434248] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    2.434258] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    2.434268] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    2.434306] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    2.434321] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    2.434376] 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00
+[    2.434394] struct sg_validate_response:
+[    2.434404] VERSION: 1
+[    2.434416] DECISION: 0
+[    2.434427] REASON: 0
+[    2.434437] exiting sg_tee_validate() function
+[    2.434471] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 0
+[    2.440979] entered sg_tee_validate() function
+[    2.441178] entered sg_serialize_request: buffer=fff00000062d0000
+[    2.441293] proposed reserving offset: 20
+[    2.441337] entered sg_serialize_transaction
+[    2.441373] sg_serialize_transaction: buf=fff00000062d0000 offset=20 metadata=ffff800080412308
+[    2.441485] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=20 value=1
+[    2.441513] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=24 value=1
+[    2.441538] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=28 value=0
+[    2.441563] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=32 value=1
+[    2.441606] entered sg_serialize_crtc
+[    2.441614] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=36 value=39
+[    2.441631] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=40 value=1
+[    2.441645] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=44 value=1
+[    2.441659] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=48 value=1272
+[    2.441673] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=52 value=1371
+[    2.441687] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=56 value=180000
+[    2.441701] entered sg_serialize_plane
+[    2.441749] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=60 value=35
+[    2.441766] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=64 value=39
+[    2.441780] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=68 value=43
+[    2.441856] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=72 value=1272
+[    2.441871] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=76 value=1371
+[    2.441885] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=80 value=875713112
+[    2.441901] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=92 value=0
+[    2.441915] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=96 value=0
+[    2.441929] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=100 value=1272
+[    2.441943] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=104 value=1371
+[    2.441965] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=116 value=1272
+[    2.441989] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=120 value=1371
+[    2.442003] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=124 value=1
+[    2.442017] entered sg_serialize_buffer
+[    2.442024] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=128 value=0
+[    2.442046] post sg_serialize_transaction offset: 132
+[    2.442055] entered sg_serialize_header
+[    2.442062] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=0 value=1
+[    2.442075] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=4 value=1
+[    2.442100] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=8 value=132
+[    2.442125] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=12 value=132
+[    2.442166] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=16 value=12
+[    2.442182] serialized request size: 132
+[    2.442190] response offset: 132
+[    2.442198] hex dump:
+[    2.442215] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    2.442315] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    2.442340] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    2.442350] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    2.442359] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    2.442369] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    2.442379] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    2.442390] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    2.442438] 00 00 00 00
+[    2.442449] ctx=fff0000006295fe0 session=1 shm=fff00000062c1ba0 shm_va=fff00000062d0000
+[    2.442466] ctx       = fff0000006295fe0
+[    2.442518] teedev    = fff000000185b000
+[    2.490722] POST TA RESPONSE
+[    2.490853] request.header.size: 132 request.header.response_size: 12
+[    2.490892] serialized request size: 144
+[    2.490916] response offset: 0
+[    2.490941] hex dump:
+[    2.490967] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    2.490990] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    2.491005] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    2.491034] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    2.491044] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    2.491054] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    2.491063] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    2.491104] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    2.491139] 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00
+[    2.491154] struct sg_validate_response:
+[    2.491171] VERSION: 1
+[    2.491180] DECISION: 0
+[    2.491274] REASON: 0
+[    2.491500] exiting sg_tee_validate() function
+[    2.491531] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 0
+[    2.629693] entered sg_tee_validate() function
+[    2.629789] entered sg_serialize_request: buffer=fff00000062d0000
+[    2.629824] proposed reserving offset: 20
+[    2.629849] entered sg_serialize_transaction
+[    2.629856] sg_serialize_transaction: buf=fff00000062d0000 offset=20 metadata=ffff800080ba2308
+[    2.629869] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=20 value=1
+[    2.629887] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=24 value=1
+[    2.629951] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=28 value=0
+[    2.629990] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=32 value=1
+[    2.630063] entered sg_serialize_crtc
+[    2.630097] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=36 value=39
+[    2.630119] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=40 value=1
+[    2.630179] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=44 value=1
+[    2.630200] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=48 value=1272
+[    2.630226] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=52 value=1371
+[    2.630249] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=56 value=180000
+[    2.630325] entered sg_serialize_plane
+[    2.630870] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=60 value=35
+[    2.630896] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=64 value=39
+[    2.630916] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=68 value=43
+[    2.630936] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=72 value=1272
+[    2.630956] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=76 value=1371
+[    2.630989] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=80 value=875713112
+[    2.631064] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=92 value=0
+[    2.631169] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=96 value=0
+[    2.631240] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=100 value=1272
+[    2.631766] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=104 value=1371
+[    2.631796] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=116 value=1272
+[    2.631816] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=120 value=1371
+[    2.631842] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=124 value=1
+[    2.631870] entered sg_serialize_buffer
+[    2.631881] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=128 value=0
+[    2.631909] post sg_serialize_transaction offset: 132
+[    2.631922] entered sg_serialize_header
+[    2.631932] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=0 value=1
+[    2.631952] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=4 value=1
+[    2.631972] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=8 value=132
+[    2.631999] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=12 value=132
+[    2.632020] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=16 value=12
+[    2.632050] serialized request size: 132
+[    2.632063] response offset: 132
+[    2.632087] hex dump:
+[    2.632110] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    2.632139] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    2.632154] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    2.632168] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    2.632188] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    2.632203] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    2.632216] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    2.632229] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    2.632249] 00 00 00 00
+[    2.632304] ctx=fff0000006295fe0 session=1 shm=fff00000062c1ba0 shm_va=fff00000062d0000
+[    2.632327] ctx       = fff0000006295fe0
+[    2.632341] teedev    = fff000000185b000
+[    2.672023] POST TA RESPONSE
+[    2.672157] request.header.size: 132 request.header.response_size: 12
+[    2.672198] serialized request size: 144
+[    2.672233] response offset: 0
+[    2.672258] hex dump:
+[    2.672284] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    2.672322] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    2.672347] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    2.672371] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    2.672395] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    2.672424] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    2.672434] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    2.672443] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    2.672453] 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00
+[    2.672464] struct sg_validate_response:
+[    2.672471] VERSION: 1
+[    2.672479] DECISION: 0
+[    2.672487] REASON: 0
+[    2.672509] exiting sg_tee_validate() function
+[    2.672532] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 0
+Saving 256 bits of creditable seed for next boot
+Starting syslogd: OK
+Starting klogd: OK
+Running sysctl: [    2.840759] entered sg_tee_validate() function
+[    2.840922] entered sg_serialize_request: buffer=fff00000062d0000
+OK[    2.841100] proposed reserving offset: 20
+[    2.841121] entered sg_serialize_transaction
+
+[    2.841130] sg_serialize_transaction: buf=fff00000062d0000 offset=20 metadata=ffff800080ba2308
+[    2.841146] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=20 value=1
+[    2.841166] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=24 value=1
+[    2.841193] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=28 value=0
+[    2.841225] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=32 value=1
+[    2.841246] entered sg_serialize_crtc
+[    2.841264] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=36 value=39
+[    2.841286] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=40 value=1
+[    2.841307] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=44 value=1
+[    2.841327] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=48 value=1272
+[    2.841348] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=52 value=1371
+[    2.841369] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=56 value=180000
+[    2.841388] entered sg_serialize_plane
+[    2.841397] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=60 value=35
+[    2.841426] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=64 value=39
+[    2.841453] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=68 value=43
+[    2.841474] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=72 value=1272
+[    2.841501] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=76 value=1371
+[    2.841522] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=80 value=875713112
+[    2.841543] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=92 value=0
+[    2.841563] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=96 value=0
+[    2.841584] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=100 value=1272
+[    2.841611] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=104 value=1371
+[    2.841639] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=116 value=1272
+[    2.841660] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=120 value=1371
+[    2.841681] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=124 value=1
+[    2.841700] entered sg_serialize_buffer
+[    2.841710] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=128 value=0
+[    2.841730] post sg_serialize_transaction offset: 132
+[    2.841742] entered sg_serialize_header
+[    2.841759] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=0 value=1
+[    2.841779] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=4 value=1
+[    2.841799] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=8 value=132
+[    2.841825] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=12 value=132
+[    2.841852] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=16 value=12
+[    2.841875] serialized request size: 132
+[    2.841888] response offset: 132
+[    2.841900] hex dump:
+[    2.841923] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    2.841946] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    2.841966] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    2.841991] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    2.842017] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    2.842037] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    2.842052] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    2.842067] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    2.842089] 00 00 00 00
+[    2.842105] ctx=fff0000006295fe0 session=1 shm=fff00000062c1ba0 shm_va=fff00000062d0000
+[    2.842127] ctx       = fff0000006295fe0
+[    2.842140] teedev    = fff000000185b000
+[    2.884642] POST TA RESPONSE
+[    2.884801] request.header.size: 132 request.header.response_size: 12
+[    2.884879] serialized request size: 144
+[    2.884919] response offset: 0
+[    2.884949] hex dump:
+[    2.885007] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    2.885042] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    2.885077] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    2.885100] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    2.885111] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    2.885120] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    2.885130] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    2.885140] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    2.885149] 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00
+[    2.885161] struct sg_validate_response:
+[    2.885168] VERSION: 1
+[    2.885199] DECISION: 0
+[    2.885207] REASON: 0
+[    2.885216] exiting sg_tee_validate() function
+[    2.885246] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 0
+Set permissions on /dev/tee*: OK
+Create/set permissions on /var/lib/tee: OK
+Starting tee-supplicant: [    3.040903] entered sg_tee_validate() function
+[    3.041063] entered sg_serialize_request: buffer=fff00000062d0000
+[    3.041171] proposed reserving offset: 20
+[    3.041240] entered sg_serialize_transaction
+[    3.041291] sg_serialize_transaction: buf=fff00000062d0000 offset=20 metadata=ffff800080ba2308
+[    3.041313] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=20 value=1
+[    3.041335] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=24 value=1
+[    3.041360] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=28 value=0
+[    3.041455] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=32 value=1
+[    3.041496] entered sg_serialize_crtc
+[    3.041503] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=36 value=39
+[    3.041529] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=40 value=1
+Using device /dev/teepriv0.
+[    3.041544] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=44 value=1
+[    3.041557] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=48 value=1272
+[    3.041571] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=52 value=1371
+[    3.041585] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=56 value=180000
+[    3.041615] entered sg_serialize_plane
+[    3.041622] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=60 value=35
+[    3.041636] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=64 value=39
+[    3.041649] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=68 value=43
+[    3.041663] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=72 value=1272
+[    3.041677] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=76 value=1371
+[    3.041783] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=80 value=875713112
+[    3.041799] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=92 value=0
+[    3.041813] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=96 value=0
+[    3.041826] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=100 value=1272
+[    3.041840] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=104 value=1371
+[    3.041853] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=116 value=1272
+[    3.041901] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=120 value=1371
+[    3.041915] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=124 value=1
+[    3.041929] entered sg_serialize_buffer
+[    3.041936] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=128 value=0
+[    3.041949] post sg_serialize_transaction offset: 132
+[    3.041958] entered sg_serialize_header
+[    3.041964] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=0 value=1
+[    3.041978] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=4 value=1
+[    3.042002] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=8 value=132
+[    3.042016] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=12 value=132
+[    3.042031] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080ba2210 offset=16 value=12
+[    3.042045] serialized request size: 132
+[    3.042053] response offset: 132
+OK[    3.042085] hex dump:
+[    3.042096] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+
+[    3.042111] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    3.042147] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    3.042157] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    3.042172] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    3.042182] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    3.042192] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    3.042201] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    3.042210] 00 00 00 00
+[    3.042219] ctx=fff0000006295fe0 session=1 shm=fff00000062c1ba0 shm_va=fff00000062d0000
+[    3.042234] ctx       = fff0000006295fe0
+[    3.042244] teedev    = fff000000185b000
+[    3.083048] POST TA RESPONSE
+[    3.083276] request.header.size: 132 request.header.response_size: 12
+[    3.083533] serialized request size: 144
+[    3.083545] response offset: 0
+[    3.083556] hex dump:
+[    3.083569] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    3.083605] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    3.083635] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    3.083650] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    3.083713] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    3.083724] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    3.083738] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    3.083766] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    3.083781] 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00
+[    3.083794] struct sg_validate_response:
+[    3.083802] VERSION: 1
+[    3.083810] DECISION: 0
+[    3.083817] REASON: 0
+[    3.083827] exiting sg_tee_validate() function
+[    3.083883] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 0
+Starting network: [    3.252113] entered sg_tee_validate() function
+[    3.252246] entered sg_serialize_request: buffer=fff00000062d0000
+[    3.252309] proposed reserving offset: 20
+[    3.252342] entered sg_serialize_transaction
+[    3.252388] sg_serialize_transaction: buf=fff00000062d0000 offset=20 metadata=ffff800080bc2308
+[    3.252415] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=20 value=1
+[    3.252452] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=24 value=1
+[    3.252466] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=28 value=0
+[    3.252479] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=32 value=1
+[    3.252493] entered sg_serialize_crtc
+[    3.252499] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=36 value=39
+[    3.252513] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=40 value=1
+[    3.252559] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=44 value=1
+[    3.252582] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=48 value=1272
+[    3.252596] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=52 value=1371
+[    3.252610] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=56 value=180000
+[    3.252632] entered sg_serialize_plane
+[    3.252640] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=60 value=35
+[    3.252663] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=64 value=39
+[    3.252677] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=68 value=43
+[    3.252698] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=72 value=1272
+[    3.252717] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=76 value=1371
+[    3.252731] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=80 value=875713112
+[    3.252753] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=92 value=0
+[    3.252780] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=96 value=0
+[    3.252796] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=100 value=1272
+[    3.252816] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=104 value=1371
+[    3.252835] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=116 value=1272
+[    3.252855] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=120 value=1371
+[    3.252869] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=124 value=1
+[    3.252891] entered sg_serialize_buffer
+[    3.252899] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=128 value=0
+[    3.252921] post sg_serialize_transaction offset: 132
+[    3.252930] entered sg_serialize_header
+[    3.252936] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=0 value=1
+[    3.252958] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=4 value=1
+[    3.252978] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=8 value=132
+[    3.252999] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=12 value=132
+[    3.253020] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080bc2210 offset=16 value=12
+[    3.253035] serialized request size: 132
+[    3.253043] response offset: 132
+[    3.253052] hex dump:
+[    3.253062] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    3.253077] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    3.253087] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    3.253096] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    3.253106] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    3.253123] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    3.253134] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    3.253145] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    3.253155] 00 00 00 00
+[    3.253166] ctx=fff0000006295fe0 session=1 shm=fff00000062c1ba0 shm_va=fff00000062d0000
+[    3.253192] ctx       = fff0000006295fe0
+[    3.253202] teedev    = fff000000185b000
+[    3.290250] POST TA RESPONSE
+[    3.290401] request.header.size: 132 request.header.response_size: 12
+[    3.290505] serialized request size: 144
+[    3.290547] response offset: 0
+[    3.290573] hex dump:
+[    3.290614] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    3.290631] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    3.290641] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    3.290666] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    3.290682] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    3.290702] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    3.290720] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    3.290746] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    3.290758] 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00
+[    3.290777] struct sg_validate_response:
+[    3.290785] VERSION: 1
+[    3.290793] DECISION: 0
+[    3.290802] REASON: 0
+[    3.290818] exiting sg_tee_validate() function
+[    3.290849] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 0
+udhcpc: started, v1.38.0
+[    3.457516] entered sg_tee_validate() function
+[    3.457645] entered sg_serialize_request: buffer=fff00000062d0000
+[    3.457705] proposed reserving offset: 20
+[    3.457741] entered sg_serialize_transaction
+[    3.457748] sg_serialize_transaction: buf=fff00000062d0000 offset=20 metadata=ffff800080412308
+[    3.457760] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=20 value=1
+[    3.457775] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=24 value=1
+[    3.457803] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=28 value=0
+[    3.457817] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=32 value=1
+[    3.457860] entered sg_serialize_crtc
+[    3.457869] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=36 value=39
+[    3.457883] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=40 value=1
+[    3.457896] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=44 value=1
+[    3.457909] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=48 value=1272
+[    3.457924] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=52 value=1371
+[    3.457957] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=56 value=180000
+[    3.457972] entered sg_serialize_plane
+[    3.457988] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=60 value=35
+[    3.458033] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=64 value=39
+[    3.458048] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=68 value=43
+[    3.458061] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=72 value=1272
+[    3.458075] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=76 value=1371
+[    3.458234] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=80 value=875713112
+[    3.458251] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=92 value=0
+[    3.458280] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=96 value=0
+[    3.458318] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=100 value=1272
+[    3.458332] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=104 value=1371
+[    3.458346] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=116 value=1272
+[    3.458367] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=120 value=1371
+[    3.458382] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=124 value=1
+[    3.458395] entered sg_serialize_buffer
+[    3.458402] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=128 value=0
+[    3.458420] post sg_serialize_transaction offset: 132
+[    3.458429] entered sg_serialize_header
+[    3.458436] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=0 value=1
+[    3.458448] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=4 value=1
+[    3.458461] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=8 value=132
+[    3.458485] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=12 value=132
+[    3.458500] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=16 value=12
+[    3.458520] serialized request size: 132
+[    3.458528] response offset: 132
+[    3.458536] hex dump:
+[    3.458548] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    3.458562] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    3.458583] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    3.458593] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    3.458602] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    3.458616] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    3.458660] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    3.458673] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    3.458686] 00 00 00 00
+[    3.458697] ctx=fff0000006295fe0 session=1 shm=fff00000062c1ba0 shm_va=fff00000062d0000
+[    3.458742] ctx       = fff0000006295fe0
+[    3.458759] teedev    = fff000000185b000
+udhcpc: broadcasting discover
+[    3.498255] POST TA RESPONSE
+[    3.498398] request.header.size: 132 request.header.response_size: 12
+[    3.498477] serialized request size: 144
+[    3.498530] response offset: 0
+[    3.498545] hex dump:
+[    3.498572] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    3.498598] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    3.498635] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    3.498666] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    3.498698] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    3.498714] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    3.498737] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    3.498753] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    3.498775] 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00
+[    3.498794] struct sg_validate_response:
+[    3.498804] VERSION: 1
+[    3.498823] DECISION: 0
+[    3.498834] REASON: 0
+[    3.498847] exiting sg_tee_validate() function
+[    3.498881] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 0
+udhcpc: broadcasting select for 10.0.2.15, server 10.0.2.2
+udhcpc: lease of 10.0.2.15 obtained from 10.0.2.2, lease time 86400
+deleting routers
+adding dns 10.0.2.3
+[    3.663512] entered sg_tee_validate() function
+[    3.663671] entered sg_serialize_request: buffer=fff00000062d0000
+[    3.663835] proposed reserving offset: 20
+[    3.663856] entered sg_serialize_transaction
+[    3.663867] sg_serialize_transaction: buf=fff00000062d0000 offset=20 metadata=ffff800080412308
+[    3.663886] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=20 value=1
+[    3.663918] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=24 value=1
+[    3.663946] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=28 value=0
+[    3.663968] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=32 value=1
+[    3.663995] entered sg_serialize_crtc
+[    3.664015] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=36 value=39
+[    3.664034] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=40 value=1
+[    3.664060] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=44 value=1
+[    3.664085] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=48 value=1272
+[    3.664107] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=52 value=1371
+[    3.664134] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=56 value=180000
+[    3.664155] entered sg_serialize_plane
+[    3.664172] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=60 value=35
+[    3.664193] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=64 value=39
+[    3.664215] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=68 value=43
+[    3.664236] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=72 value=1272
+[    3.664264] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=76 value=1371
+[    3.664287] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=80 value=875713112
+[    3.664316] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=92 value=0
+[    3.664339] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=96 value=0
+[    3.664360] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=100 value=1272
+[    3.664390] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=104 value=1371
+[    3.664419] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=116 value=1272
+[    3.664441] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=120 value=1371
+[    3.664574] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=124 value=1
+[    3.664599] entered sg_serialize_buffer
+[    3.664728] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=128 value=0
+[    3.664754] post sg_serialize_transaction offset: 132
+[    3.664771] entered sg_serialize_header
+[    3.664781] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=0 value=1
+[    3.664809] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=4 value=1
+[    3.664838] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=8 value=132
+[    3.664861] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=12 value=132
+[    3.664884] sg_write_u32: buf=fff00000062d0000 offset_ptr=ffff800080412210 offset=16 value=12
+[    3.664906] serialized request size: 132
+[    3.664919] response offset: 132
+[    3.664930] hex dump:
+[    3.664950] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    3.664990] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    3.665015] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    3.665038] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    3.665059] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    3.665073] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    3.665087] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    3.665101] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    3.665114] 00 00 00 00
+[    3.665129] ctx=fff0000006295fe0 session=1 shm=fff00000062c1ba0 shm_va=fff00000062d0000
+[    3.665151] ctx       = fff0000006295fe0
+[    3.665176] teedev    = fff000000185b000
+OK
+[    3.705367] POST TA RESPONSE
+[    3.705496] request.header.size: 132 request.header.response_size: 12
+[    3.705565] serialized request size: 144
+[    3.705597] response offset: 0
+[    3.705621] hex dump:
+[    3.705675] 01 00 00 00 01 00 00 00 84 00 00 00 84 00 00 00
+[    3.705707] 0c 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00
+[    3.705742] 01 00 00 00 27 00 00 00 01 00 00 00 01 00 00 00
+[    3.705752] f8 04 00 00 5b 05 00 00 20 bf 02 00 23 00 00 00
+[    3.705772] 27 00 00 00 2b 00 00 00 f8 04 00 00 5b 05 00 00
+[    3.705797] 58 52 32 34 00 00 00 00 00 00 00 00 00 00 00 00
+[    3.705807] 00 00 00 00 f8 04 00 00 5b 05 00 00 00 00 00 00
+[    3.705817] 00 00 00 00 f8 04 00 00 5b 05 00 00 01 00 00 00
+[    3.705826] 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00
+[    3.705837] struct sg_validate_response:
+[    3.705845] VERSION: 1
+[    3.705876] DECISION: 0
+[    3.705893] REASON: 0
+[    3.705909] exiting sg_tee_validate() function
+[    3.705946] virtio-pci 0000:00:02.0: [drm] SG validated the request as: decision: 0 reason: 0
+Starting crond: OK
+qemu: terminating on signal 2
