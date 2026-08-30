@@ -53,17 +53,21 @@ fi
 ###################################################################
 
 # using EARLY_TA_PATHS as the way to embed an out-of-tree built TA into the OPTEE OS Image
-EARLY_TA="$ROOT/out/buildroot/build/sg-tee-test-1.0/ta/out/cc6c3285-e725-4249-bfc4-3ad5a558e051.stripped.elf"
+EARLY_TA_1="$ROOT/out/buildroot/build/sg-tee-test-1.0/ta/out/cc6c3285-e725-4249-bfc4-3ad5a558e051.stripped.elf"
 
-if [[ ! -f "$EARLY_TA" ]]; then
+EARLY_TA_2="$ROOT/out/buildroot/build/sg-tee-abi-test-1.0/ta/out/a6a197ec-d5cb-4e04-b72c-7332ec01d427.stripped.elf"
+
+for ta in "$EARLY_TA_1" "$EARLY_TA_2"; do
+    if [[ ! -f "$ta" ]]; then
 	echo "ERROR: early TA not found:"
-	echo " $EARLY_TA "
-	echo "Build sg-tee-test first using buildroot sg-ext"
+	echo " $ta "
+	echo "Build sg-tee-{abi}-test first using buildroot sg-ext"
 	exit 1
-fi
+    fi
 
-echo "Using EARLY TA:"
-echo "  $EARLY_TA"
+    echo "Using EARLY TA:"
+    echo "  $ta "
+done
 
 make "${COMMON_ARGS[@]}" \
-    EARLY_TA_PATHS="$EARLY_TA"
+    EARLY_TA_PATHS="$EARLY_TA_1 $EARLY_TA_2"
