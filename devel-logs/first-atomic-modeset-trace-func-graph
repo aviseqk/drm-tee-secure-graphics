@@ -1,0 +1,2423 @@
+# cat /sys/kernel/tracing/trace
+# tracer: function_graph
+#
+# CPU  DURATION                  FUNCTION CALLS
+# |     |   |                     |   |   |   |
+ 2)               |  drm_mode_atomic_ioctl() {
+ 2)               |    drm_atomic_commit_alloc() {
+ 2) ! 226.854 us  |      __kmalloc_cache_noprof();
+ 2)               |      drm_atomic_commit_init() {
+ 2)   9.528 us    |        __kmalloc_noprof();
+ 2)   5.510 us    |        __kmalloc_noprof();
+ 2)   4.117 us    |        __kmalloc_noprof();
+ 2)   4.248 us    |        drm_dev_get();
+ 2)   3.948 us    |        __drm_dev_dbg();
+ 2) + 57.300 us   |      }
+ 2) ! 560.513 us  |    }
+ 2) + 11.121 us   |    drm_modeset_acquire_init();
+ 2)               |    drm_mode_object_find() {
+ 2)               |      __drm_mode_object_find() {
+ 2)   3.748 us    |        mutex_lock();
+ 2)               |        _drm_lease_held() {
+ 2)               |          drm_file_get_master() {
+ 2)   3.407 us    |            _raw_spin_lock();
+ 2)   3.567 us    |            _raw_spin_unlock();
+ 2) + 19.227 us   |          }
+ 2)   4.128 us    |          drm_master_put();
+ 2) + 35.689 us   |        }
+ 2)   3.587 us    |        mutex_unlock();
+ 2) + 68.110 us   |      }
+ 2) + 76.116 us   |    }
+ 2)   4.910 us    |    drm_mode_obj_find_prop_id();
+ 2)               |    drm_atomic_set_property() {
+ 2) + 40.358 us   |      drm_property_change_valid_get();
+ 2)               |      drm_atomic_get_plane_state() {
+ 2)               |        drm_modeset_lock() {
+ 2) + 16.782 us   |          ww_mutex_lock_interruptible();
+ 2) + 41.490 us   |        }
+ 2)               |        virtio_gpu_plane_duplicate_state() {
+ 2)   9.679 us    |          __kmalloc_cache_noprof();
+ 2)               |          __drm_atomic_helper_plane_duplicate_state() {
+ 2)               |            drm_mode_object_get() {
+ 2)   4.268 us    |              __drm_dev_dbg();
+ 2) + 20.699 us   |            }
+ 2) + 31.671 us   |          }
+ 2) ! 112.766 us  |        }
+ 2)   4.138 us    |        __drm_dev_dbg();
+ 2)               |        drm_atomic_get_crtc_state() {
+ 2)               |          drm_modeset_lock() {
+ 2)   3.516 us    |            ww_mutex_lock_interruptible();
+ 2) + 11.031 us   |          }
+ 2)               |          drm_atomic_helper_crtc_duplicate_state() {
+ 2)   5.090 us    |            __kmalloc_cache_noprof();
+ 2)               |            __drm_atomic_helper_crtc_duplicate_state() {
+ 2)               |              drm_property_blob_get() {
+ 2)               |                drm_mode_object_get() {
+ 2)   3.356 us    |                  __drm_dev_dbg();
+ 2) + 10.871 us   |                }
+ 2) + 18.686 us   |              }
+ 2) + 29.366 us   |            }
+ 2) + 54.464 us   |          }
+ 2)   3.376 us    |          __drm_dev_dbg();
+ 2) + 87.157 us   |        }
+ 2) ! 270.668 us  |      }
+ 2) + 11.432 us   |      drm_property_change_valid_put();
+ 2) ! 491.510 us  |    }
+ 2)   3.647 us    |    drm_mode_obj_find_prop_id();
+ 2)               |    drm_atomic_set_property() {
+ 2)   3.617 us    |      drm_property_change_valid_get();
+ 2)   3.356 us    |      drm_atomic_get_plane_state();
+ 2)   3.436 us    |      drm_property_change_valid_put();
+ 2) + 37.853 us   |    }
+ 2)   3.367 us    |    drm_mode_obj_find_prop_id();
+ 2)               |    drm_atomic_set_property() {
+ 2)   3.607 us    |      drm_property_change_valid_get();
+ 2)   3.326 us    |      drm_atomic_get_plane_state();
+ 2)   3.427 us    |      drm_property_change_valid_put();
+ 2) + 49.475 us   |    }
+ 2)   3.347 us    |    drm_mode_obj_find_prop_id();
+ 2)               |    drm_atomic_set_property() {
+ 2)   3.517 us    |      drm_property_change_valid_get();
+ 2)   3.367 us    |      drm_atomic_get_plane_state();
+ 2)   3.296 us    |      drm_property_change_valid_put();
+ 2) + 35.208 us   |    }
+ 2) ! 249.407 us  |    drm_mode_obj_find_prop_id();
+ 2)               |    drm_atomic_set_property() {
+ 2) + 30.869 us   |      drm_property_change_valid_get();
+ 2)   3.276 us    |      drm_atomic_get_plane_state();
+ 2)   3.217 us    |      drm_property_change_valid_put();
+ 2) + 57.610 us   |    }
+ 2)   3.506 us    |    drm_mode_obj_find_prop_id();
+ 2)               |    drm_atomic_set_property() {
+ 2)   3.327 us    |      drm_property_change_valid_get();
+ 2)   3.226 us    |      drm_atomic_get_plane_state();
+ 2)   3.196 us    |      drm_property_change_valid_put();
+ 2) + 30.528 us   |    }
+ 2)   3.346 us    |    drm_mode_obj_find_prop_id();
+ 2)               |    drm_atomic_set_property() {
+ 2)   3.276 us    |      drm_property_change_valid_get();
+ 2)   3.307 us    |      drm_atomic_get_plane_state();
+ 2)   3.206 us    |      drm_property_change_valid_put();
+ 2) + 29.186 us   |    }
+ 2)   3.347 us    |    drm_mode_obj_find_prop_id();
+ 2)               |    drm_atomic_set_property() {
+ 2)   3.246 us    |      drm_property_change_valid_get();
+ 2)   3.306 us    |      drm_atomic_get_plane_state();
+ 2)   4.238 us    |      drm_property_change_valid_put();
+ 2) + 32.412 us   |    }
+ 2)   4.689 us    |    drm_mode_obj_find_prop_id();
+ 2)               |    drm_atomic_set_property() {
+ 2)               |      drm_property_change_valid_get() {
+ 2)               |        __drm_mode_object_find() {
+ 2)   3.266 us    |          mutex_lock();
+ 2)   3.897 us    |          mutex_unlock();
+ 2) + 23.705 us   |        }
+ 2) + 59.665 us   |      }
+ 2)   3.356 us    |      drm_atomic_get_plane_state();
+ 2)               |      drm_framebuffer_lookup() {
+ 2)               |        __drm_mode_object_find() {
+ 2)   3.196 us    |          mutex_lock();
+ 2)   3.236 us    |          mutex_unlock();
+ 2) + 18.275 us   |        }
+ 2) + 33.104 us   |      }
+ 2)               |      drm_atomic_set_fb_for_plane() {
+ 2)   3.577 us    |        __drm_dev_dbg();
+ 2)               |        drm_mode_object_get() {
+ 2)   3.357 us    |          __drm_dev_dbg();
+ 2) + 10.941 us   |        }
+ 2)               |        drm_mode_object_put() {
+ 2)               |          drm_mode_object_put.part.0() {
+ 2)   4.018 us    |            __drm_dev_dbg();
+ 2) + 12.885 us   |          }
+ 2) + 21.040 us   |        }
+ 2) + 64.453 us   |      }
+ 2)               |      drm_mode_object_put() {
+ 2)               |        drm_mode_object_put.part.0() {
+ 2)   3.336 us    |          __drm_dev_dbg();
+ 2) + 10.770 us   |        }
+ 2) + 19.067 us   |      }
+ 2)               |      drm_property_change_valid_put() {
+ 2)               |        drm_mode_object_put() {
+ 2)               |          drm_mode_object_put.part.0() {
+ 2)   3.527 us    |            __drm_dev_dbg();
+ 2) + 10.881 us   |          }
+ 2) + 18.184 us   |        }
+ 2) + 49.795 us   |      }
+ 2) ! 288.422 us  |    }
+ 2)   3.597 us    |    drm_mode_obj_find_prop_id();
+ 2)               |    drm_atomic_set_property() {
+ 2)               |      drm_property_change_valid_get() {
+ 2)               |        __drm_mode_object_find() {
+ 2)   4.418 us    |          mutex_lock();
+ 2) + 18.315 us   |          _drm_lease_held();
+ 2)   3.276 us    |          mutex_unlock();
+ 2) + 44.314 us   |        }
+ 2) + 51.709 us   |      }
+ 2)   4.729 us    |      drm_atomic_get_plane_state();
+ 2)               |      irq_enter_rcu() {
+ 2)   4.669 us    |        irqtime_account_irq();
+ 2) + 13.786 us   |      }
+ 2)               |      do_interrupt_handler() {
+ 2)   ==========> |
+ 2)               |        gic_handle_irq() {
+ 2)               |          generic_handle_domain_irq() {
+ 2)               |            __irq_resolve_mapping() {
+ 2)   3.557 us    |              __rcu_read_lock();
+ 2)   9.689 us    |              __rcu_read_unlock();
+ 2) + 29.937 us   |            }
+ 2)               |            handle_irq_desc() {
+ 2)               |              handle_percpu_devid_irq() {
+ 2)               |                arch_timer_handler_virt() {
+ 2)               |                  hrtimer_interrupt() {
+ 2)   3.497 us    |                    _raw_spin_lock_irqsave();
+ 2)               |                    ktime_get_update_offsets_now() {
+ 2)   3.617 us    |                      arch_counter_read();
+ 2) + 12.474 us   |                    }
+ 2)               |                    __hrtimer_run_queues() {
+ 2)   4.889 us    |                      __remove_hrtimer();
+ 2)   3.998 us    |                      _raw_spin_unlock_irqrestore();
+ 2)               |                      tick_nohz_handler() {
+ 2)               |                        ktime_get() {
+ 2)   3.466 us    |                          arch_counter_read();
+ 2) + 11.041 us   |                        }
+ 2)               |                        tick_do_update_jiffies64() {
+ 2)   3.336 us    |                          _raw_spin_lock();
+ 2)   4.238 us    |                          calc_global_load();
+ 2)   3.276 us    |                          _raw_spin_unlock();
+ 2)               |                          update_wall_time() {
+ 2)   3.617 us    |                            _raw_spin_lock_irqsave();
+ 2)               |                            __timekeeping_advance.constprop.0() {
+ 2)   3.446 us    |                              arch_counter_read();
+ 2)   3.336 us    |                              ntp_tick_length();
+ 2)   3.166 us    |                              ntp_tick_length();
+ 2)               |                              timekeeping_update_from_shadow.constprop.0() {
+ 2)   3.797 us    |                                ntp_get_next_leap();
+ 2)   6.382 us    |                                update_vsyscall();
+ 2)               |                                raw_notifier_call_chain() {
+ 2)   3.477 us    |                                  notifier_call_chain();
+ 2) + 11.071 us   |                                }
+ 2) + 39.636 us   |                              }
+ 2) + 72.299 us   |                            }
+ 2)   3.546 us    |                            _raw_spin_unlock_irqrestore();
+ 2) + 95.573 us   |                          }
+ 2) ! 128.797 us  |                        }
+ 2)               |                        update_process_times() {
+ 2)               |                          account_process_tick() {
+ 2)               |                            account_system_index_time() {
+ 2)   3.436 us    |                              cpuacct_account_field();
+ 2)   3.778 us    |                              acct_account_cputime();
+ 2) + 20.900 us   |                            }
+ 2) + 29.667 us   |                          }
+ 2)   3.587 us    |                          hrtimer_run_queues();
+ 2)               |                          tmigr_requires_handle_remote() {
+ 2)   3.486 us    |                            get_jiffies_update();
+ 2)               |                            __walk_groups_from() {
+ 2)   3.748 us    |                              tmigr_requires_handle_remote_up();
+ 2) + 13.116 us   |                            }
+ 2) + 29.276 us   |                          }
+ 2)               |                          rcu_sched_clock_irq() {
+ 2)   3.567 us    |                            rcu_qs();
+ 2)   3.576 us    |                            rcu_is_cpu_rrupt_from_idle();
+ 2)   3.607 us    |                            rcu_segcblist_ready_cbs();
+ 2)   3.607 us    |                            rcu_is_cpu_rrupt_from_idle();
+ 2) + 40.598 us   |                          }
+ 2)               |                          sched_tick() {
+ 2)   3.788 us    |                            topology_scale_freq_tick();
+ 2)   3.426 us    |                            _raw_spin_lock();
+ 2)               |                            update_rq_clock() {
+ 2)   4.659 us    |                              update_irq_load_avg();
+ 2) + 15.139 us   |                            }
+ 2)   5.350 us    |                            update_hw_load_avg();
+ 2)               |                            task_tick_fair() {
+ 2)               |                              update_curr() {
+ 2)               |                                update_se() {
+ 2)   4.338 us    |                                  cpuacct_charge();
+ 2) + 15.440 us   |                                }
+ 2)   4.298 us    |                                avg_vruntime();
+ 2)               |                                dl_server_update() {
+ 2)   5.190 us    |                                  update_curr_dl_se();
+ 2) + 13.576 us   |                                }
+ 2) + 52.411 us   |                              }
+ 2)   5.340 us    |                              __update_load_avg_se();
+ 2)   5.059 us    |                              __update_load_avg_cfs_rq();
+ 2)   3.437 us    |                              update_cfs_group();
+ 2)               |                              update_curr() {
+ 2)   3.447 us    |                                update_se();
+ 2)   3.286 us    |                                avg_vruntime();
+ 2) + 18.154 us   |                              }
+ 2)   3.386 us    |                              __update_load_avg_se();
+ 2)   3.246 us    |                              __update_load_avg_cfs_rq();
+ 2)   4.259 us    |                              update_cfs_group();
+ 2) ! 137.253 us  |                            }
+ 2)   3.577 us    |                            calc_global_load_tick();
+ 2)   3.297 us    |                            _raw_spin_unlock();
+ 2)               |                            perf_event_task_tick() {
+ 2)   3.707 us    |                              perf_adjust_freq_unthr_context();
+ 2)   4.087 us    |                              __rcu_read_lock();
+ 2)   3.226 us    |                              __rcu_read_unlock();
+ 2) + 27.442 us   |                            }
+ 2)   3.597 us    |                            idle_cpu();
+ 2)               |                            sched_balance_trigger() {
+ 2)   3.707 us    |                              nohz_balance_exit_idle();
+ 2) + 16.532 us   |                            }
+ 2) ! 267.402 us  |                          }
+ 2)   4.128 us    |                          run_posix_cpu_timers();
+ 2) ! 406.558 us  |                        }
+ 2)               |                        profile_tick() {
+ 2)               |                          profile_pc() {
+ 2)   4.118 us    |                            profile_pc_cb();
+ 2) + 17.042 us   |                          }
+ 2) + 24.707 us   |                        }
+ 2)   3.557 us    |                        hrtimer_forward();
+ 2) ! 601.281 us  |                      }
+ 2)   3.707 us    |                      _raw_spin_lock_irq();
+ 2)   5.620 us    |                      enqueue_hrtimer();
+ 2) ! 645.686 us  |                    }
+ 2)               |                    ktime_get_update_offsets_now() {
+ 2)   4.459 us    |                      arch_counter_read();
+ 2) + 14.258 us   |                    }
+ 2)   4.568 us    |                    __hrtimer_get_next_event();
+ 2)   4.750 us    |                    __hrtimer_get_next_event();
+ 2)               |                    tick_program_event() {
+ 2)               |                      clockevents_program_event() {
+ 2)               |                        ktime_get() {
+ 2)   4.048 us    |                          arch_counter_read();
+ 2) + 13.165 us   |                        }
+ 2) + 14.488 us   |                        arch_timer_set_next_event_virt();
+ 2) + 41.960 us   |                      }
+ 2) + 52.270 us   |                    }
+ 2) + 32.512 us   |                    _raw_spin_unlock_irqrestore();
+ 2) ! 827.894 us  |                  }
+ 2) ! 837.643 us  |                }
+ 2)               |                add_interrupt_randomness() {
+ 2)   3.406 us    |                  fast_mix();
+ 2) + 12.383 us   |                }
+ 2) + 10.791 us   |                gic_eoi_irq();
+ 2) ! 877.680 us  |              }
+ 2) ! 885.664 us  |            }
+ 2) ! 927.475 us  |          }
+ 2) ! 943.936 us  |        }
+ 2)   <========== |
+ 2) ! 956.680 us  |      }
+ 2)               |      irq_exit_rcu() {
+ 2)               |        irqtime_account_irq() {
+ 2)   3.297 us    |          irqtime_account_delta();
+ 2) + 11.983 us   |        }
+ 2)   5.631 us    |        idle_cpu();
+ 2) + 30.618 us   |      }
+ 2)   3.376 us    |      raw_irqentry_exit_cond_resched();
+ 2)               |      drm_mode_object_find() {
+ 2)               |        __drm_mode_object_find() {
+ 2)   3.787 us    |          mutex_lock();
+ 2)               |          _drm_lease_held() {
+ 2)               |            drm_file_get_master() {
+ 2)   3.717 us    |              _raw_spin_lock();
+ 2)   3.266 us    |              _raw_spin_unlock();
+ 2) + 35.288 us   |            }
+ 2)   4.689 us    |            drm_master_put();
+ 2) + 54.184 us   |          }
+ 2)   3.947 us    |          mutex_unlock();
+ 2) + 85.463 us   |        }
+ 2) + 93.879 us   |      }
+ 2) + 27.052 us   |      drm_atomic_set_crtc_for_plane();
+ 2)               |      drm_property_change_valid_put() {
+ 2)   7.895 us    |        drm_mode_object_put();
+ 2) + 16.291 us   |      }
+ 2) # 1379.659 us |    }
+ 2)   3.396 us    |    drm_mode_object_put();
+ 2)               |    drm_mode_object_find() {
+ 2)               |      __drm_mode_object_find() {
+ 2)   3.447 us    |        mutex_lock();
+ 2)               |        _drm_lease_held() {
+ 2)               |          drm_file_get_master() {
+ 2)   3.347 us    |            _raw_spin_lock();
+ 2)   3.276 us    |            _raw_spin_unlock();
+ 2) + 18.135 us   |          }
+ 2)   3.758 us    |          drm_master_put();
+ 2) + 33.574 us   |        }
+ 2)   3.347 us    |        mutex_unlock();
+ 2) + 56.407 us   |      }
+ 2) + 63.682 us   |    }
+ 2)   3.917 us    |    drm_mode_obj_find_prop_id();
+ 2)               |    drm_atomic_set_property() {
+ 2)   4.258 us    |      drm_property_change_valid_get();
+ 2)   4.288 us    |      drm_atomic_get_crtc_state();
+ 2)   3.427 us    |      drm_property_change_valid_put();
+ 2) + 91.265 us   |    }
+ 2)   3.527 us    |    drm_mode_obj_find_prop_id();
+ 2)               |    drm_atomic_set_property() {
+ 2)               |      drm_property_change_valid_get() {
+ 2)               |        __drm_mode_object_find() {
+ 2)   3.206 us    |          mutex_lock();
+ 2)   3.286 us    |          mutex_unlock();
+ 2) + 19.166 us   |        }
+ 2) + 65.075 us   |      }
+ 2)   3.406 us    |      drm_atomic_get_crtc_state();
+ 2)               |      drm_property_lookup_blob() {
+ 2)               |        __drm_mode_object_find() {
+ 2)   3.397 us    |          mutex_lock();
+ 2)   3.206 us    |          mutex_unlock();
+ 2) + 18.446 us   |        }
+ 2) + 40.137 us   |      }
+ 2)               |      drm_atomic_set_mode_prop_for_crtc() {
+ 2)               |        drm_property_blob_put() {
+ 2)               |          drm_mode_object_put() {
+ 2)               |            drm_mode_object_put.part.0() {
+ 2)   3.868 us    |              __drm_dev_dbg();
+ 2) + 14.298 us   |            }
+ 2) + 22.814 us   |          }
+ 2) + 31.861 us   |        }
+ 2)               |        drm_mode_convert_umode() {
+ 2)   7.595 us    |          drm_mode_validate_driver();
+ 2)   6.252 us    |          drm_mode_set_crtcinfo();
+ 2) ! 143.415 us  |        }
+ 2)               |        drm_property_blob_get() {
+ 2)               |          drm_mode_object_get() {
+ 2)   3.427 us    |            __drm_dev_dbg();
+ 2) + 10.901 us   |          }
+ 2) + 19.047 us   |        }
+ 2)   3.567 us    |        __drm_dev_dbg();
+ 2) ! 307.608 us  |      }
+ 2)               |      drm_property_blob_put() {
+ 2)               |        drm_mode_object_put() {
+ 2)               |          drm_mode_object_put.part.0() {
+ 2)   3.357 us    |            __drm_dev_dbg();
+ 2) + 10.680 us   |          }
+ 2) + 17.994 us   |        }
+ 2) + 25.248 us   |      }
+ 2)               |      drm_property_change_valid_put() {
+ 2)               |        drm_mode_object_put() {
+ 2)               |          drm_mode_object_put.part.0() {
+ 2)   3.376 us    |            __drm_dev_dbg();
+ 2) + 10.641 us   |          }
+ 2) + 17.914 us   |        }
+ 2) + 30.017 us   |      }
+ 2) ! 533.030 us  |    }
+ 2)   3.277 us    |    drm_mode_object_put();
+ 2)               |    drm_mode_object_find() {
+ 2)               |      __drm_mode_object_find() {
+ 2) + 10.179 us   |        mutex_lock();
+ 2)               |        _drm_lease_held() {
+ 2)               |          drm_file_get_master() {
+ 2)   3.306 us    |            _raw_spin_lock();
+ 2)   3.416 us    |            _raw_spin_unlock();
+ 2) + 18.025 us   |          }
+ 2)   6.702 us    |          drm_master_put();
+ 2) + 36.540 us   |        }
+ 2)   3.306 us    |        mutex_unlock();
+ 2) + 68.772 us   |      }
+ 2) + 75.985 us   |    }
+ 2)   3.787 us    |    drm_mode_obj_find_prop_id();
+ 2)               |    drm_atomic_set_property() {
+ 2)               |      drm_property_change_valid_get() {
+ 2)               |        __drm_mode_object_find() {
+ 2)   3.216 us    |          mutex_lock();
+ 2)   3.557 us    |          _drm_lease_held();
+ 2)   3.246 us    |          mutex_unlock();
+ 2) + 26.000 us   |        }
+ 2) + 34.626 us   |      }
+ 2)               |      drm_atomic_get_connector_state() {
+ 2)               |        drm_modeset_lock() {
+ 2)   4.258 us    |          ww_mutex_lock_interruptible();
+ 2) + 14.307 us   |        }
+ 2)               |        krealloc_node_align_noprof() {
+ 2) + 11.883 us   |          __kmalloc_node_track_caller_noprof();
+ 2)   5.641 us    |          kfree();
+ 2) + 42.331 us   |        }
+ 2)               |        drm_atomic_helper_connector_duplicate_state() {
+ 2)   9.017 us    |          __kmalloc_cache_noprof();
+ 2)               |          drm_mode_object_get() {
+ 2)   3.747 us    |            __drm_dev_dbg();
+ 2) + 11.432 us   |          }
+ 2) + 45.687 us   |        }
+ 2)               |        drm_mode_object_get() {
+ 2)   3.356 us    |          __drm_dev_dbg();
+ 2) + 10.710 us   |        }
+ 2)   3.386 us    |        __drm_dev_dbg();
+ 2)   3.467 us    |        drm_atomic_get_crtc_state();
+ 2) ! 270.988 us  |      }
+ 2)               |      drm_mode_object_find() {
+ 2)               |        __drm_mode_object_find() {
+ 2)   3.326 us    |          mutex_lock();
+ 2)               |          _drm_lease_held() {
+ 2)               |            drm_file_get_master() {
+ 2)   3.297 us    |              _raw_spin_lock();
+ 2)   3.287 us    |              _raw_spin_unlock();
+ 2) + 18.024 us   |            }
+ 2)   3.447 us    |            drm_master_put();
+ 2) + 33.064 us   |          }
+ 2)   3.306 us    |          mutex_unlock();
+ 2) + 55.696 us   |        }
+ 2) + 63.502 us   |      }
+ 2) + 17.253 us   |      drm_atomic_set_crtc_for_connector();
+ 2)               |      drm_property_change_valid_put() {
+ 2)   3.176 us    |        drm_mode_object_put();
+ 2) + 10.730 us   |      }
+ 2) ! 491.370 us  |    }
+ 2)               |    drm_mode_object_put() {
+ 2)               |      drm_mode_object_put.part.0() {
+ 2)   3.366 us    |        __drm_dev_dbg();
+ 2) + 10.941 us   |      }
+ 2) + 18.405 us   |    }
+ 2)               |    drm_atomic_commit() {
+ 2)               |      drm_atomic_check_only() {
+ 2)   3.477 us    |        __drm_dev_dbg();
+ 2)   3.878 us    |        drm_plane_has_format();
+ 2)   3.447 us    |        __drm_plane_get_damage_clips();
+ 2)   3.477 us    |        drm_plane_get_damage_clips_count();
+ 2)               |        drm_atomic_helper_check() {
+ 2)               |          drm_atomic_helper_check_modeset() {
+ 2)   3.366 us    |            mutex_is_locked();
+ 2)               |            drm_mode_equal() {
+ 2)   4.047 us    |              drm_mode_match();
+ 2) + 11.662 us   |            }
+ 2)   3.377 us    |            __drm_dev_dbg();
+ 2)   3.376 us    |            drm_dev_has_vblank();
+ 2)               |            handle_conflicting_encoders() {
+ 2) + 14.798 us   |              drm_connector_get_single_encoder();
+ 2)   3.437 us    |              drm_connector_list_iter_begin();
+ 2)               |              drm_connector_list_iter_next() {
+ 2)   3.868 us    |                _raw_spin_lock_irqsave();
+ 2)   3.827 us    |                _raw_spin_unlock_irqrestore();
+ 2) + 20.659 us   |              }
+ 2)               |              drm_connector_list_iter_next() {
+ 2)   3.347 us    |                _raw_spin_lock_irqsave();
+ 2)   3.797 us    |                __drm_connector_put_safe();
+ 2)   3.397 us    |                _raw_spin_unlock_irqrestore();
+ 2) + 28.665 us   |              }
+ 2)   3.737 us    |              drm_connector_list_iter_end();
+ 2) ! 104.580 us  |            }
+ 2)   3.216 us    |            mutex_is_locked();
+ 2)   3.376 us    |            __drm_dev_dbg();
+ 2)   5.030 us    |            drm_connector_get_single_encoder();
+ 2) + 12.193 us   |            set_best_encoder();
+ 2)   4.629 us    |            __drm_dev_dbg();
+ 2) + 10.149 us   |            __drm_dev_dbg();
+ 2)               |            drm_atomic_add_affected_connectors() {
+ 2)   3.868 us    |              drm_atomic_get_crtc_state();
+ 2)               |              drm_modeset_lock() {
+ 2)               |                ww_mutex_lock_interruptible() {
+ 2)               |                  __ww_mutex_lock_interruptible_slowpath() {
+ 2)   4.518 us    |                    __ww_mutex_lock.constprop.0();
+ 2) + 25.488 us   |                  }
+ 2) + 54.625 us   |                }
+ 2) + 63.231 us   |              }
+ 2)   3.516 us    |              __drm_dev_dbg();
+ 2)   3.276 us    |              drm_connector_list_iter_begin();
+ 2)               |              drm_connector_list_iter_next() {
+ 2)   4.188 us    |                _raw_spin_lock_irqsave();
+ 2)   3.516 us    |                _raw_spin_unlock_irqrestore();
+ 2) + 19.487 us   |              }
+ 2)               |              drm_atomic_get_connector_state() {
+ 2)               |                drm_modeset_lock() {
+ 2)               |                  ww_mutex_lock_interruptible() {
+ 2)               |                    __ww_mutex_lock_interruptible_slowpath() {
+ 2)   3.386 us    |                      __ww_mutex_lock.constprop.0();
+ 2) + 10.691 us   |                    }
+ 2) + 18.105 us   |                  }
+ 2) + 25.378 us   |                }
+ 2) + 33.715 us   |              }
+ 2)               |              drm_connector_list_iter_next() {
+ 2)   3.447 us    |                _raw_spin_lock_irqsave();
+ 2)   3.476 us    |                __drm_connector_put_safe();
+ 2)   3.417 us    |                _raw_spin_unlock_irqrestore();
+ 2) + 25.839 us   |              }
+ 2)   3.457 us    |              drm_connector_list_iter_end();
+ 2) ! 216.384 us  |            }
+ 2)               |            drm_atomic_add_affected_planes() {
+ 2)   3.607 us    |              __drm_dev_dbg();
+ 2)   4.248 us    |              drm_atomic_get_plane_state();
+ 2) + 41.009 us   |            }
+ 2)               |            drm_atomic_add_encoder_bridges() {
+ 2)   3.447 us    |              __drm_dev_dbg();
+ 2)   3.527 us    |              mutex_lock();
+ 2)   3.596 us    |              drm_bridge_get();
+ 2)   3.416 us    |              mutex_unlock();
+ 2) + 44.885 us   |            }
+ 2)               |            drm_atomic_add_encoder_bridges() {
+ 2)   3.376 us    |              __drm_dev_dbg();
+ 2)   3.266 us    |              mutex_lock();
+ 2)   3.236 us    |              drm_bridge_get();
+ 2)   3.266 us    |              mutex_unlock();
+ 2) + 32.432 us   |            }
+ 2)   8.737 us    |            drm_encoder_mode_valid();
+ 2)   3.226 us    |            drm_bridge_get();
+ 2)   3.938 us    |            drm_bridge_chain_mode_valid();
+ 2)   3.667 us    |            drm_bridge_put();
+ 2)   8.326 us    |            drm_crtc_mode_valid();
+ 2)   3.787 us    |            drm_mode_copy();
+ 2)   3.216 us    |            drm_bridge_get();
+ 2) + 49.254 us   |            drm_atomic_bridge_chain_check();
+ 2)   3.386 us    |            drm_bridge_put();
+ 2) ! 748.031 us  |          }
+ 2)               |          drm_atomic_helper_check_planes() {
+ 2)   3.287 us    |            mutex_is_locked();
+ 2)               |            drm_atomic_helper_check_plane_damage() {
+ 2)   3.366 us    |              drm_property_blob_put();
+ 2) + 31.280 us   |            }
+ 2)               |            virtio_gpu_plane_atomic_check() {
+ 2)   3.546 us    |              drm_atomic_get_crtc_state();
+ 2)               |              drm_atomic_helper_check_plane_state() {
+ 2)   3.657 us    |                drm_rect_rotate();
+ 2)   3.957 us    |                drm_rect_calc_hscale();
+ 2)   3.657 us    |                drm_rect_calc_vscale();
+ 2)   4.790 us    |                drm_mode_get_hv_timing();
+ 2)   3.787 us    |                drm_rect_clip_scaled();
+ 2)   3.617 us    |                drm_rect_rotate_inv();
+ 2) + 55.577 us   |              }
+ 2) + 71.988 us   |            }
+ 2)   4.248 us    |            virtio_gpu_crtc_atomic_check();
+ 2) ! 135.329 us  |          }
+ 2)   4.418 us    |          drm_self_refresh_helper_alter_state();
+ 2) ! 908.518 us  |        }
+ 2) ! 955.288 us  |      }
+ 2)   4.278 us    |      __drm_dev_dbg();
+ 2)               |      drm_atomic_helper_commit() {
+ 2)               |        drm_atomic_helper_setup_commit() {
+ 2)   8.266 us    |          __kmalloc_cache_noprof();
+ 2)   3.437 us    |          __init_swait_queue_head();
+ 2)   3.237 us    |          __init_swait_queue_head();
+ 2)   3.226 us    |          __init_swait_queue_head();
+ 2)   3.698 us    |          _raw_spin_lock();
+ 2)   3.396 us    |          _raw_spin_unlock();
+ 2)   4.699 us    |          __kmalloc_cache_noprof();
+ 2) + 69.513 us   |        }
+ 2)               |        drm_atomic_helper_prepare_planes() {
+ 2)               |          virtio_gpu_plane_prepare_fb() {
+ 2)               |            drm_gem_plane_helper_prepare_fb() {
+ 2)   4.148 us    |              drm_gem_fb_get_obj();
+ 2)               |              dma_resv_get_singleton() {
+ 2)               |                dma_resv_get_fences() {
+ 2)   3.226 us    |                  __rcu_read_lock();
+ 2)   4.088 us    |                  __rcu_read_unlock();
+ 2) + 23.485 us   |                }
+ 2) + 32.763 us   |              }
+ 2) + 51.799 us   |            }
+ 2) + 62.159 us   |          }
+ 2) + 72.869 us   |        }
+ 2)   5.531 us    |        drm_atomic_helper_wait_for_fences();
+ 2)               |        drm_atomic_helper_swap_state() {
+ 2)               |          wait_for_completion_interruptible() {
+ 2)   4.669 us    |            _raw_spin_lock_irq();
+ 2)   3.978 us    |            _raw_spin_unlock_irq();
+ 2) + 23.244 us   |          }
+ 2)               |          wait_for_completion_interruptible() {
+ 2)   3.396 us    |            _raw_spin_lock_irq();
+ 2)   3.316 us    |            _raw_spin_unlock_irq();
+ 2) + 17.985 us   |          }
+ 2)               |          wait_for_completion_interruptible() {
+ 2)               |              irq_enter_rcu() {
+ 2)   4.920 us    |                irqtime_account_irq();
+ 2) + 14.097 us   |              }
+ 2)               |              do_interrupt_handler() {
+ 2)   ==========> |
+ 2)               |                gic_handle_irq() {
+ 2)               |                  generic_handle_domain_irq() {
+ 2)               |                    __irq_resolve_mapping() {
+ 2)   3.246 us    |                      __rcu_read_lock();
+ 2)   3.727 us    |                      __rcu_read_unlock();
+ 2) + 21.221 us   |                    }
+ 2)               |                    handle_irq_desc() {
+ 2)               |                      handle_percpu_devid_irq() {
+ 2)               |                        arch_timer_handler_virt() {
+ 2)               |                          hrtimer_interrupt() {
+ 2)   3.477 us    |                            _raw_spin_lock_irqsave();
+ 2)               |                            ktime_get_update_offsets_now() {
+ 2)   3.898 us    |                              arch_counter_read();
+ 2) + 14.608 us   |                            }
+ 2)               |                            __hrtimer_run_queues() {
+ 2)   6.863 us    |                              __remove_hrtimer();
+ 2)   4.048 us    |                              _raw_spin_unlock_irqrestore();
+ 2)               |                              tick_nohz_handler() {
+ 2)               |                                ktime_get() {
+ 2)   3.407 us    |                                  arch_counter_read();
+ 2) + 11.692 us   |                                }
+ 2)               |                                tick_do_update_jiffies64() {
+ 2)   3.617 us    |                                  _raw_spin_lock();
+ 2)   3.758 us    |                                  calc_global_load();
+ 2)   3.296 us    |                                  _raw_spin_unlock();
+ 2)               |                                  update_wall_time() {
+ 2)   3.557 us    |                                    _raw_spin_lock_irqsave();
+ 2)               |                                    __timekeeping_advance.constprop.0() {
+ 2)   3.417 us    |                                      arch_counter_read();
+ 2)   3.607 us    |                                      ntp_tick_length();
+ 2)   3.206 us    |                                      ntp_tick_length();
+ 2)               |                                      timekeeping_update_from_shadow.constprop.0() {
+ 2)   3.497 us    |                                        ntp_get_next_leap();
+ 2)   8.176 us    |                                        update_vsyscall();
+ 2)               |                                        raw_notifier_call_chain() {
+ 2)   3.617 us    |                                          notifier_call_chain();
+ 2) + 11.131 us   |                                        }
+ 2) + 42.942 us   |                                      }
+ 2) + 78.130 us   |                                    }
+ 2)   3.547 us    |                                    _raw_spin_unlock_irqrestore();
+ 2) ! 101.444 us  |                                  }
+ 2) ! 135.719 us  |                                }
+ 2)               |                                update_process_times() {
+ 2)               |                                  account_process_tick() {
+ 2)               |                                    account_system_index_time() {
+ 2)   3.717 us    |                                      cpuacct_account_field();
+ 2)   3.788 us    |                                      acct_account_cputime();
+ 2) + 21.291 us   |                                    }
+ 2) + 30.959 us   |                                  }
+ 2)   3.988 us    |                                  hrtimer_run_queues();
+ 2)               |                                  tmigr_requires_handle_remote() {
+ 2)   3.787 us    |                                    get_jiffies_update();
+ 2)               |                                    __walk_groups_from() {
+ 2)   3.828 us    |                                      tmigr_requires_handle_remote_up();
+ 2) + 12.864 us   |                                    }
+ 2) + 29.717 us   |                                  }
+ 2)               |                                  rcu_sched_clock_irq() {
+ 2)   3.797 us    |                                    rcu_is_cpu_rrupt_from_idle();
+ 2)   3.487 us    |                                    rcu_segcblist_ready_cbs();
+ 2)   3.176 us    |                                    rcu_is_cpu_rrupt_from_idle();
+ 2) + 31.280 us   |                                  }
+ 2)               |                                  sched_tick() {
+ 2)   3.677 us    |                                    topology_scale_freq_tick();
+ 2)   3.417 us    |                                    _raw_spin_lock();
+ 2)               |                                    update_rq_clock() {
+ 2)   5.090 us    |                                      update_irq_load_avg();
+ 2) + 15.590 us   |                                    }
+ 2)   5.751 us    |                                    update_hw_load_avg();
+ 2)               |                                    task_tick_fair() {
+ 2)               |                                      update_curr() {
+ 2)               |                                        update_se() {
+ 2)   4.008 us    |                                          cpuacct_charge();
+ 2) + 13.816 us   |                                        }
+ 2)   4.589 us    |                                        avg_vruntime();
+ 2)               |                                        dl_server_update() {
+ 2)   5.571 us    |                                          update_curr_dl_se();
+ 2) + 13.847 us   |                                        }
+ 2) + 50.867 us   |                                      }
+ 2)   6.001 us    |                                      __update_load_avg_se();
+ 2)   5.501 us    |                                      __update_load_avg_cfs_rq();
+ 2)   3.697 us    |                                      update_cfs_group();
+ 2)               |                                      update_curr() {
+ 2)   3.446 us    |                                        update_se();
+ 2)   3.306 us    |                                        avg_vruntime();
+ 2) + 18.876 us   |                                      }
+ 2)   3.437 us    |                                      __update_load_avg_se();
+ 2)   3.306 us    |                                      __update_load_avg_cfs_rq();
+ 2)   3.748 us    |                                      update_cfs_group();
+ 2) ! 136.772 us  |                                    }
+ 2)   3.817 us    |                                    calc_global_load_tick();
+ 2)   3.337 us    |                                    _raw_spin_unlock();
+ 2)               |                                    perf_event_task_tick() {
+ 2)   3.997 us    |                                      perf_adjust_freq_unthr_context();
+ 2)   4.469 us    |                                      __rcu_read_lock();
+ 2)   3.477 us    |                                      __rcu_read_unlock();
+ 2) + 31.280 us   |                                    }
+ 2)   3.777 us    |                                    idle_cpu();
+ 2)               |                                    sched_balance_trigger() {
+ 2)   5.861 us    |                                      nohz_balance_exit_idle();
+ 2) + 18.896 us   |                                    }
+ 2) ! 276.549 us  |                                  }
+ 2)   4.208 us    |                                  run_posix_cpu_timers();
+ 2) ! 410.135 us  |                                }
+ 2)               |                                profile_tick() {
+ 2)               |                                  profile_pc() {
+ 2)   4.879 us    |                                    profile_pc_cb();
+ 2) + 19.347 us   |                                  }
+ 2) + 28.745 us   |                                }
+ 2)   4.018 us    |                                hrtimer_forward();
+ 2) ! 618.283 us  |                              }
+ 2)   3.817 us    |                              _raw_spin_lock_irq();
+ 2)   7.865 us    |                              enqueue_hrtimer();
+ 2) ! 669.020 us  |                            }
+ 2)               |                            ktime_get_update_offsets_now() {
+ 2)   3.627 us    |                              arch_counter_read();
+ 2) + 12.364 us   |                            }
+ 2)   4.198 us    |                            __hrtimer_get_next_event();
+ 2)   3.788 us    |                            __hrtimer_get_next_event();
+ 2)               |                            tick_program_event() {
+ 2)               |                              clockevents_program_event() {
+ 2)               |                                ktime_get() {
+ 2)   3.466 us    |                                  arch_counter_read();
+ 2) + 10.891 us   |                                }
+ 2) + 14.758 us   |                                arch_timer_set_next_event_virt();
+ 2) + 38.213 us   |                              }
+ 2) + 46.709 us   |                            }
+ 2)   3.577 us    |                            _raw_spin_unlock_irqrestore();
+ 2) ! 841.710 us  |                          }
+ 2) ! 853.182 us  |                        }
+ 2)               |                        add_interrupt_randomness() {
+ 2)   3.497 us    |                          fast_mix();
+ 2) + 12.814 us   |                        }
+ 2) + 13.606 us   |                        gic_eoi_irq();
+ 2) ! 900.022 us  |                      }
+ 2) ! 908.198 us  |                    }
+ 2) ! 943.716 us  |                  }
+ 2) ! 975.236 us  |                }
+ 2)   <========== |
+ 2) ! 986.848 us  |              }
+ 2)               |              irq_exit_rcu() {
+ 2)               |                irqtime_account_irq() {
+ 2)   3.968 us    |                  irqtime_account_delta();
+ 2) + 12.934 us   |                }
+ 2) + 88.820 us   |                idle_cpu();
+ 2) ! 129.017 us  |              }
+ 2)   4.629 us    |              raw_irqentry_exit_cond_resched();
+ 2) # 1177.773 us |            _raw_spin_lock_irq();
+ 2)   4.108 us    |            _raw_spin_unlock_irq();
+ 2) # 1226.818 us |          }
+ 2)   3.717 us    |          _raw_spin_lock();
+ 2)   3.387 us    |          _raw_spin_unlock();
+ 2) # 1310.879 us |        }
+ 2)               |        commit_tail() {
+ 2)               |          ktime_get() {
+ 2)   4.358 us    |            arch_counter_read();
+ 2) + 13.846 us   |          }
+ 2)   6.964 us    |          drm_atomic_helper_wait_for_fences();
+ 2)               |          drm_atomic_helper_wait_for_dependencies() {
+ 2)               |            drm_crtc_commit_wait() {
+ 2)               |              wait_for_completion_timeout() {
+ 2)   3.467 us    |                _raw_spin_lock_irq();
+ 2)   3.456 us    |                _raw_spin_unlock_irq();
+ 2) + 19.558 us   |              }
+ 2)               |              wait_for_completion_timeout() {
+ 2)   3.406 us    |                _raw_spin_lock_irq();
+ 2)   3.447 us    |                _raw_spin_unlock_irq();
+ 2) + 18.756 us   |              }
+ 2) + 53.702 us   |            }
+ 2)               |            drm_crtc_commit_wait() {
+ 2)               |              wait_for_completion_timeout() {
+ 2)   3.637 us    |                _raw_spin_lock_irq();
+ 2)   3.657 us    |                _raw_spin_unlock_irq();
+ 2) + 18.565 us   |              }
+ 2)               |              wait_for_completion_timeout() {
+ 2)   3.517 us    |                _raw_spin_lock_irq();
+ 2)   3.407 us    |                _raw_spin_unlock_irq();
+ 2) + 18.636 us   |              }
+ 2) + 48.723 us   |            }
+ 2)               |            drm_crtc_commit_wait() {
+ 2)               |              wait_for_completion_timeout() {
+ 2)   3.397 us    |                _raw_spin_lock_irq();
+ 2)   3.416 us    |                _raw_spin_unlock_irq();
+ 2) + 18.816 us   |              }
+ 2)               |              wait_for_completion_timeout() {
+ 2)   3.376 us    |                _raw_spin_lock_irq();
+ 2)   3.557 us    |                _raw_spin_unlock_irq();
+ 2) + 18.405 us   |              }
+ 2) + 53.583 us   |            }
+ 2) ! 178.542 us  |          }
+ 2)               |          drm_atomic_helper_commit_tail() {
+ 2)               |            drm_atomic_helper_commit_encoder_bridge_disable() {
+ 2)   9.388 us    |              crtc_needs_disable();
+ 2)   5.190 us    |              __drm_dev_dbg();
+ 2)   4.158 us    |              drm_bridge_get();
+ 2)   8.166 us    |              drm_atomic_bridge_chain_disable();
+ 2)   3.657 us    |              drm_bridge_put();
+ 2) + 13.205 us   |              virtio_gpu_enc_disable();
+ 2) ! 105.712 us  |            }
+ 2)               |            drm_atomic_helper_commit_encoder_bridge_post_disable() {
+ 2)   3.237 us    |              crtc_needs_disable();
+ 2)   3.537 us    |              __drm_dev_dbg();
+ 2)   3.216 us    |              drm_bridge_get();
+ 2)   7.234 us    |              drm_atomic_bridge_chain_post_disable();
+ 2)   3.326 us    |              drm_bridge_put();
+ 2) + 52.921 us   |            }
+ 2)               |            drm_atomic_helper_commit_crtc_disable() {
+ 2)   3.176 us    |              crtc_needs_disable();
+ 2)   3.427 us    |              __drm_dev_dbg();
+ 2)               |              virtio_gpu_crtc_atomic_disable() {
+ 2)               |                drm_crtc_vblank_off() {
+ 2)   4.137 us    |                  _raw_spin_lock_irq();
+ 2)   3.306 us    |                  _raw_spin_lock();
+ 2)   3.487 us    |                  __drm_dev_dbg();
+ 2)               |                  drm_vblank_disable_and_save() {
+ 2)   4.208 us    |                    _raw_spin_lock_irqsave();
+ 2)               |                    drm_update_vblank_count() {
+ 2)               |                      get_vblank_counter_and_timestamp() {
+ 2)               |                        __get_vblank_counter() {
+ 2)   3.798 us    |                          drm_crtc_from_index();
+ 2) + 14.117 us   |                        }
+ 2)   3.317 us    |                        drm_crtc_from_index();
+ 2)               |                        drm_crtc_get_last_vbltimestamp() {
+ 2)               |                          drm_crtc_vblank_helper_get_vblank_timestamp_from_timer() {
+ 2)               |                            drm_crtc_vblank_get_vblank_timeout() {
+ 2)   3.958 us    |                              drm_vblank_count_and_time();
+ 2)   3.256 us    |                              drm_vblank_count_and_time();
+ 2) + 21.411 us   |                            }
+ 2) + 30.418 us   |                          }
+ 2) + 41.038 us   |                        }
+ 2)               |                        __get_vblank_counter() {
+ 2)   3.196 us    |                          drm_crtc_from_index();
+ 2) + 10.650 us   |                        }
+ 2) ! 100.392 us  |                      }
+ 2)   3.437 us    |                      __drm_dev_dbg();
+ 2)   3.386 us    |                      __drm_dev_dbg();
+ 2) ! 127.114 us  |                    }
+ 2)   3.277 us    |                    drm_crtc_from_index();
+ 2)               |                    drm_crtc_vblank_helper_disable_vblank_timer() {
+ 2)               |                      drm_crtc_vblank_cancel_timer() {
+ 2)   3.637 us    |                        _raw_spin_lock_irqsave();
+ 2)   5.381 us    |                        _raw_spin_unlock_irqrestore();
+ 2)               |                        hrtimer_try_to_cancel() {
+ 2)   5.511 us    |                          hrtimer_active();
+ 2)               |                          hrtimer_try_to_cancel.part.0() {
+ 2)   3.467 us    |                            _raw_spin_lock_irqsave();
+ 2)   7.103 us    |                            __remove_hrtimer();
+ 2)   3.787 us    |                            _raw_spin_unlock_irqrestore();
+ 2) + 32.733 us   |                          }
+ 2) + 51.028 us   |                        }
+ 2) + 91.516 us   |                      }
+ 2) ! 108.588 us  |                    }
+ 2)   3.447 us    |                    _raw_spin_unlock_irqrestore();
+ 2) ! 312.748 us  |                  }
+ 2)               |                  __wake_up() {
+ 2)   3.516 us    |                    _raw_spin_lock_irqsave();
+ 2)   8.576 us    |                    __wake_up_common();
+ 2)   3.377 us    |                    _raw_spin_unlock_irqrestore();
+ 2) + 33.274 us   |                  }
+ 2)   3.266 us    |                  _raw_spin_unlock();
+ 2)   3.186 us    |                  drm_vblank_count_and_time();
+ 2)               |                  drm_vblank_cancel_pending_works() {
+ 2)               |                    __wake_up() {
+ 2)   3.466 us    |                      _raw_spin_lock_irqsave();
+ 2)   3.357 us    |                      __wake_up_common();
+ 2)   3.416 us    |                      _raw_spin_unlock_irqrestore();
+ 2) + 26.451 us   |                    }
+ 2) + 46.178 us   |                  }
+ 2)   4.028 us    |                  _raw_spin_unlock_irq();
+ 2)               |                  kthread_flush_worker() {
+ 2)   3.647 us    |                    __init_swait_queue_head();
+ 2)   3.597 us    |                    _raw_spin_lock_irqsave();
+ 2)               |                    kthread_insert_work() {
+ 2) + 14.618 us   |                      kthread_insert_work_sanity_check();
+ 2)               |                      wake_up_process() {
+ 2)               |                        try_to_wake_up() {
+ 2)   6.142 us    |                          _raw_spin_lock_irqsave();
+ 2)               |                          select_task_rq_rt() {
+ 2)   3.356 us    |                            __rcu_read_lock();
+ 2)   4.408 us    |                            __rcu_read_unlock();
+ 2) + 37.211 us   |                          }
+ 2)   3.957 us    |                          kthread_is_per_cpu();
+ 2)               |                          ttwu_queue_wakelist() {
+ 2)               |                            __smp_call_single_queue() {
+ 2)   3.356 us    |                              call_function_single_prep_ipi();
+ 2)               |                              arch_send_call_function_single_ipi() {
+ 2)               |                                smp_cross_call() {
+ 2)               |                                  arm64_send_ipi() {
+ 2)               |                                    __ipi_send_mask() {
+ 2) + 28.013 us   |                                      gic_ipi_send_mask();
+ 2) + 38.073 us   |                                    }
+ 2) + 46.900 us   |                                  }
+ 2) + 54.935 us   |                                }
+ 2) + 62.911 us   |                              }
+ 2) + 83.109 us   |                            }
+ 2) ! 114.229 us  |                          }
+ 2)   3.777 us    |                          _raw_spin_unlock_irqrestore();
+ 2) ! 208.649 us  |                        }
+ 2) ! 218.047 us  |                      }
+ 2) ! 260.558 us  |                    }
+ 2)   3.447 us    |                    _raw_spin_unlock_irqrestore();
+ 2)               |                    wait_for_completion() {
+ 2)   3.937 us    |                      _raw_spin_lock_irq();
+ 2)   3.777 us    |                      _raw_spin_unlock_irq();
+ 2)               |                      schedule_timeout() {
+ 2)               |                        schedule() {
+ 2)               |                          rcu_note_context_switch() {
+ 2)   3.576 us    |                            rcu_qs();
+ 2) + 14.828 us   |                          }
+ 2)   4.559 us    |                          migrate_disable_switch.isra.0();
+ 2)   3.898 us    |                          _raw_spin_lock();
+ 2)               |                          update_rq_clock() {
+ 2)   5.761 us    |                            update_irq_load_avg();
+ 2) + 17.082 us   |                          }
+ 2)               |                          dequeue_task_fair() {
+ 2)               |                            dequeue_entities() {
+ 2)               |                              update_curr() {
+ 2)               |                                update_se() {
+ 2)   6.953 us    |                                  cpuacct_charge();
+ 2) + 27.422 us   |                                }
+ 2)               |                                dl_server_update() {
+ 2)   7.184 us    |                                  update_curr_dl_se();
+ 2) + 19.717 us   |                                }
+ 2) + 73.320 us   |                              }
+ 2)   4.659 us    |                              vruntime_eligible();
+ 2)   7.565 us    |                              __update_load_avg_se();
+ 2)   5.671 us    |                              __update_load_avg_cfs_rq();
+ 2)   5.340 us    |                              avg_vruntime();
+ 2)   5.060 us    |                              entity_lag.isra.0();
+ 2)   4.288 us    |                              account_llc_dequeue();
+ 2)   3.587 us    |                              update_cfs_group();
+ 2)               |                              update_curr() {
+ 2)   3.747 us    |                                update_se();
+ 2) + 11.342 us   |                              }
+ 2)   3.266 us    |                              vruntime_eligible();
+ 2)   3.738 us    |                              __update_load_avg_se();
+ 2)   3.316 us    |                              __update_load_avg_cfs_rq();
+ 2)   3.226 us    |                              avg_vruntime();
+ 2)   3.247 us    |                              entity_lag.isra.0();
+ 2)   3.247 us    |                              update_cfs_group();
+ 2) ! 241.312 us  |                            }
+ 2) ! 250.589 us  |                          }
+ 2)               |                          pick_task_fair() {
+ 2)   3.747 us    |                            __msecs_to_jiffies();
+ 2) + 18.104 us   |                          }
+ 2)   4.198 us    |                          pick_task_idle();
+ 2)   6.653 us    |                          put_prev_task_fair();
+ 2)   6.422 us    |                          set_next_task_idle();
+ 2)               |                          fpsimd_thread_switch() {
+ 2) + 10.420 us   |                            fpsimd_save_user_state();
+ 2) + 29.496 us   |                          }
+ 2)   6.773 us    |                          tls_preserve_current_state();
+ 2)   4.949 us    |                          hw_breakpoint_thread_switch();
+ 2)   3.356 us    |                          mte_thread_switch();
+ 2)               |                          finish_task_switch.isra.0() {
+ 2)   7.324 us    |                            _raw_spin_unlock();
+ 2) + 42.992 us   |                          }
+ 2) # 1299.506 us |                        }
+ 2) # 1311.279 us |                      }
+ 2)   4.629 us    |                      _raw_spin_lock_irq();
+ 2)   4.699 us    |                      _raw_spin_unlock_irq();
+ 2) # 1364.661 us |                    }
+ 2) # 1713.488 us |                  }
+ 2) # 2237.351 us |                }
+ 2)               |                virtio_gpu_cmd_set_scanout() {
+ 2)               |                  virtio_gpu_get_vbuf() {
+ 2)               |                    kmem_cache_alloc_noprof() {
+ 2)               |                      irq_enter_rcu() {
+ 2)   5.561 us    |                        irqtime_account_irq();
+ 2) + 15.119 us   |                      }
+ 2)               |                      do_interrupt_handler() {
+ 2)   ==========> |
+ 2)               |                        gic_handle_irq() {
+ 2)               |                          generic_handle_domain_irq() {
+ 2)               |                            __irq_resolve_mapping() {
+ 2)   3.366 us    |                              __rcu_read_lock();
+ 2)   3.417 us    |                              __rcu_read_unlock();
+ 2) + 20.610 us   |                            }
+ 2)               |                            handle_irq_desc() {
+ 2)               |                              handle_percpu_devid_irq() {
+ 2)               |                                arch_timer_handler_virt() {
+ 2)               |                                  hrtimer_interrupt() {
+ 2)   3.777 us    |                                    _raw_spin_lock_irqsave();
+ 2)               |                                    ktime_get_update_offsets_now() {
+ 2)   4.569 us    |                                      arch_counter_read();
+ 2) + 13.686 us   |                                    }
+ 2)               |                                    __hrtimer_run_queues() {
+ 2)   6.042 us    |                                      __remove_hrtimer();
+ 2)   4.349 us    |                                      _raw_spin_unlock_irqrestore();
+ 2)               |                                      tick_nohz_handler() {
+ 2)               |                                        ktime_get() {
+ 2)   3.597 us    |                                          arch_counter_read();
+ 2) + 11.492 us   |                                        }
+ 2)               |                                        tick_do_update_jiffies64() {
+ 2)   4.358 us    |                                          _raw_spin_lock();
+ 2)   5.140 us    |                                          calc_global_load();
+ 2)   3.357 us    |                                          _raw_spin_unlock();
+ 2)               |                                          update_wall_time() {
+ 2)   3.567 us    |                                            _raw_spin_lock_irqsave();
+ 2)               |                                            __timekeeping_advance.constprop.0() {
+ 2)   3.677 us    |                                              arch_counter_read();
+ 2)   4.018 us    |                                              ntp_tick_length();
+ 2)   3.537 us    |                                              ntp_tick_length();
+ 2)               |                                              timekeeping_update_from_shadow.constprop.0() {
+ 2)   3.898 us    |                                                ntp_get_next_leap();
+ 2) + 10.510 us   |                                                update_vsyscall();
+ 2)               |                                                raw_notifier_call_chain() {
+ 2)   3.908 us    |                                                  notifier_call_chain();
+ 2) + 12.474 us   |                                                }
+ 2) + 53.362 us   |                                              }
+ 2) + 93.569 us   |                                            }
+ 2)   3.497 us    |                                            _raw_spin_unlock_irqrestore();
+ 2) ! 117.816 us  |                                          }
+ 2) ! 156.810 us  |                                        }
+ 2)               |                                        update_process_times() {
+ 2)               |                                          account_process_tick() {
+ 2)               |                                            account_system_index_time() {
+ 2)   4.529 us    |                                              cpuacct_account_field();
+ 2)   4.859 us    |                                              acct_account_cputime();
+ 2) + 31.951 us   |                                            }
+ 2) + 52.290 us   |                                          }
+ 2)   3.476 us    |                                          hrtimer_run_queues();
+ 2)               |                                          tmigr_requires_handle_remote() {
+ 2)   3.346 us    |                                            get_jiffies_update();
+ 2)               |                                            __walk_groups_from() {
+ 2)   3.537 us    |                                              tmigr_requires_handle_remote_up();
+ 2) + 12.714 us   |                                            }
+ 2) + 28.655 us   |                                          }
+ 2)               |                                          rcu_sched_clock_irq() {
+ 2)   3.887 us    |                                            rcu_is_cpu_rrupt_from_idle();
+ 2)   3.517 us    |                                            rcu_segcblist_ready_cbs();
+ 2)   3.316 us    |                                            rcu_is_cpu_rrupt_from_idle();
+ 2) + 30.829 us   |                                          }
+ 2)               |                                          sched_tick() {
+ 2)   3.967 us    |                                            topology_scale_freq_tick();
+ 2)   3.407 us    |                                            _raw_spin_lock();
+ 2)               |                                            update_rq_clock() {
+ 2)   4.478 us    |                                              update_irq_load_avg();
+ 2) + 13.626 us   |                                            }
+ 2)   4.258 us    |                                            update_hw_load_avg();
+ 2)               |                                            task_tick_fair() {
+ 2)               |                                              update_curr() {
+ 2)               |                                                update_se() {
+ 2)   4.158 us    |                                                  cpuacct_charge();
+ 2) + 13.646 us   |                                                }
+ 2)               |                                                dl_server_update() {
+ 2)   3.657 us    |                                                  update_curr_dl_se();
+ 2) + 12.244 us   |                                                }
+ 2) + 42.912 us   |                                              }
+ 2)   5.861 us    |                                              __update_load_avg_se();
+ 2)   4.790 us    |                                              __update_load_avg_cfs_rq();
+ 2)   4.278 us    |                                              update_cfs_group();
+ 2)               |                                              update_curr() {
+ 2)   4.769 us    |                                                update_se();
+ 2) + 14.597 us   |                                              }
+ 2)   4.208 us    |                                              __update_load_avg_se();
+ 2)   4.058 us    |                                              __update_load_avg_cfs_rq();
+ 2)   5.260 us    |                                              update_cfs_group();
+ 2) ! 136.571 us  |                                            }
+ 2)   4.749 us    |                                            calc_global_load_tick();
+ 2)   4.419 us    |                                            _raw_spin_unlock();
+ 2)               |                                            perf_event_task_tick() {
+ 2)   5.019 us    |                                              perf_adjust_freq_unthr_context();
+ 2)   3.637 us    |                                              __rcu_read_lock();
+ 2)   3.326 us    |                                              __rcu_read_unlock();
+ 2) + 32.923 us   |                                            }
+ 2)   3.617 us    |                                            idle_cpu();
+ 2)               |                                            sched_balance_trigger() {
+ 2)               |                                              raise_softirq() {
+ 2)   3.507 us    |                                                __raise_softirq_irqoff();
+ 2) + 12.494 us   |                                              }
+ 2)   3.687 us    |                                              nohz_balance_exit_idle();
+ 2) + 38.423 us   |                                            }
+ 2) ! 299.714 us  |                                          }
+ 2) + 12.153 us   |                                          run_posix_cpu_timers();
+ 2) ! 474.908 us  |                                        }
+ 2)               |                                        profile_tick() {
+ 2)               |                                          profile_pc() {
+ 2)   4.639 us    |                                            profile_pc_cb();
+ 2) + 17.554 us   |                                          }
+ 2) + 27.452 us   |                                        }
+ 2)   3.547 us    |                                        hrtimer_forward();
+ 2) ! 700.630 us  |                                      }
+ 2)   3.737 us    |                                      _raw_spin_lock_irq();
+ 2)   7.054 us    |                                      enqueue_hrtimer();
+ 2) ! 748.893 us  |                                    }
+ 2)               |                                    ktime_get_update_offsets_now() {
+ 2)   3.496 us    |                                      arch_counter_read();
+ 2) + 11.862 us   |                                    }
+ 2)   3.537 us    |                                    __hrtimer_get_next_event();
+ 2)   3.467 us    |                                    __hrtimer_get_next_event();
+ 2)               |                                    tick_program_event() {
+ 2)               |                                      clockevents_program_event() {
+ 2)               |                                        ktime_get() {
+ 2)   3.477 us    |                                          arch_counter_read();
+ 2) + 10.911 us   |                                        }
+ 2)   9.007 us    |                                        arch_timer_set_next_event_virt();
+ 2) + 32.743 us   |                                      }
+ 2) + 41.229 us   |                                    }
+ 2)   3.697 us    |                                    _raw_spin_unlock_irqrestore();
+ 2) ! 889.111 us  |                                  }
+ 2) ! 902.928 us  |                                }
+ 2)               |                                add_interrupt_randomness() {
+ 2)   4.709 us    |                                  fast_mix();
+ 2) + 14.468 us   |                                }
+ 2) + 12.053 us   |                                gic_eoi_irq();
+ 2) ! 965.878 us  |                              }
+ 2) ! 974.394 us  |                            }
+ 2) # 1007.618 us |                          }
+ 2) # 1021.906 us |                        }
+ 2)   <========== |
+ 2) # 1041.643 us |                      }
+ 2)               |                      irq_exit_rcu() {
+ 2)               |                        irqtime_account_irq() {
+ 2)   3.396 us    |                          irqtime_account_delta();
+ 2) + 12.193 us   |                        }
+ 2)               |                        do_softirq_own_stack() {
+ 2)               |                          ____do_softirq() {
+ 2)               |                            __do_softirq() {
+ 2)               |                              handle_softirqs() {
+ 2)   3.787 us    |                                irqtime_account_irq();
+ 2)               |                                sched_balance_softirq() {
+ 2)               |                                  sched_balance_update_blocked_averages() {
+ 2)               |                                    raw_spin_rq_lock_nested() {
+ 2)   3.427 us    |                                      _raw_spin_lock();
+ 2) + 11.412 us   |                                    }
+ 2)               |                                    update_rq_clock() {
+ 2)   4.228 us    |                                      update_irq_load_avg();
+ 2) + 12.494 us   |                                    }
+ 2)               |                                    __sched_balance_update_blocked_averages() {
+ 2)               |                                      update_other_load_avgs() {
+ 2)   5.541 us    |                                        update_rt_rq_load_avg();
+ 2)   4.749 us    |                                        update_dl_rq_load_avg();
+ 2)   3.667 us    |                                        update_hw_load_avg();
+ 2)   3.336 us    |                                        update_irq_load_avg();
+ 2) + 38.413 us   |                                      }
+ 2)   3.637 us    |                                      __update_load_avg_cfs_rq();
+ 2)   3.507 us    |                                      __update_load_avg_se();
+ 2)   3.276 us    |                                      __update_load_avg_cfs_rq();
+ 2)   3.217 us    |                                      __update_load_avg_cfs_rq();
+ 2) + 83.430 us   |                                    }
+ 2)   3.317 us    |                                    _raw_spin_unlock();
+ 2) ! 132.935 us  |                                  }
+ 2)               |                                  sched_balance_domains() {
+ 2)   3.236 us    |                                    __rcu_read_lock();
+ 2)   3.457 us    |                                    __msecs_to_jiffies();
+ 2)   3.266 us    |                                    __rcu_read_unlock();
+ 2) + 28.374 us   |                                  }
+ 2) ! 174.815 us  |                                }
+ 2)               |                                irqtime_account_irq() {
+ 2)   3.266 us    |                                  irqtime_account_delta();
+ 2) + 11.903 us   |                                }
+ 2) ! 210.352 us  |                              }
+ 2) ! 218.107 us  |                            }
+ 2) ! 225.982 us  |                          }
+ 2) ! 234.829 us  |                        }
+ 2)   3.266 us    |                        idle_cpu();
+ 2) ! 269.445 us  |                      }
+ 2)   3.777 us    |                      raw_irqentry_exit_cond_resched();
+ 2) + 29.737 us   |                    }
+ 2) # 1433.092 us |                  }
+ 2)               |                  virtio_gpu_queue_fenced_ctrl_buffer() {
+ 2)               |                    drm_dev_enter() {
+ 2)   5.310 us    |                      __srcu_read_lock();
+ 2) + 15.460 us   |                    }
+ 2)   3.327 us    |                    _raw_spin_lock();
+ 2)               |                    virtqueue_add_sgs() {
+ 2) + 11.572 us   |                      __kmalloc_noprof();
+ 2)   4.368 us    |                      vring_map_one_sg();
+ 2)   3.456 us    |                      vring_map_one_sg();
+ 2) + 53.723 us   |                    }
+ 2)   3.417 us    |                    _raw_spin_unlock();
+ 2)               |                    drm_dev_exit() {
+ 2)   3.947 us    |                      __srcu_read_unlock();
+ 2) + 14.638 us   |                    }
+ 2) ! 125.230 us  |                  }
+ 2) # 1598.449 us |                }
+ 2)               |                virtio_gpu_notify() {
+ 2)   3.136 us    |                  _raw_spin_lock();
+ 2)               |                  virtqueue_kick_prepare() {
+ 2)   4.589 us    |                    virtqueue_kick_prepare_split();
+ 2) + 12.915 us   |                  }
+ 2)   3.286 us    |                  _raw_spin_unlock();
+ 2)               |                  virtqueue_notify() {
+ 2) + 18.335 us   |                    vp_notify();
+ 2) + 27.713 us   |                  }
+ 2) + 70.224 us   |                }
+ 2) # 3956.550 us |              }
+ 2)               |                irq_enter_rcu() {
+ 2) + 15.129 us   |                  irqtime_account_irq();
+ 2) + 64.143 us   |                }
+ 2)               |                do_interrupt_handler() {
+ 2)   ==========> |
+ 2)               |                  gic_handle_irq() {
+ 2)               |                    generic_handle_domain_irq() {
+ 2)               |                      __irq_resolve_mapping() {
+ 2)   4.398 us    |                        __rcu_read_lock();
+ 2)   4.448 us    |                        __rcu_read_unlock();
+ 2) + 29.337 us   |                      }
+ 2)               |                      handle_irq_desc() {
+ 2)               |                        handle_percpu_devid_irq() {
+ 2)               |                          arch_timer_handler_virt() {
+ 2)               |                            hrtimer_interrupt() {
+ 2)   5.079 us    |                              _raw_spin_lock_irqsave();
+ 2)               |                              ktime_get_update_offsets_now() {
+ 2) + 12.464 us   |                                arch_counter_read();
+ 2) + 28.765 us   |                              }
+ 2)               |                              __hrtimer_run_queues() {
+ 2) + 11.182 us   |                                __remove_hrtimer();
+ 2)   5.501 us    |                                _raw_spin_unlock_irqrestore();
+ 2)               |                                tick_nohz_handler() {
+ 2)               |                                  ktime_get() {
+ 2)   4.789 us    |                                    arch_counter_read();
+ 2) + 15.069 us   |                                  }
+ 2)   5.290 us    |                                  tick_do_update_jiffies64();
+ 2)               |                                  update_process_times() {
+ 2)               |                                    account_process_tick() {
+ 2)               |                                      account_system_index_time() {
+ 2) + 22.243 us   |                                        cpuacct_account_field();
+ 2)   5.821 us    |                                        acct_account_cputime();
+ 2) + 92.858 us   |                                      }
+ 2) ! 144.045 us  |                                    }
+ 2)   5.241 us    |                                    hrtimer_run_queues();
+ 2)               |                                    tmigr_requires_handle_remote() {
+ 2)   4.719 us    |                                      get_jiffies_update();
+ 2)               |                                      __walk_groups_from() {
+ 2)   5.730 us    |                                        tmigr_requires_handle_remote_up();
+ 2) + 18.015 us   |                                      }
+ 2) + 42.091 us   |                                    }
+ 2)   5.200 us    |                                    __raise_softirq_irqoff();
+ 2)               |                                    rcu_sched_clock_irq() {
+ 2)   5.681 us    |                                      rcu_is_cpu_rrupt_from_idle();
+ 2)   5.871 us    |                                      rcu_segcblist_ready_cbs();
+ 2)   4.368 us    |                                      rcu_is_cpu_rrupt_from_idle();
+ 2) + 48.542 us   |                                    }
+ 2)               |                                    sched_tick() {
+ 2)   5.621 us    |                                      topology_scale_freq_tick();
+ 2)   4.649 us    |                                      _raw_spin_lock();
+ 2)               |                                      update_rq_clock() {
+ 2)   5.290 us    |                                        update_irq_load_avg();
+ 2) + 18.034 us   |                                      }
+ 2)   8.576 us    |                                      update_hw_load_avg();
+ 2)               |                                      task_tick_fair() {
+ 2)               |                                        update_curr() {
+ 2)               |                                          update_se() {
+ 2)   5.741 us    |                                            cpuacct_charge();
+ 2) + 21.822 us   |                                          }
+ 2)   5.550 us    |                                          avg_vruntime();
+ 2)               |                                          dl_server_update() {
+ 2) + 11.632 us   |                                            update_curr_dl_se();
+ 2) + 27.392 us   |                                          }
+ 2) + 89.712 us   |                                        }
+ 2)   9.618 us    |                                        __update_load_avg_se();
+ 2)   9.197 us    |                                        __update_load_avg_cfs_rq();
+ 2)   5.180 us    |                                        update_cfs_group();
+ 2)               |                                        update_curr() {
+ 2)   4.900 us    |                                          update_se();
+ 2)   4.929 us    |                                          avg_vruntime();
+ 2) + 47.120 us   |                                        }
+ 2)   5.040 us    |                                        __update_load_avg_se();
+ 2)   4.940 us    |                                        __update_load_avg_cfs_rq();
+ 2)   5.902 us    |                                        update_cfs_group();
+ 2) ! 240.240 us  |                                      }
+ 2)   6.031 us    |                                      calc_global_load_tick();
+ 2)   5.149 us    |                                      _raw_spin_unlock();
+ 2)               |                                      perf_event_task_tick() {
+ 2)   5.721 us    |                                        perf_adjust_freq_unthr_context();
+ 2)   5.510 us    |                                        __rcu_read_lock();
+ 2)   5.000 us    |                                        __rcu_read_unlock();
+ 2) + 45.387 us   |                                      }
+ 2)   4.499 us    |                                      idle_cpu();
+ 2)               |                                      sched_balance_trigger() {
+ 2)               |                                        raise_softirq() {
+ 2)   4.358 us    |                                          __raise_softirq_irqoff();
+ 2) + 19.527 us   |                                        }
+ 2)   5.781 us    |                                        nohz_balance_exit_idle();
+ 2)   4.579 us    |                                        housekeeping_cpumask();
+ 2)   6.683 us    |                                        idle_cpu();
+ 2)   5.119 us    |                                        idle_cpu();
+ 2)               |                                        smp_call_function_single_async() {
+ 2)               |                                          generic_exec_single() {
+ 2)               |                                            __smp_call_single_queue() {
+ 2)   4.057 us    |                                              call_function_single_prep_ipi();
+ 2)               |                                              arch_send_call_function_single_ipi() {
+ 2)               |                                                smp_cross_call() {
+ 2)               |                                                  arm64_send_ipi() {
+ 2)               |                                                    __ipi_send_mask() {
+ 2) + 39.185 us   |                                                      gic_ipi_send_mask();
+ 2) + 51.358 us   |                                                    }
+ 2) + 64.774 us   |                                                  }
+ 2) + 74.784 us   |                                                }
+ 2) + 85.043 us   |                                              }
+ 2) ! 122.534 us  |                                            }
+ 2) ! 133.014 us  |                                          }
+ 2) ! 143.926 us  |                                        }
+ 2) ! 251.120 us  |                                      }
+ 2) ! 757.991 us  |                                    }
+ 2)   9.228 us    |                                    run_posix_cpu_timers();
+ 2) # 1075.137 us |                                  }
+ 2)               |                                  profile_tick() {
+ 2)               |                                    profile_pc() {
+ 2)   5.320 us    |                                      profile_pc_cb();
+ 2) + 29.106 us   |                                    }
+ 2) + 41.059 us   |                                  }
+ 2)   8.025 us    |                                  hrtimer_forward();
+ 2) # 1185.989 us |                                }
+ 2)   4.900 us    |                                _raw_spin_lock_irq();
+ 2)   8.757 us    |                                enqueue_hrtimer();
+ 2) # 1257.116 us |                              }
+ 2)               |                              ktime_get_update_offsets_now() {
+ 2)   4.158 us    |                                arch_counter_read();
+ 2) + 17.283 us   |                              }
+ 2)   5.992 us    |                              __hrtimer_get_next_event();
+ 2)   5.601 us    |                              __hrtimer_get_next_event();
+ 2)               |                              tick_program_event() {
+ 2)               |                                clockevents_program_event() {
+ 2)               |                                  ktime_get() {
+ 2)   3.688 us    |                                    arch_counter_read();
+ 2) + 12.013 us   |                                  }
+ 2)   8.336 us    |                                  arch_timer_set_next_event_virt();
+ 2) + 34.216 us   |                                }
+ 2) + 43.022 us   |                              }
+ 2)   4.358 us    |                              _raw_spin_unlock_irqrestore();
+ 2) # 1424.416 us |                            }
+ 2) # 1440.185 us |                          }
+ 2)               |                          add_interrupt_randomness() {
+ 2)   3.727 us    |                            fast_mix();
+ 2) + 12.604 us   |                          }
+ 2) + 10.270 us   |                          gic_eoi_irq();
+ 2) # 1487.316 us |                        }
+ 2) # 1498.017 us |                      }
+ 2) # 1544.846 us |                    }
+ 2) # 1595.152 us |                  }
+ 2)   <========== |
+ 2) # 1613.036 us |                }
+ 2)               |                irq_exit_rcu() {
+ 2)               |                  irqtime_account_irq() {
+ 2)   4.729 us    |                    irqtime_account_delta();
+ 2) + 15.389 us   |                  }
+ 2)               |                  do_softirq_own_stack() {
+ 2)               |                    ____do_softirq() {
+ 2)               |                      __do_softirq() {
+ 2)               |                        handle_softirqs() {
+ 2)   4.258 us    |                          irqtime_account_irq();
+ 2)               |                          run_timer_softirq() {
+ 2)               |                            tmigr_handle_remote() {
+ 2)   4.589 us    |                              get_jiffies_update();
+ 2)               |                              __walk_groups_from() {
+ 2)               |                                tmigr_handle_remote_up() {
+ 2)   4.318 us    |                                  _raw_spin_lock_irq();
+ 2)   5.220 us    |                                  _raw_spin_unlock_irq();
+ 2) + 41.199 us   |                                }
+ 2) + 51.068 us   |                              }
+ 2)   4.048 us    |                              _raw_spin_lock_irq();
+ 2)   3.657 us    |                              _raw_spin_unlock_irq();
+ 2) ! 103.668 us  |                            }
+ 2) ! 118.166 us  |                          }
+ 2)               |                          sched_balance_softirq() {
+ 2)               |                            sched_balance_update_blocked_averages() {
+ 2)               |                              raw_spin_rq_lock_nested() {
+ 2)   3.797 us    |                                _raw_spin_lock();
+ 2) + 12.074 us   |                              }
+ 2)               |                              update_rq_clock() {
+ 2)   4.178 us    |                                update_irq_load_avg();
+ 2) + 13.245 us   |                              }
+ 2)               |                              __sched_balance_update_blocked_averages() {
+ 2)               |                                update_other_load_avgs() {
+ 2)   5.140 us    |                                  update_rt_rq_load_avg();
+ 2)   5.951 us    |                                  update_dl_rq_load_avg();
+ 2)   4.458 us    |                                  update_hw_load_avg();
+ 2)   3.677 us    |                                  update_irq_load_avg();
+ 2) + 43.103 us   |                                }
+ 2)   4.118 us    |                                __update_load_avg_cfs_rq();
+ 2)   4.709 us    |                                __update_load_avg_se();
+ 2)   3.807 us    |                                __update_load_avg_cfs_rq();
+ 2)   3.507 us    |                                __update_load_avg_cfs_rq();
+ 2) + 90.994 us   |                              }
+ 2)   3.747 us    |                              _raw_spin_unlock();
+ 2) ! 144.607 us  |                            }
+ 2)               |                            sched_balance_domains() {
+ 2)   4.087 us    |                              __rcu_read_lock();
+ 2)   4.218 us    |                              __msecs_to_jiffies();
+ 2)               |                              sched_balance_rq() {
+ 2)   3.557 us    |                                idle_cpu();
+ 2)   6.673 us    |                                group_balance_cpu();
+ 2)               |                                sched_balance_find_src_group() {
+ 2)               |                                  update_group_capacity() {
+ 2)   3.647 us    |                                    __msecs_to_jiffies();
+ 2) + 16.351 us   |                                  }
+ 2)   5.711 us    |                                  cpu_util();
+ 2)   4.389 us    |                                  cpu_util();
+ 2)   3.847 us    |                                  idle_cpu();
+ 2)   4.279 us    |                                  cpu_util();
+ 2)   4.318 us    |                                  cpu_util();
+ 2)   3.547 us    |                                  idle_cpu();
+ 2) ! 124.608 us  |                                }
+ 2) ! 184.423 us  |                              }
+ 2)   3.497 us    |                              __msecs_to_jiffies();
+ 2)   3.547 us    |                              __rcu_read_unlock();
+ 2) ! 240.761 us  |                            }
+ 2) ! 402.911 us  |                          }
+ 2)               |                          irqtime_account_irq() {
+ 2)   3.737 us    |                            irqtime_account_delta();
+ 2) + 12.865 us   |                          }
+ 2) ! 566.233 us  |                        }
+ 2) ! 574.690 us  |                      }
+ 2) ! 582.795 us  |                    }
+ 2) ! 592.343 us  |                  }
+ 2)   3.507 us    |                  idle_cpu();
+ 2) ! 639.353 us  |                }
+ 2)   4.008 us    |                raw_irqentry_exit_cond_resched();
+ 2) # 2470.076 us |              drm_dev_has_vblank();
+ 2)               |              drm_crtc_vblank_get() {
+ 2)               |                drm_vblank_get() {
+ 2)   5.721 us    |                  _raw_spin_lock_irqsave();
+ 2)   5.070 us    |                  _raw_spin_unlock_irqrestore();
+ 2) + 35.107 us   |                }
+ 2) + 47.741 us   |              }
+ 2) * 37506.48 us |            }
+ 2) + 22.272 us   |            drm_atomic_helper_update_legacy_modeset_state();
+ 2)               |            drm_atomic_helper_calc_timestamping_constants() {
+ 2)               |              drm_calc_timestamping_constants() {
+ 2)   4.619 us    |                drm_mode_copy();
+ 2)   7.113 us    |                __drm_dev_dbg();
+ 2)   3.727 us    |                __drm_dev_dbg();
+ 2) + 40.577 us   |              }
+ 2) + 52.951 us   |            }
+ 2)               |            drm_atomic_helper_commit_crtc_set_mode() {
+ 2)   3.596 us    |              __drm_dev_dbg();
+ 2)               |              virtio_gpu_crtc_mode_set_nofb() {
+ 2)               |                virtio_gpu_cmd_set_scanout() {
+ 2)               |                  virtio_gpu_get_vbuf() {
+ 2)               |                    kmem_cache_alloc_noprof() {
+ 2)               |                      __pcs_replace_empty_main() {
+ 2)               |                        barn_replace_empty_sheaf() {
+ 2)   4.028 us    |                          _raw_spin_lock_irqsave();
+ 2)   3.737 us    |                          _raw_spin_unlock_irqrestore();
+ 2) + 24.707 us   |                        }
+ 2) + 39.295 us   |                      }
+ 2) + 61.318 us   |                    }
+ 2) + 74.683 us   |                  }
+ 2)               |                  virtio_gpu_queue_fenced_ctrl_buffer() {
+ 2)               |                    drm_dev_enter() {
+ 2)   6.412 us    |                      __srcu_read_lock();
+ 2) + 17.052 us   |                    }
+ 2)   3.827 us    |                    _raw_spin_lock();
+ 2)               |                    virtqueue_add_sgs() {
+ 2) + 14.187 us   |                      __kmalloc_noprof();
+ 2)   5.771 us    |                      vring_map_one_sg();
+ 2)   3.527 us    |                      vring_map_one_sg();
+ 2) + 73.822 us   |                    }
+ 2)   3.667 us    |                    _raw_spin_unlock();
+ 2)               |                    drm_dev_exit() {
+ 2)   5.601 us    |                      __srcu_read_unlock();
+ 2) + 16.201 us   |                    }
+ 2) ! 154.145 us  |                  }
+ 2) ! 247.654 us  |                }
+ 2)               |                virtio_gpu_notify() {
+ 2)   3.476 us    |                  _raw_spin_lock();
+ 2)               |                  virtqueue_kick_prepare() {
+ 2)   5.420 us    |                    virtqueue_kick_prepare_split();
+ 2) + 15.941 us   |                  }
+ 2)   3.937 us    |                  _raw_spin_unlock();
+ 2)               |                  virtqueue_notify() {
+ 2) + 35.247 us   |                    vp_notify();
+ 2) + 46.188 us   |                  }
+ 2) + 97.387 us   |                }
+ 2) ! 424.412 us  |              }
+ 2)   3.857 us    |              __drm_dev_dbg();
+ 2) + 15.680 us   |              virtio_gpu_enc_mode_set();
+ 2)               |              drm_bridge_get() {
+ 2)               |                irq_enter_rcu() {
+ 2) + 31.039 us   |                  irqtime_account_irq();
+ 2) + 54.554 us   |                }
+ 2)               |                do_interrupt_handler() {
+ 2)   ==========> |
+ 2)               |                  gic_handle_irq() {
+ 2)               |                    generic_handle_domain_irq() {
+ 2)               |                      __irq_resolve_mapping() {
+ 2) + 11.852 us   |                        __rcu_read_lock();
+ 2)   3.877 us    |                        __rcu_read_unlock();
+ 2) + 32.312 us   |                      }
+ 2)               |                      handle_irq_desc() {
+ 2)               |                        handle_percpu_devid_irq() {
+ 2)               |                          arch_timer_handler_virt() {
+ 2)               |                            hrtimer_interrupt() {
+ 2)   4.288 us    |                              _raw_spin_lock_irqsave();
+ 2)               |                              ktime_get_update_offsets_now() {
+ 2)   4.248 us    |                                arch_counter_read();
+ 2) + 14.307 us   |                              }
+ 2)               |                              __hrtimer_run_queues() {
+ 2)   5.591 us    |                                __remove_hrtimer();
+ 2)   4.188 us    |                                _raw_spin_unlock_irqrestore();
+ 2)               |                                tick_nohz_handler() {
+ 2)               |                                  ktime_get() {
+ 2)   3.918 us    |                                    arch_counter_read();
+ 2) + 12.334 us   |                                  }
+ 2)               |                                  tick_do_update_jiffies64() {
+ 2)   3.777 us    |                                    _raw_spin_lock();
+ 2)   4.549 us    |                                    calc_global_load();
+ 2)   3.778 us    |                                    _raw_spin_unlock();
+ 2)               |                                    update_wall_time() {
+ 2)   3.897 us    |                                      _raw_spin_lock_irqsave();
+ 2)               |                                      __timekeeping_advance.constprop.0() {
+ 2)   3.957 us    |                                        arch_counter_read();
+ 2)   3.797 us    |                                        ntp_tick_length();
+ 2)   3.456 us    |                                        ntp_tick_length();
+ 2)               |                                        timekeeping_update_from_shadow.constprop.0() {
+ 2)   4.289 us    |                                          ntp_get_next_leap();
+ 2)   7.705 us    |                                          update_vsyscall();
+ 2)               |                                          raw_notifier_call_chain() {
+ 2)   3.978 us    |                                            notifier_call_chain();
+ 2) + 12.444 us   |                                          }
+ 2) + 48.943 us   |                                        }
+ 2) + 88.299 us   |                                      }
+ 2)   3.978 us    |                                      _raw_spin_unlock_irqrestore();
+ 2) ! 113.918 us  |                                    }
+ 2) ! 157.751 us  |                                  }
+ 2)               |                                  update_process_times() {
+ 2)               |                                    account_process_tick() {
+ 2)               |                                      account_system_index_time() {
+ 2)   4.309 us    |                                        cpuacct_account_field();
+ 2)   4.639 us    |                                        acct_account_cputime();
+ 2) + 25.469 us   |                                      }
+ 2) + 35.468 us   |                                    }
+ 2)   3.737 us    |                                    hrtimer_run_queues();
+ 2)               |                                    tmigr_requires_handle_remote() {
+ 2)   4.699 us    |                                      get_jiffies_update();
+ 2)               |                                      __walk_groups_from() {
+ 2)   4.499 us    |                                        tmigr_requires_handle_remote_up();
+ 2) + 23.044 us   |                                      }
+ 2) + 52.521 us   |                                    }
+ 2)               |                                    rcu_sched_clock_irq() {
+ 2) + 16.832 us   |                                      rcu_is_cpu_rrupt_from_idle();
+ 2)   4.639 us    |                                      rcu_segcblist_ready_cbs();
+ 2)   4.429 us    |                                      rcu_is_cpu_rrupt_from_idle();
+ 2) ! 128.416 us  |                                    }
+ 2)               |                                    sched_tick() {
+ 2)   5.371 us    |                                      topology_scale_freq_tick();
+ 2)   5.681 us    |                                      _raw_spin_lock();
+ 2)               |                                      update_rq_clock() {
+ 2)   8.937 us    |                                        update_irq_load_avg();
+ 2) + 24.527 us   |                                      }
+ 2)   7.465 us    |                                      update_hw_load_avg();
+ 2)               |                                      task_tick_fair() {
+ 2)               |                                        update_curr() {
+ 2)               |                                          update_se() {
+ 2)   6.061 us    |                                            cpuacct_charge();
+ 2) + 21.240 us   |                                          }
+ 2)               |                                          dl_server_update() {
+ 2)   6.432 us    |                                            update_curr_dl_se();
+ 2) + 19.297 us   |                                          }
+ 2) + 61.527 us   |                                        }
+ 2)   7.314 us    |                                        __update_load_avg_se();
+ 2)   6.172 us    |                                        __update_load_avg_cfs_rq();
+ 2)   4.900 us    |                                        update_cfs_group();
+ 2)               |                                        update_curr() {
+ 2)   5.180 us    |                                          update_se();
+ 2) + 16.311 us   |                                        }
+ 2)   4.188 us    |                                        __update_load_avg_se();
+ 2)   3.547 us    |                                        __update_load_avg_cfs_rq();
+ 2)   4.108 us    |                                        update_cfs_group();
+ 2) ! 164.144 us  |                                      }
+ 2)   4.168 us    |                                      calc_global_load_tick();
+ 2)   3.577 us    |                                      _raw_spin_unlock();
+ 2)               |                                      perf_event_task_tick() {
+ 2)   3.887 us    |                                        perf_adjust_freq_unthr_context();
+ 2)   5.240 us    |                                        __rcu_read_lock();
+ 2)   4.809 us    |                                        __rcu_read_unlock();
+ 2) + 34.646 us   |                                      }
+ 2) + 20.038 us   |                                      idle_cpu();
+ 2)               |                                      sched_balance_trigger() {
+ 2)   6.032 us    |                                        nohz_balance_exit_idle();
+ 2) + 29.797 us   |                                      }
+ 2) ! 387.742 us  |                                    }
+ 2)   6.643 us    |                                    run_posix_cpu_timers();
+ 2) ! 673.869 us  |                                  }
+ 2)               |                                  profile_tick() {
+ 2)               |                                    profile_pc() {
+ 2)   7.464 us    |                                      profile_pc_cb();
+ 2) + 56.898 us   |                                    }
+ 2) + 69.984 us   |                                  }
+ 2)   5.921 us    |                                  hrtimer_forward();
+ 2) ! 955.939 us  |                                }
+ 2) + 16.060 us   |                                _raw_spin_lock_irq();
+ 2)   9.719 us    |                                enqueue_hrtimer();
+ 2) # 1026.915 us |                              }
+ 2)               |                              ktime_get_update_offsets_now() {
+ 2)   5.921 us    |                                arch_counter_read();
+ 2) + 19.237 us   |                              }
+ 2)   5.901 us    |                              __hrtimer_get_next_event();
+ 2) + 11.623 us   |                              __hrtimer_get_next_event();
+ 2)               |                              tick_program_event() {
+ 2)               |                                clockevents_program_event() {
+ 2)               |                                  ktime_get() {
+ 2)   5.902 us    |                                    arch_counter_read();
+ 2) + 18.165 us   |                                  }
+ 2) + 11.973 us   |                                  arch_timer_set_next_event_virt();
+ 2) + 49.494 us   |                                }
+ 2) + 61.909 us   |                              }
+ 2)   5.711 us    |                              _raw_spin_unlock_irqrestore();
+ 2) # 1308.413 us |                            }
+ 2) # 1330.947 us |                          }
+ 2)               |                          add_interrupt_randomness() {
+ 2) + 32.903 us   |                            fast_mix();
+ 2) + 48.954 us   |                          }
+ 2) + 13.967 us   |                          gic_eoi_irq();
+ 2) # 1432.481 us |                        }
+ 2) # 1442.390 us |                      }
+ 2) # 1490.502 us |                    }
+ 2) # 1521.391 us |                  }
+ 2)   <========== |
+ 2) # 1542.451 us |                }
+ 2)               |                irq_exit_rcu() {
+ 2)               |                  irqtime_account_irq() {
+ 2)   5.350 us    |                    irqtime_account_delta();
+ 2) + 18.355 us   |                  }
+ 2)   6.182 us    |                  idle_cpu();
+ 2) + 45.627 us   |                }
+ 2)   6.753 us    |                raw_irqentry_exit_cond_resched();
+ 2) ! 189.683 us  |              }
+ 2) + 15.339 us   |              drm_bridge_chain_mode_set();
+ 2)   5.731 us    |              drm_bridge_put();
+ 2) # 2625.053 us |            }
+ 2)               |            drm_atomic_helper_commit_planes() {
+ 2)               |              virtio_gpu_primary_plane_update() {
+ 2)               |                drm_atomic_helper_damage_merged() {
+ 2)               |                  drm_atomic_helper_damage_iter_init() {
+ 2)               |                    drm_plane_get_damage_clips() {
+ 2)   6.593 us    |                      drm_mode_obj_find_prop_id();
+ 2) + 20.860 us   |                    }
+ 2)   5.541 us    |                    drm_plane_get_damage_clips_count();
+ 2) + 48.263 us   |                  }
+ 2) + 61.848 us   |                }
+ 2)               |                virtio_gpu_array_alloc() {
+ 2) + 11.231 us   |                  __kmalloc_noprof();
+ 2) + 25.318 us   |                }
+ 2)   7.014 us    |                virtio_gpu_array_add_obj();
+ 2)               |                virtio_gpu_cmd_transfer_to_host_2d() {
+ 2)   5.701 us    |                  virtio_gpu_is_shmem();
+ 2)               |                  virtio_gpu_get_vbuf() {
+ 2)   7.464 us    |                    kmem_cache_alloc_noprof();
+ 2) + 37.372 us   |                  }
+ 2)               |                  virtio_gpu_queue_fenced_ctrl_buffer() {
+ 2)               |                    drm_dev_enter() {
+ 2)   9.768 us    |                      __srcu_read_lock();
+ 2) + 23.525 us   |                    }
+ 2)   5.200 us    |                    _raw_spin_lock();
+ 2)               |                    virtqueue_add_sgs() {
+ 2)   6.032 us    |                      __kmalloc_noprof();
+ 2)   5.600 us    |                      vring_map_one_sg();
+ 2)   4.860 us    |                      vring_map_one_sg();
+ 2) + 51.568 us   |                    }
+ 2)   4.750 us    |                    _raw_spin_unlock();
+ 2)               |                    drm_dev_exit() {
+ 2) + 20.950 us   |                      __srcu_read_unlock();
+ 2) + 33.564 us   |                    }
+ 2) ! 162.080 us  |                  }
+ 2) ! 236.252 us  |                }
+ 2)   6.062 us    |                __drm_dev_dbg();
+ 2)               |                virtio_gpu_cmd_set_scanout() {
+ 2)               |                  virtio_gpu_get_vbuf() {
+ 2)   5.841 us    |                    kmem_cache_alloc_noprof();
+ 2) + 16.922 us   |                  }
+ 2)               |                  virtio_gpu_queue_fenced_ctrl_buffer() {
+ 2)               |                    drm_dev_enter() {
+ 2)   5.150 us    |                      __srcu_read_lock();
+ 2) + 16.031 us   |                    }
+ 2)   4.980 us    |                    _raw_spin_lock();
+ 2)               |                    virtqueue_add_sgs() {
+ 2)   5.370 us    |                      __kmalloc_noprof();
+ 2)   5.139 us    |                      vring_map_one_sg();
+ 2)   4.889 us    |                      vring_map_one_sg();
+ 2) + 40.327 us   |                    }
+ 2)   4.909 us    |                    _raw_spin_unlock();
+ 2)               |                    drm_dev_exit() {
+ 2)   5.290 us    |                      __srcu_read_unlock();
+ 2) + 16.201 us   |                    }
+ 2) ! 117.996 us  |                  }
+ 2) ! 154.005 us  |                }
+ 2)               |                virtio_gpu_cmd_resource_flush() {
+ 2)               |                  virtio_gpu_get_vbuf() {
+ 2)   7.965 us    |                    kmem_cache_alloc_noprof();
+ 2) + 18.986 us   |                  }
+ 2)               |                  virtio_gpu_queue_fenced_ctrl_buffer() {
+ 2)               |                    drm_dev_enter() {
+ 2)   4.930 us    |                      __srcu_read_lock();
+ 2) + 15.579 us   |                    }
+ 2)   4.759 us    |                    _raw_spin_lock();
+ 2)               |                    virtqueue_add_sgs() {
+ 2)   5.461 us    |                      __kmalloc_noprof();
+ 2)   4.859 us    |                      vring_map_one_sg();
+ 2)   4.899 us    |                      vring_map_one_sg();
+ 2) + 38.444 us   |                    }
+ 2)   4.759 us    |                    _raw_spin_unlock();
+ 2)               |                    drm_dev_exit() {
+ 2)   4.438 us    |                      __srcu_read_unlock();
+ 2) + 14.548 us   |                    }
+ 2) ! 112.565 us  |                  }
+ 2) ! 150.478 us  |                }
+ 2)               |                virtio_gpu_notify() {
+ 2)   4.299 us    |                  _raw_spin_lock();
+ 2)               |                  virtqueue_kick_prepare() {
+ 2)   5.330 us    |                    virtqueue_kick_prepare_split();
+ 2) + 16.742 us   |                  }
+ 2)   4.338 us    |                  _raw_spin_unlock();
+ 2)               |                  virtqueue_notify() {
+ 2) + 39.175 us   |                    vp_notify();
+ 2) + 53.042 us   |                  }
+ 2)               |                  irq_enter_rcu() {
+ 2)   8.646 us    |                    irqtime_account_irq();
+ 2) + 90.884 us   |                  }
+ 2)               |                  do_interrupt_handler() {
+ 2)   ==========> |
+ 2)               |                    gic_handle_irq() {
+ 2)               |                      generic_handle_domain_irq() {
+ 2)               |                        __irq_resolve_mapping() {
+ 2)   8.646 us    |                          __rcu_read_lock();
+ 2)   5.340 us    |                          __rcu_read_unlock();
+ 2) + 77.939 us   |                        }
+ 2)               |                        handle_irq_desc() {
+ 2)               |                          handle_percpu_devid_irq() {
+ 2)               |                            arch_timer_handler_virt() {
+ 2)               |                              hrtimer_interrupt() {
+ 2)   5.591 us    |                                _raw_spin_lock_irqsave();
+ 2)               |                                ktime_get_update_offsets_now() {
+ 2)   5.781 us    |                                  arch_counter_read();
+ 2) + 21.040 us   |                                }
+ 2)               |                                __hrtimer_run_queues() {
+ 2)   8.476 us    |                                  __remove_hrtimer();
+ 2)   6.182 us    |                                  _raw_spin_unlock_irqrestore();
+ 2)               |                                  tick_nohz_handler() {
+ 2)               |                                    ktime_get() {
+ 2)   5.741 us    |                                      arch_counter_read();
+ 2) + 16.221 us   |                                    }
+ 2)               |                                    tick_do_update_jiffies64() {
+ 2) + 40.247 us   |                                      _raw_spin_lock();
+ 2)   9.318 us    |                                      calc_global_load();
+ 2)   5.390 us    |                                      _raw_spin_unlock();
+ 2)               |                                      update_wall_time() {
+ 2)   6.472 us    |                                        _raw_spin_lock_irqsave();
+ 2)               |                                        __timekeeping_advance.constprop.0() {
+ 2)   5.671 us    |                                          arch_counter_read();
+ 2)   5.570 us    |                                          ntp_tick_length();
+ 2)   4.328 us    |                                          ntp_tick_length();
+ 2)               |                                          timekeeping_update_from_shadow.constprop.0() {
+ 2)   4.869 us    |                                            ntp_get_next_leap();
+ 2) + 11.031 us   |                                            update_vsyscall();
+ 2)               |                                            raw_notifier_call_chain() {
+ 2)   5.691 us    |                                              notifier_call_chain();
+ 2) + 16.521 us   |                                            }
+ 2) + 66.086 us   |                                          }
+ 2) ! 125.290 us  |                                        }
+ 2)   5.280 us    |                                        _raw_spin_unlock_irqrestore();
+ 2) ! 161.729 us  |                                      }
+ 2) ! 345.702 us  |                                    }
+ 2)               |                                    update_process_times() {
+ 2)               |                                      account_process_tick() {
+ 2)               |                                        account_system_index_time() {
+ 2)   5.621 us    |                                          cpuacct_account_field();
+ 2)   5.821 us    |                                          acct_account_cputime();
+ 2) + 33.083 us   |                                        }
+ 2) + 45.557 us   |                                      }
+ 2)   5.511 us    |                                      hrtimer_run_queues();
+ 2)               |                                      tmigr_requires_handle_remote() {
+ 2)   4.559 us    |                                        get_jiffies_update();
+ 2)               |                                        __walk_groups_from() {
+ 2)   6.102 us    |                                          tmigr_requires_handle_remote_up();
+ 2) + 20.108 us   |                                        }
+ 2) + 48.192 us   |                                      }
+ 2)               |                                      rcu_sched_clock_irq() {
+ 2)   7.865 us    |                                        rcu_is_cpu_rrupt_from_idle();
+ 2)   6.031 us    |                                        rcu_segcblist_ready_cbs();
+ 2)   7.053 us    |                                        rcu_is_cpu_rrupt_from_idle();
+ 2) + 60.355 us   |                                      }
+ 2)               |                                      sched_tick() {
+ 2) + 31.190 us   |                                        topology_scale_freq_tick();
+ 2)   9.388 us    |                                        _raw_spin_lock();
+ 2)               |                                        update_rq_clock() {
+ 2)   7.745 us    |                                          update_irq_load_avg();
+ 2) + 27.152 us   |                                        }
+ 2) + 14.147 us   |                                        update_hw_load_avg();
+ 2)               |                                        task_tick_fair() {
+ 2)               |                                          update_curr() {
+ 2)               |                                            update_se() {
+ 2) + 13.736 us   |                                              cpuacct_charge();
+ 2) + 42.642 us   |                                            }
+ 2) + 12.294 us   |                                            avg_vruntime();
+ 2)               |                                            dl_server_update() {
+ 2)               |                                              update_curr_dl_se() {
+ 2)               |                                                hrtimer_try_to_cancel() {
+ 2) + 11.141 us   |                                                  hrtimer_active();
+ 2)               |                                                  hrtimer_try_to_cancel.part.0() {
+ 2) + 10.360 us   |                                                    _raw_spin_lock_irqsave();
+ 2) + 24.607 us   |                                                    __remove_hrtimer();
+ 2) + 15.139 us   |                                                    _raw_spin_unlock_irqrestore();
+ 2) ! 106.033 us  |                                                  }
+ 2) ! 163.693 us  |                                                }
+ 2)               |                                                start_dl_timer() {
+ 2)               |                                                  ktime_get() {
+ 2) + 13.055 us   |                                                    arch_counter_read();
+ 2) + 37.933 us   |                                                  }
+ 2)               |                                                  hrtimer_start_range_ns() {
+ 2)   6.703 us    |                                                    _raw_spin_lock_irqsave();
+ 2)               |                                                    hrtimer_start_range_ns_common() {
+ 2)   5.791 us    |                                                      tick_nohz_tick_stopped();
+ 2) + 38.483 us   |                                                    }
+ 2)   6.081 us    |                                                    _raw_spin_unlock_irqrestore();
+ 2) + 91.645 us   |                                                  }
+ 2) ! 170.046 us  |                                                }
+ 2) ! 379.516 us  |                                              }
+ 2) ! 403.773 us  |                                            }
+ 2) ! 506.849 us  |                                          }
+ 2) + 10.210 us   |                                          __update_load_avg_se();
+ 2) + 14.809 us   |                                          __update_load_avg_cfs_rq();
+ 2)   9.038 us    |                                          update_cfs_group();
+ 2)               |                                          update_curr() {
+ 2)   8.005 us    |                                            update_se();
+ 2) + 11.231 us   |                                            avg_vruntime();
+ 2) + 79.272 us   |                                          }
+ 2)   7.684 us    |                                          __update_load_avg_se();
+ 2)   6.302 us    |                                          __update_load_avg_cfs_rq();
+ 2)   7.184 us    |                                          update_cfs_group();
+ 2) ! 734.295 us  |                                        }
+ 2)   8.696 us    |                                        calc_global_load_tick();
+ 2)   6.082 us    |                                        _raw_spin_unlock();
+ 2)               |                                        perf_event_task_tick() {
+ 2)   8.056 us    |                                          perf_adjust_freq_unthr_context();
+ 2)   9.338 us    |                                          __rcu_read_lock();
+ 2) + 13.426 us   |                                          __rcu_read_unlock();
+ 2) + 87.167 us   |                                        }
+ 2) + 30.859 us   |                                        idle_cpu();
+ 2)               |                                        sched_balance_trigger() {
+ 2)   6.012 us    |                                          nohz_balance_exit_idle();
+ 2) + 30.318 us   |                                        }
+ 2) # 1091.909 us |                                      }
+ 2)   5.571 us    |                                      run_posix_cpu_timers();
+ 2) # 1321.979 us |                                    }
+ 2)               |                                    profile_tick() {
+ 2)               |                                      profile_pc() {
+ 2)   5.391 us    |                                        profile_pc_cb();
+ 2) + 25.609 us   |                                      }
+ 2) + 38.273 us   |                                    }
+ 2)   6.332 us    |                                    hrtimer_forward();
+ 2) # 1766.029 us |                                  }
+ 2)   4.859 us    |                                  _raw_spin_lock_irq();
+ 2)   8.836 us    |                                  enqueue_hrtimer();
+ 2) # 1830.873 us |                                }
+ 2)               |                                ktime_get_update_offsets_now() {
+ 2)   4.208 us    |                                  arch_counter_read();
+ 2) + 17.193 us   |                                }
+ 2)   4.088 us    |                                __hrtimer_get_next_event();
+ 2)   3.968 us    |                                __hrtimer_get_next_event();
+ 2)               |                                tick_program_event() {
+ 2)               |                                  clockevents_program_event() {
+ 2)               |                                    ktime_get() {
+ 2)   5.851 us    |                                      arch_counter_read();
+ 2) + 18.255 us   |                                    }
+ 2) + 12.193 us   |                                    arch_timer_set_next_event_virt();
+ 2) + 57.029 us   |                                  }
+ 2) + 71.076 us   |                                }
+ 2)   6.924 us    |                                _raw_spin_unlock_irqrestore();
+ 2) # 2022.019 us |                              }
+ 2) # 2039.993 us |                            }
+ 2)               |                            add_interrupt_randomness() {
+ 2)   7.033 us    |                              fast_mix();
+ 2) + 24.527 us   |                            }
+ 2) + 29.947 us   |                            gic_eoi_irq();
+ 2) # 2127.260 us |                          }
+ 2) # 2141.347 us |                        }
+ 2) # 2239.505 us |                      }
+ 2) # 2267.278 us |                    }
+ 2)   <========== |
+ 2) # 2291.926 us |                  }
+ 2)               |                  irq_exit_rcu() {
+ 2)               |                    irqtime_account_irq() {
+ 2)   6.843 us    |                      irqtime_account_delta();
+ 2) + 23.425 us   |                    }
+ 2)   7.564 us    |                    idle_cpu();
+ 2) + 56.478 us   |                  }
+ 2)   7.314 us    |                  raw_irqentry_exit_cond_resched();
+ 2) * 45447.65 us |                }
+ 2) * 48730.83 us |              }
+ 2)               |              virtio_gpu_crtc_atomic_flush() {
+ 2)   6.633 us    |                _raw_spin_lock_irq();
+ 2)               |                drm_crtc_vblank_get() {
+ 2)               |                  drm_vblank_get() {
+ 2)   6.843 us    |                    _raw_spin_lock_irqsave();
+ 2)   6.884 us    |                    _raw_spin_unlock_irqrestore();
+ 2) + 37.893 us   |                  }
+ 2) + 52.190 us   |                }
+ 2)               |                drm_crtc_send_vblank_event() {
+ 2)   9.398 us    |                  drm_vblank_count_and_time();
+ 2)               |                  send_vblank_event() {
+ 2)               |                    drm_send_event_timestamp_locked() {
+ 2)               |                      drm_send_event_helper() {
+ 2)               |                        complete_all() {
+ 2)   6.612 us    |                          _raw_spin_lock_irqsave();
+ 2)   5.951 us    |                          _raw_spin_unlock_irqrestore();
+ 2) + 47.100 us   |                        }
+ 2)   5.972 us    |                        release_crtc_commit();
+ 2) + 20.209 us   |                        kfree();
+ 2) ! 107.315 us  |                      }
+ 2) ! 120.871 us  |                    }
+ 2) ! 139.016 us  |                  }
+ 2) ! 244.317 us  |                }
+ 2)   6.612 us    |                _raw_spin_unlock_irq();
+ 2) ! 413.602 us  |              }
+ 2) * 49178.52 us |            }
+ 2)               |            drm_atomic_helper_commit_crtc_enable() {
+ 2)   6.884 us    |              __drm_dev_dbg();
+ 2)               |              virtio_gpu_crtc_atomic_enable() {
+ 2)               |                drm_crtc_vblank_on() {
+ 2)               |                  drm_crtc_vblank_on_config() {
+ 2)   7.675 us    |                    _raw_spin_lock_irq();
+ 2)   5.701 us    |                    __drm_dev_dbg();
+ 2)   5.991 us    |                    _raw_spin_lock();
+ 2)               |                    get_vblank_counter_and_timestamp() {
+ 2)               |                      __get_vblank_counter() {
+ 2)   6.713 us    |                        drm_crtc_from_index();
+ 2) + 23.896 us   |                      }
+ 2)   5.190 us    |                      drm_crtc_from_index();
+ 2)               |                      drm_crtc_get_last_vbltimestamp() {
+ 2)               |                        drm_crtc_vblank_helper_get_vblank_timestamp_from_timer() {
+ 2)               |                          drm_crtc_vblank_get_vblank_timeout() {
+ 2)               |                            ktime_get() {
+ 2)   6.693 us    |                              arch_counter_read();
+ 2) + 22.543 us   |                            }
+ 2) + 37.332 us   |                          }
+ 2) + 49.946 us   |                        }
+ 2) + 66.016 us   |                      }
+ 2)               |                      __get_vblank_counter() {
+ 2)   5.100 us    |                        drm_crtc_from_index();
+ 2) + 16.923 us   |                      }
+ 2) ! 146.511 us  |                    }
+ 2)               |                    store_vblank() {
+ 2)   5.260 us    |                      _raw_spin_lock();
+ 2)   5.540 us    |                      _raw_spin_unlock();
+ 2) + 31.100 us   |                    }
+ 2)   5.420 us    |                    _raw_spin_unlock();
+ 2)   6.262 us    |                    _raw_spin_unlock_irq();
+ 2) ! 315.414 us  |                  }
+ 2) ! 375.178 us  |                }
+ 2) ! 407.339 us  |              }
+ 2) ! 453.187 us  |            }
+ 2)               |            drm_atomic_helper_commit_encoder_bridge_pre_enable() {
+ 2)   5.380 us    |              __drm_dev_dbg();
+ 2)   4.939 us    |              drm_bridge_get();
+ 2) + 12.123 us   |              drm_atomic_bridge_chain_pre_enable();
+ 2)   4.268 us    |              drm_bridge_put();
+ 2) + 69.282 us   |            }
+ 2)               |            drm_atomic_helper_commit_encoder_bridge_enable() {
+ 2)   5.610 us    |              __drm_dev_dbg();
+ 2)   5.200 us    |              drm_bridge_get();
+ 2) + 20.970 us   |              virtio_gpu_enc_enable();
+ 2) + 11.863 us   |              drm_atomic_bridge_chain_enable();
+ 2)   5.390 us    |              drm_bridge_put();
+ 2) ! 150.047 us  |            }
+ 2)   7.495 us    |            drm_atomic_helper_commit_writebacks();
+ 2)   6.473 us    |            drm_atomic_helper_fake_vblank();
+ 2)               |            drm_atomic_helper_commit_hw_done() {
+ 2)               |              complete_all() {
+ 2)   6.282 us    |                _raw_spin_lock_irqsave();
+ 2)   6.553 us    |                _raw_spin_unlock_irqrestore();
+ 2) + 32.612 us   |              }
+ 2) + 51.819 us   |            }
+ 2)               |            drm_atomic_helper_wait_for_vblanks.part.0() {
+ 2)               |              drm_crtc_vblank_get() {
+ 2)               |                drm_vblank_get() {
+ 2)   5.801 us    |                  _raw_spin_lock_irqsave();
+ 2)               |                  drm_vblank_enable() {
+ 2)   5.581 us    |                    _raw_spin_lock();
+ 2)   5.361 us    |                    drm_crtc_from_index();
+ 2)               |                    drm_crtc_vblank_helper_enable_vblank_timer() {
+ 2)               |                      drm_crtc_vblank_start_timer() {
+ 2) + 11.852 us   |                        hrtimer_active();
+ 2)               |                        drm_calc_timestamping_constants() {
+ 2) + 16.612 us   |                          drm_mode_copy();
+ 2) + 19.076 us   |                          __drm_dev_dbg();
+ 2)   5.751 us    |                          __drm_dev_dbg();
+ 2) + 99.331 us   |                        }
+ 2)   6.282 us    |                        _raw_spin_lock_irqsave();
+ 2)   6.192 us    |                        _raw_spin_unlock_irqrestore();
+ 2)               |                        hrtimer_start_range_ns() {
+ 2)   5.190 us    |                          _raw_spin_lock_irqsave();
+ 2)               |                          hrtimer_start_range_ns_common() {
+ 2)               |                            __hrtimer_cb_get_time() {
+ 2)               |                              ktime_get() {
+ 2)   5.600 us    |                                arch_counter_read();
+ 2) + 17.694 us   |                              }
+ 2) + 30.428 us   |                            }
+ 2)               |                            get_nohz_timer_target() {
+ 2)   5.521 us    |                              idle_cpu();
+ 2) + 19.667 us   |                            }
+ 2)   5.441 us    |                            _raw_spin_unlock();
+ 2)   5.450 us    |                            _raw_spin_lock();
+ 2) + 10.790 us   |                            enqueue_hrtimer();
+ 2) ! 119.138 us  |                          }
+ 2)   6.021 us    |                          _raw_spin_unlock_irqrestore();
+ 2) ! 156.249 us  |                        }
+ 2) ! 385.518 us  |                      }
+ 2) ! 417.018 us  |                    }
+ 2)   5.541 us    |                    __drm_dev_dbg();
+ 2)               |                    drm_update_vblank_count() {
+ 2)               |                      get_vblank_counter_and_timestamp() {
+ 2)               |                        __get_vblank_counter() {
+ 2)   6.222 us    |                          drm_crtc_from_index();
+ 2) + 20.259 us   |                        }
+ 2)   5.491 us    |                        drm_crtc_from_index();
+ 2)               |                        drm_crtc_get_last_vbltimestamp() {
+ 2)               |                          drm_crtc_vblank_helper_get_vblank_timestamp_from_timer() {
+ 2)               |                            drm_crtc_vblank_get_vblank_timeout() {
+ 2)               |                              ktime_get() {
+ 2)   5.100 us    |                                arch_counter_read();
+ 2) + 26.290 us   |                              }
+ 2) ! 123.276 us  |                            }
+ 2) ! 134.838 us  |                          }
+ 2) ! 148.033 us  |                        }
+ 2)               |                        __get_vblank_counter() {
+ 2)   3.918 us    |                          drm_crtc_from_index();
+ 2) + 12.725 us   |                        }
+ 2) ! 230.831 us  |                      }
+ 2)   5.530 us    |                      __drm_dev_dbg();
+ 2)   5.711 us    |                      __drm_dev_dbg();
+ 2) ! 343.397 us  |                    }
+ 2)   4.839 us    |                    _raw_spin_unlock();
+ 2) ! 842.051 us  |                  }
+ 2)               |                  _raw_spin_unlock_irqrestore() {
+ 2)               |                    irq_enter_rcu() {
+ 2)   6.733 us    |                      irqtime_account_irq();
+ 2) + 17.955 us   |                    }
+ 2)               |                    do_interrupt_handler() {
+ 2)   ==========> |
+ 2)               |                      gic_handle_irq() {
+ 2)               |                        generic_handle_domain_irq() {
+ 2)               |                          __irq_resolve_mapping() {
+ 2)   4.178 us    |                            __rcu_read_lock();
+ 2)   5.431 us    |                            __rcu_read_unlock();
+ 2) + 27.503 us   |                          }
+ 2)               |                          handle_irq_desc() {
+ 2)               |                            handle_percpu_devid_irq() {
+ 2)               |                              arch_timer_handler_virt() {
+ 2)               |                                hrtimer_interrupt() {
+ 2)   4.468 us    |                                  _raw_spin_lock_irqsave();
+ 2)               |                                  ktime_get_update_offsets_now() {
+ 2)   4.288 us    |                                    arch_counter_read();
+ 2) + 14.908 us   |                                  }
+ 2)               |                                  __hrtimer_run_queues() {
+ 2) + 17.894 us   |                                    __remove_hrtimer();
+ 2)   4.298 us    |                                    _raw_spin_unlock_irqrestore();
+ 2)               |                                    tick_nohz_handler() {
+ 2)               |                                      ktime_get() {
+ 2)   4.108 us    |                                        arch_counter_read();
+ 2) + 14.328 us   |                                      }
+ 2)               |                                      tick_do_update_jiffies64() {
+ 2)   4.028 us    |                                        _raw_spin_lock();
+ 2)   5.160 us    |                                        calc_global_load();
+ 2)   6.212 us    |                                        _raw_spin_unlock();
+ 2)               |                                        update_wall_time() {
+ 2)   5.861 us    |                                          _raw_spin_lock_irqsave();
+ 2)               |                                          __timekeeping_advance.constprop.0() {
+ 2) + 18.415 us   |                                            arch_counter_read();
+ 2)   4.709 us    |                                            ntp_tick_length();
+ 2)   3.677 us    |                                            ntp_tick_length();
+ 2)               |                                            timekeeping_update_from_shadow.constprop.0() {
+ 2)   4.068 us    |                                              ntp_get_next_leap();
+ 2) + 11.803 us   |                                              update_vsyscall();
+ 2)               |                                              raw_notifier_call_chain() {
+ 2)   5.210 us    |                                                notifier_call_chain();
+ 2) + 14.087 us   |                                              }
+ 2) + 57.590 us   |                                            }
+ 2) ! 120.841 us  |                                          }
+ 2)   4.399 us    |                                          _raw_spin_unlock_irqrestore();
+ 2) ! 153.223 us  |                                        }
+ 2) ! 230.421 us  |                                      }
+ 2)               |                                      update_process_times() {
+ 2)               |                                        account_process_tick() {
+ 2)               |                                          account_system_index_time() {
+ 2)   4.980 us    |                                            cpuacct_account_field();
+ 2)   6.943 us    |                                            acct_account_cputime();
+ 2) + 30.288 us   |                                          }
+ 2) + 43.794 us   |                                        }
+ 2)   4.609 us    |                                        hrtimer_run_queues();
+ 2)               |                                        tmigr_requires_handle_remote() {
+ 2)   4.889 us    |                                          get_jiffies_update();
+ 2)               |                                          __walk_groups_from() {
+ 2)   5.130 us    |                                            tmigr_requires_handle_remote_up();
+ 2) + 15.099 us   |                                          }
+ 2) + 36.960 us   |                                        }
+ 2)               |                                        rcu_sched_clock_irq() {
+ 2)   6.662 us    |                                          rcu_is_cpu_rrupt_from_idle();
+ 2)   4.770 us    |                                          rcu_segcblist_ready_cbs();
+ 2)   4.558 us    |                                          rcu_is_cpu_rrupt_from_idle();
+ 2) ! 147.562 us  |                                        }
+ 2)               |                                        sched_tick() {
+ 2)   5.651 us    |                                          topology_scale_freq_tick();
+ 2)   4.068 us    |                                          _raw_spin_lock();
+ 2)               |                                          update_rq_clock() {
+ 2)   7.364 us    |                                            update_irq_load_avg();
+ 2) + 21.171 us   |                                          }
+ 2)   9.809 us    |                                          update_hw_load_avg();
+ 2)               |                                          task_tick_fair() {
+ 2)               |                                            update_curr() {
+ 2)               |                                              update_se() {
+ 2)   5.531 us    |                                                cpuacct_charge();
+ 2) + 17.624 us   |                                              }
+ 2)               |                                              dl_server_update() {
+ 2)   7.524 us    |                                                update_curr_dl_se();
+ 2) + 17.744 us   |                                              }
+ 2) + 53.653 us   |                                            }
+ 2)   7.665 us    |                                            __update_load_avg_se();
+ 2)   7.594 us    |                                            __update_load_avg_cfs_rq();
+ 2)   4.549 us    |                                            update_cfs_group();
+ 2)               |                                            update_curr() {
+ 2)   4.007 us    |                                              update_se();
+ 2) + 13.125 us   |                                            }
+ 2)   4.279 us    |                                            __update_load_avg_se();
+ 2)   3.807 us    |                                            __update_load_avg_cfs_rq();
+ 2)   5.030 us    |                                            update_cfs_group();
+ 2) ! 148.765 us  |                                          }
+ 2)   4.368 us    |                                          calc_global_load_tick();
+ 2)   3.737 us    |                                          _raw_spin_unlock();
+ 2)               |                                          perf_event_task_tick() {
+ 2)   4.879 us    |                                            perf_adjust_freq_unthr_context();
+ 2)   4.619 us    |                                            __rcu_read_lock();
+ 2)   4.228 us    |                                            __rcu_read_unlock();
+ 2) + 34.286 us   |                                          }
+ 2)   4.208 us    |                                          idle_cpu();
+ 2)               |                                          sched_balance_trigger() {
+ 2)   3.998 us    |                                            nohz_balance_exit_idle();
+ 2) + 19.959 us   |                                          }
+ 2) ! 328.529 us  |                                        }
+ 2)   5.190 us    |                                        run_posix_cpu_timers();
+ 2) ! 619.666 us  |                                      }
+ 2)               |                                      profile_tick() {
+ 2)               |                                        profile_pc() {
+ 2)   5.049 us    |                                          profile_pc_cb();
+ 2) + 11.993 us   |                                          unwind_find_stack.constprop.0();
+ 2)   6.423 us    |                                          profile_pc_cb();
+ 2) ! 311.406 us  |                                        }
+ 2) ! 323.028 us  |                                      }
+ 2)   4.829 us    |                                      hrtimer_forward();
+ 2) # 1226.887 us |                                    }
+ 2)   7.865 us    |                                    _raw_spin_lock_irq();
+ 2) + 11.292 us   |                                    enqueue_hrtimer();
+ 2) # 1305.318 us |                                  }
+ 2)               |                                  ktime_get_update_offsets_now() {
+ 2)   4.419 us    |                                    arch_counter_read();
+ 2) + 15.770 us   |                                  }
+ 2)   4.990 us    |                                  __hrtimer_get_next_event();
+ 2)   4.549 us    |                                  __hrtimer_get_next_event();
+ 2)               |                                  tick_program_event() {
+ 2)               |                                    clockevents_program_event() {
+ 2)               |                                      ktime_get() {
+ 2)   3.867 us    |                                        arch_counter_read();
+ 2) + 13.566 us   |                                      }
+ 2) + 20.138 us   |                                      arch_timer_set_next_event_virt();
+ 2) + 49.355 us   |                                    }
+ 2) + 58.992 us   |                                  }
+ 2)   4.619 us    |                                  _raw_spin_unlock_irqrestore();
+ 2) # 1465.975 us |                                }
+ 2) # 1484.099 us |                              }
+ 2)               |                              add_interrupt_randomness() {
+ 2) + 69.172 us   |                                fast_mix();
+ 2) + 83.780 us   |                              }
+ 2) + 38.213 us   |                              gic_eoi_irq();
+ 2) # 1638.345 us |                            }
+ 2) # 1648.735 us |                          }
+ 2) # 1694.051 us |                        }
+ 2) # 1726.644 us |                      }
+ 2)   <========== |
+ 2) # 1743.236 us |                    }
+ 2)               |                    irq_exit_rcu() {
+ 2)               |                      irqtime_account_irq() {
+ 2)   4.027 us    |                        irqtime_account_delta();
+ 2) + 14.979 us   |                      }
+ 2)   6.693 us    |                      idle_cpu();
+ 2) + 39.635 us   |                    }
+ 2)   3.787 us    |                    raw_irqentry_exit_cond_resched();
+ 2) # 1873.355 us |                  }
+ 2) # 2748.980 us |                }
+ 2) # 2759.851 us |              }
+ 2)               |              drm_crtc_vblank_count() {
+ 2)   4.419 us    |                drm_vblank_count();
+ 2) + 14.167 us   |              }
+ 2)   4.318 us    |              drm_crtc_vblank_waitqueue();
+ 2)               |              drm_crtc_vblank_count() {
+ 2)   3.607 us    |                drm_vblank_count();
+ 2) + 12.033 us   |              }
+ 2)   3.948 us    |              init_wait_entry();
+ 2)               |              prepare_to_wait_event() {
+ 2)   4.929 us    |                _raw_spin_lock_irqsave();
+ 2)   3.838 us    |                _raw_spin_unlock_irqrestore();
+ 2) + 24.647 us   |              }
+ 2)               |              drm_crtc_vblank_count() {
+ 2)   3.607 us    |                drm_vblank_count();
+ 2) + 12.053 us   |              }
+ 2)               |              schedule_timeout() {
+ 2)   4.518 us    |                timer_init_key();
+ 2)               |                add_timer() {
+ 2)               |                  lock_timer_base() {
+ 2)   4.007 us    |                    _raw_spin_lock_irqsave();
+ 2) + 14.137 us   |                  }
+ 2)   5.100 us    |                  detach_if_pending();
+ 2)   4.619 us    |                  calc_wheel_index();
+ 2)   7.655 us    |                  enqueue_timer();
+ 2)   3.998 us    |                  _raw_spin_unlock_irqrestore();
+ 2) + 71.587 us   |                }
+ 2)               |                schedule() {
+ 2)               |                  rcu_note_context_switch() {
+ 2)   4.359 us    |                    rcu_qs();
+ 2) + 20.569 us   |                  }
+ 2)   6.393 us    |                  migrate_disable_switch.isra.0();
+ 2)   4.749 us    |                  _raw_spin_lock();
+ 2)               |                  update_rq_clock() {
+ 2)   6.313 us    |                    update_irq_load_avg();
+ 2) + 29.266 us   |                  }
+ 2)               |                  dequeue_task_fair() {
+ 2)               |                    dequeue_entities() {
+ 2)               |                      update_curr() {
+ 2)   5.190 us    |                        update_se();
+ 2) + 18.435 us   |                      }
+ 2)   7.885 us    |                      vruntime_eligible();
+ 2)   6.913 us    |                      __update_load_avg_se();
+ 2)   6.753 us    |                      __update_load_avg_cfs_rq();
+ 2)   6.042 us    |                      avg_vruntime();
+ 2)   8.887 us    |                      entity_lag.isra.0();
+ 2)   6.362 us    |                      account_llc_dequeue();
+ 2)   5.721 us    |                      update_cfs_group();
+ 2)               |                      update_curr() {
+ 2)   5.049 us    |                        update_se();
+ 2) + 16.392 us   |                      }
+ 2)   5.190 us    |                      vruntime_eligible();
+ 2)   4.078 us    |                      __update_load_avg_se();
+ 2)   3.647 us    |                      __update_load_avg_cfs_rq();
+ 2)   3.687 us    |                      avg_vruntime();
+ 2)   3.647 us    |                      entity_lag.isra.0();
+ 2)   3.998 us    |                      update_cfs_group();
+ 2) ! 255.439 us  |                    }
+ 2) ! 267.972 us  |                  }
+ 2)               |                  pick_task_fair() {
+ 2)   3.717 us    |                    __msecs_to_jiffies();
+ 2) + 20.529 us   |                  }
+ 2)   4.880 us    |                  pick_task_idle();
+ 2)   6.423 us    |                  put_prev_task_fair();
+ 2)   7.334 us    |                  set_next_task_idle();
+ 2)               |                  fpsimd_thread_switch() {
+ 2) + 11.562 us   |                    fpsimd_save_user_state();
+ 2) + 26.581 us   |                  }
+ 2)   8.927 us    |                  tls_preserve_current_state();
+ 2)   5.100 us    |                  hw_breakpoint_thread_switch();
+ 2)   4.017 us    |                  mte_thread_switch();
+ 2)               |                  finish_task_switch.isra.0() {
+ 2)   6.994 us    |                    _raw_spin_unlock();
+ 2) + 49.585 us   |                  }
+ 2) * 15095.28 us |                }
+ 2)               |                timer_delete_sync() {
+ 2)               |                  __timer_delete_sync() {
+ 2)               |                    lock_timer_base() {
+ 2)   4.408 us    |                      _raw_spin_lock_irqsave();
+ 2) + 14.277 us   |                    }
+ 2)   4.970 us    |                    detach_if_pending();
+ 2)   3.908 us    |                    _raw_spin_unlock_irqrestore();
+ 2) + 41.860 us   |                  }
+ 2) + 49.905 us   |                }
+ 2) * 15250.96 us |              }
+ 2)               |              drm_crtc_vblank_count() {
+ 2)   4.649 us    |                drm_vblank_count();
+ 2) + 13.426 us   |              }
+ 2)   3.827 us    |              finish_wait();
+ 2)               |              drm_crtc_vblank_put() {
+ 2)               |                drm_vblank_put() {
+ 2)               |                  mod_timer() {
+ 2)               |                    lock_timer_base() {
+ 2)   4.058 us    |                      _raw_spin_lock_irqsave();
+ 2) + 11.271 us   |                    }
+ 2)   4.168 us    |                    calc_wheel_index();
+ 2)   3.427 us    |                    detach_if_pending();
+ 2)   3.426 us    |                    _raw_spin_unlock();
+ 2)   3.958 us    |                    _raw_spin_lock();
+ 2)   5.120 us    |                    enqueue_timer();
+ 2)   3.507 us    |                    _raw_spin_unlock_irqrestore();
+ 2) + 90.964 us   |                  }
+ 2) + 99.901 us   |                }
+ 2) ! 107.706 us  |              }
+ 2) * 18277.88 us |            }
+ 2)               |            drm_atomic_helper_cleanup_planes() {
+ 2)   6.142 us    |              virtio_gpu_plane_cleanup_fb();
+ 2) + 17.854 us   |            }
+ 2) @ 108700.0 us |          }
+ 2)               |          ktime_get() {
+ 2)   4.819 us    |            arch_counter_read();
+ 2) + 91.455 us   |          }
+ 2)   5.661 us    |          drm_self_refresh_helper_update_avg_times();
+ 2)               |          drm_atomic_helper_commit_cleanup_done() {
+ 2)               |            complete_all() {
+ 2)   4.098 us    |              _raw_spin_lock_irqsave();
+ 2)   3.536 us    |              _raw_spin_unlock_irqrestore();
+ 2) + 20.018 us   |            }
+ 2)               |            try_wait_for_completion() {
+ 2)   4.488 us    |              _raw_spin_lock_irqsave();
+ 2)   4.779 us    |              _raw_spin_unlock_irqrestore();
+ 2) + 24.176 us   |            }
+ 2)   4.499 us    |            _raw_spin_lock();
+ 2)   4.538 us    |            _raw_spin_unlock();
+ 2) + 81.515 us   |          }
+ 2) @ 109122.7 us |        }
+ 2) @ 110616.0 us |      }
+ 2) @ 111597.7 us |    }
+ 2)   4.709 us    |    kfree();
+ 2)               |    __drm_atomic_commit_free() {
+ 2)               |      drm_atomic_commit_default_clear() {
+ 2)   6.562 us    |        __drm_dev_dbg();
+ 2)               |        drm_atomic_helper_connector_destroy_state() {
+ 2)               |          __drm_atomic_helper_connector_destroy_state() {
+ 2)               |            drm_mode_object_put() {
+ 2)               |              drm_mode_object_put.part.0() {
+ 2)   4.919 us    |                __drm_dev_dbg();
+ 2) + 16.803 us   |              }
+ 2) + 29.567 us   |            }
+ 2)               |            __drm_crtc_commit_free() {
+ 2) + 20.299 us   |              kfree();
+ 2) + 29.076 us   |            }
+ 2)   3.566 us    |            drm_property_blob_put();
+ 2) + 98.890 us   |          }
+ 2)   6.943 us    |          kfree();
+ 2) ! 134.908 us  |        }
+ 2)               |        drm_mode_object_put() {
+ 2)               |          drm_mode_object_put.part.0() {
+ 2)   4.128 us    |            __drm_dev_dbg();
+ 2) + 13.687 us   |          }
+ 2) + 22.373 us   |        }
+ 2)               |        drm_atomic_helper_crtc_destroy_state() {
+ 2)               |          __drm_atomic_helper_crtc_destroy_state() {
+ 2)   4.289 us    |            kfree();
+ 2)               |            drm_property_blob_put() {
+ 2)               |              drm_mode_object_put() {
+ 2)               |                drm_mode_object_put.part.0() {
+ 2)   3.346 us    |                  __drm_dev_dbg();
+ 2)               |                  drm_property_free_blob() {
+ 2)   4.328 us    |                    mutex_lock();
+ 2)   4.769 us    |                    mutex_unlock();
+ 2)               |                    drm_mode_object_unregister() {
+ 2)   3.426 us    |                      mutex_lock();
+ 2)   3.327 us    |                      mutex_unlock();
+ 2) + 32.963 us   |                    }
+ 2)               |                    kvfree() {
+ 2)   3.877 us    |                      is_vmalloc_addr();
+ 2)   6.392 us    |                      kfree();
+ 2) + 24.096 us   |                    }
+ 2) + 94.480 us   |                  }
+ 2) ! 110.200 us  |                }
+ 2) ! 119.188 us  |              }
+ 2) ! 126.862 us  |            }
+ 2)   3.196 us    |            drm_property_blob_put();
+ 2)   3.136 us    |            drm_property_blob_put();
+ 2)   3.136 us    |            drm_property_blob_put();
+ 2) ! 171.118 us  |          }
+ 2)   3.637 us    |          kfree();
+ 2) ! 189.032 us  |        }
+ 2)               |        drm_atomic_helper_plane_destroy_state() {
+ 2)               |          __drm_atomic_helper_plane_destroy_state() {
+ 2)               |            drm_mode_object_put() {
+ 2)               |              drm_mode_object_put.part.0() {
+ 2)   3.437 us    |                __drm_dev_dbg();
+ 2) + 10.861 us   |              }
+ 2) + 18.225 us   |            }
+ 2)               |            __drm_crtc_commit_free() {
+ 2)   4.418 us    |              kfree();
+ 2) + 12.103 us   |            }
+ 2)               |            drm_property_blob_put() {
+ 2)               |              drm_mode_object_put() {
+ 2)               |                drm_mode_object_put.part.0() {
+ 2)   3.577 us    |                  __drm_dev_dbg();
+ 2)               |                  drm_property_free_blob() {
+ 2)   3.306 us    |                    mutex_lock();
+ 2)   3.497 us    |                    mutex_unlock();
+ 2)               |                    drm_mode_object_unregister() {
+ 2)   3.186 us    |                      mutex_lock();
+ 2)   3.257 us    |                      mutex_unlock();
+ 2) + 19.047 us   |                    }
+ 2)               |                    kvfree() {
+ 2)   3.216 us    |                      is_vmalloc_addr();
+ 2)   5.932 us    |                      kfree();
+ 2) + 20.189 us   |                    }
+ 2) + 72.068 us   |                  }
+ 2) + 86.966 us   |                }
+ 2) + 94.260 us   |              }
+ 2) ! 101.344 us  |            }
+ 2) ! 151.961 us  |          }
+ 2)   3.577 us    |          kfree();
+ 2) ! 168.582 us  |        }
+ 2) ! 571.173 us  |      }
+ 2)   3.808 us    |      __drm_dev_dbg();
+ 2)   5.551 us    |      kfree();
+ 2)   3.667 us    |      kfree();
+ 2)   5.180 us    |      kfree();
+ 2)   3.317 us    |      kfree();
+ 2)   3.316 us    |      kfree();
+ 2)   4.499 us    |      kfree();
+ 2)               |      drm_dev_put() {
+ 2)   4.198 us    |        drm_dev_put.part.0();
+ 2) + 12.474 us   |      }
+ 2) ! 683.438 us  |    }
+ 2)               |    drm_modeset_drop_locks() {
+ 2)   4.198 us    |      ww_mutex_unlock();
+ 2)   3.226 us    |      ww_mutex_unlock();
+ 2)   3.357 us    |      ww_mutex_unlock();
+ 2) + 27.753 us   |    }
+ 2)   3.717 us    |    drm_modeset_acquire_fini();
+ 2) @ 118498.7 us |  }
