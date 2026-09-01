@@ -1,0 +1,5 @@
+config BR2_PACKAGE_SG_DRM_ATOMIC_MODESET
+	bool "sg-drm-atomic-modeset"
+	select BR2_PACKAGE_LIBDRM
+	help
+		Secure Graphics DRM Information Utility(drm-test-app)
